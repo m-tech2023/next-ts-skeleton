@@ -4,7 +4,7 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import LoginLabel from "@/components/LoginComponents/label";
 import LoginInput from "@/components/LoginComponents/input";
 import LoginButton from "@/components/LoginComponents/button";
-import LoginForm from "@/components/LoginComponents/form";
+import Link from "next/link";
 
 const ForgetPassword = () => {
   return (
@@ -14,7 +14,7 @@ const ForgetPassword = () => {
         <FontAwesomeIcon icon={faAngleRight} />
         <p>Login</p>
         <FontAwesomeIcon icon={faAngleRight} />
-        <p>Esqueceu a senha</p>
+        <span>Esqueceu a senha</span>
       </div>
       <div className={styles.header}>
         <h2 className={styles.title}>Esqueci minha senha</h2>
@@ -39,7 +39,14 @@ const ForgetPassword = () => {
               className={styles.input}
             />
           </div>
-          <p>Não lembra seu e-mail? Clique aqui para recuperar.</p>
+          <div className={styles.forget_email}>
+            <p>Não lembra seu e-mail?</p>
+            <p>
+              <Link href={"/login/forget-email"} className={styles.link}>
+                Clique aqui para recuperar.
+              </Link>
+            </p>
+          </div>
           <div className={styles.container_buttons}>
             <LoginButton text="ENVIAR" className={styles.btn} />
           </div>

@@ -1,3 +1,1 @@
-const findById = async (uuid: string) => {
-  // code...
-};
+const findById = async (uuid: string) => {};

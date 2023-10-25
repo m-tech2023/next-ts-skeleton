@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../../../pages/login/styles.module.scss";
 import LoginButton from "../button";
 import LoginInput from "../input";
@@ -31,7 +32,9 @@ const LoginForm = () => {
         />
       </div>
       <div className={styles.forget_password}>
-        <p>Esqueci minha senha</p>
+        <Link href={"/login/forget-password"} className={styles.link}>
+          <p>Esqueci minha senha</p>
+        </Link>
       </div>
       <div className={styles.container_buttons}>
         <LoginButton text="ENTRAR" className={styles.btn} />

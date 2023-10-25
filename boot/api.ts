@@ -1,11 +1,10 @@
-import { env } from '@/env';
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
-	baseURL: env.API_URL,
-	headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
+  baseURL: process.env.API_URL,
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
   },
 });
 

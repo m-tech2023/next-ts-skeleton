@@ -1,4 +1,5 @@
-import styles from "../styles.module.scss";
+import styles from "../../../pages/login/styles.module.scss";
+import LoginButton from "../button";
 import LoginInput from "../input";
 import LoginLabel from "../label";
 
@@ -6,36 +7,40 @@ const LoginForm = () => {
   return (
     <form className={styles.form}>
       <div className={styles.form_group}>
-        <LoginLabel labelFor="email" text="E-mail ou CNPJ" />
+        <LoginLabel
+          labelFor="email"
+          text="E-mail ou CNPJ"
+          className={styles.label}
+        />
         <LoginInput
           type="text"
           id="email"
           name="email"
           placeholder="Digite seu e-mail ou CNPJ"
+          className={styles.input}
         />
       </div>
       <div className={styles.form_group}>
-        <LoginLabel labelFor="password" text="Senha" />
+        <LoginLabel labelFor="password" text="Senha" className={styles.label} />
         <LoginInput
           type="password"
           id="password"
           name="password"
           placeholder="Digite sua senha"
+          className={styles.input}
         />
       </div>
       <div className={styles.forget_password}>
         <p>Esqueci minha senha</p>
       </div>
       <div className={styles.container_buttons}>
-        <button className={styles.btn}>ENTRAR</button>
-        <button className={styles.btn_google}>
-          <img
-            src="/google-icon.png"
-            alt="google icone"
-            className={styles.icon_google}
-          />
-          ENTRAR COM O GOOGLE
-        </button>
+        <LoginButton text="ENTRAR" className={styles.btn} />
+        <LoginButton
+          img="/google-icon.png"
+          text="ENTRAR COM GOOGLE"
+          className={styles.btn_google}
+          alt="google icon"
+        />
       </div>
     </form>
   );

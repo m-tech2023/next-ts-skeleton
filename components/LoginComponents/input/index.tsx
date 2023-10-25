@@ -1,4 +1,3 @@
-import styles from "../styles.module.scss";
 import React, { ChangeEvent } from "react";
 
 interface LoginInputProps {
@@ -7,9 +6,11 @@ interface LoginInputProps {
   type: string;
   placeholder: string;
   value?: string;
+  className?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 const LoginInput: React.FC<LoginInputProps> = ({
+  className,
   type,
   id,
   name,
@@ -26,7 +27,7 @@ const LoginInput: React.FC<LoginInputProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className={styles.input}
+        className={className}
       />
     </>
   );

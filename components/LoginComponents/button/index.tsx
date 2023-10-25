@@ -1,11 +1,18 @@
-import styles from "../styles.module.scss";
-
 interface LoginButtonProps {
   text: string;
+  className?: string;
+  img?: string;
+  alt?: string;
 }
-const LoginButton: React.FC<LoginButtonProps> = ({ text }) => {
+const LoginButton: React.FC<LoginButtonProps> = ({
+  text,
+  className,
+  img,
+  alt,
+}) => {
   return (
-    <div>
+    <div className={className}>
+      <img src={img} alt={alt} />
       <p>{text}</p>
     </div>
   );

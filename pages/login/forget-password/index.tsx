@@ -4,15 +4,17 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import LoginLabel from "@/components/LoginComponents/label";
 import LoginInput from "@/components/LoginComponents/input";
 import LoginButton from "@/components/LoginComponents/button";
+import LoginForm from "@/components/LoginComponents/form";
 
 const ForgetPassword = () => {
   return (
     <div className={styles.container}>
       <div className={styles.breadcrumb}>
-        <p>
-          Home <FontAwesomeIcon icon={faAngleRight} /> Login
-          <FontAwesomeIcon icon={faAngleRight} /> Esqueci minha senha
-        </p>
+        <p>Home</p>
+        <FontAwesomeIcon icon={faAngleRight} />
+        <p>Login</p>
+        <FontAwesomeIcon icon={faAngleRight} />
+        <p>Esqueceu a senha</p>
       </div>
       <div className={styles.header}>
         <h2 className={styles.title}>Esqueci minha senha</h2>
@@ -21,20 +23,25 @@ const ForgetPassword = () => {
           senha, onde será possível alterar a seua senha.
         </p>
       </div>
-      <div className={styles.contaienr_form}>
-        <form action="" className={styles.form}>
+      <div className={styles.container_form}>
+        <form className={styles.form}>
           <div className={styles.form_group}>
-            <LoginLabel labelFor="forgetEmail" text="E-mail de cadastro" />
+            <LoginLabel
+              labelFor="email"
+              text="E-mail de cadastro"
+              className={styles.label}
+            />
             <LoginInput
-              id="forgetEmail"
-              name="forgetEmail"
               type="text"
+              id="email"
+              name="email"
               placeholder="Digite seu e-mail de cadastro"
+              className={styles.input}
             />
           </div>
           <p>Não lembra seu e-mail? Clique aqui para recuperar.</p>
           <div className={styles.container_buttons}>
-            <LoginButton text="ENVIAR" />
+            <LoginButton text="ENVIAR" className={styles.btn} />
           </div>
         </form>
       </div>

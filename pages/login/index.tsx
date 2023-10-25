@@ -19,10 +19,12 @@ const Login = () => {
         <LoginForm />
         <div className={styles.hr} />
         <div className={styles.register}>
-          <p>Ainda não tem uma conta?</p>
-          <Link href={"/register"} className={styles.link}>
-            Cadastra-se
-          </Link>
+          <p>
+            Ainda não tem uma conta?{" "}
+            <Link href={"/register"} className={styles.link}>
+              Cadastra-se
+            </Link>
+          </p>
         </div>
       </div>
     </div>

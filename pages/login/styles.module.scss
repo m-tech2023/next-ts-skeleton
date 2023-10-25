@@ -1,4 +1,5 @@
 @import "../../styles/fonts.scss";
+@import "../../styles/colors.scss";
 
 .container {
   width: 100%;
@@ -14,7 +15,7 @@
       margin: 0;
     }
     span {
-      color: black;
+      color: $black;
       font-weight: 700;
     }
   }
@@ -25,7 +26,7 @@
     justify-content: center;
     align-items: center;
     height: 40px;
-    margin: 50px 0;
+    margin: 80px 0;
     .title {
       display: flex;
       justify-content: center;
@@ -33,9 +34,13 @@
       max-width: 420px;
       width: 100%;
       font-family: $font-primary;
-      font-weight: 700;
-      color: #37406d;
+      font-weight: bold;
+      color: $blue;
       font-size: 32px;
+    }
+    .sub_title {
+      text-align: center;
+      padding: 0 10px;
     }
   }
   .container_form {
@@ -46,6 +51,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 0 10px;
     .form {
       width: 100%;
       display: flex;
@@ -63,23 +69,27 @@
         .label {
           font-size: 14px;
           font-weight: 700;
-          color: #37406d;
+          color: $blue;
         }
         .input {
           width: 100%;
           height: 50px;
           border-radius: 5px;
           padding: 0 5px;
-          border: 1px solid #999999;
+          border: 1px solid $grey;
+          &:focus {
+            outline: none;
+          }
         }
       }
       .forget_password {
         display: flex;
-        justify-content: left;
+        justify-content: center;
         align-items: center;
+        text-align: center;
         gap: 5px;
         width: 100%;
-        color: #0000ff;
+        color: $blue_link;
         .link {
           text-decoration: none;
           cursor: pointer;
@@ -87,7 +97,7 @@
       }
       .forget_email {
         @extend .forget_password;
-        color: #333333;
+        color: $light_black;
       }
       .container_buttons {
         width: 100%;
@@ -102,15 +112,21 @@
           width: 100%;
           height: 50px;
           font-size: 14px;
-          background-color: #02a2e9;
+          background-color: $buttons_login;
           font-family: $font-primary;
           border: 2px solid transparent;
           border-radius: 5px;
-          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.35);
-          color: #ffffff;
+          box-shadow: 2px 2px 5px 0px $buttons_shadow;
+          color: $white_smoke;
           cursor: pointer;
+          transition: all 0.5s;
+          font-family: $font-secondary;
           p {
             margin: 0;
+          }
+          &:hover {
+            background-color: $buttons_hover;
+            transition: all 0.5s;
           }
         }
         .btn_google {
@@ -119,10 +135,13 @@
           justify-content: center;
           align-items: center;
           gap: 20px;
-          background-color: #ffff;
+          background-color: $white;
           color: black;
           img {
             width: 35px;
+          }
+          &:hover {
+            background-color: $white_smoke;
           }
         }
       }
@@ -133,10 +152,10 @@
     margin-top: 50px;
     margin-bottom: 20px;
     height: 1px;
-    border: 1px solid #d7d7d7;
+    border: 1px solid $white;
   }
   .register {
-    display: flex;
+    text-align: center;
     gap: 5px;
     .link {
       text-decoration: none;

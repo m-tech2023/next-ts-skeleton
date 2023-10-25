@@ -1,3 +1,4 @@
+import { FormEvent } from "react";
 import Link from "next/link";
 import styles from "../../../pages/login/styles.module.scss";
 import LoginButton from "../button";
@@ -5,8 +6,10 @@ import LoginInput from "../input";
 import LoginLabel from "../label";
 
 const LoginForm = () => {
+  const handleLogin = async (e: FormEvent<HTMLFormElement>) => {};
+
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleLogin}>
       <div className={styles.form_group}>
         <LoginLabel
           labelFor="email"
@@ -37,7 +40,7 @@ const LoginForm = () => {
         </Link>
       </div>
       <div className={styles.container_buttons}>
-        <LoginButton text="ENTRAR" className={styles.btn} />
+        <LoginButton text="ENTRAR" className={styles.btn} type="submit" />
         <LoginButton
           img="/google-icon.png"
           text="ENTRAR COM GOOGLE"

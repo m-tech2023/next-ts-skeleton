@@ -9,8 +9,8 @@ const Login = () => {
     <div className={styles.container}>
       <div className={styles.breadcrumb}>
         <p>Home</p>
-        <FontAwesomeIcon icon={faAngleRight} />
-        <p>Login</p>
+        <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />
+        <span>Login</span>
       </div>
       <div className={styles.header}>
         <h2 className={styles.title}>Login</h2>

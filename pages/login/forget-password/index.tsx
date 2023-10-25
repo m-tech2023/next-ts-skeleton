@@ -11,16 +11,16 @@ const ForgetPassword = () => {
     <div className={styles.container}>
       <div className={styles.breadcrumb}>
         <p>Home</p>
-        <FontAwesomeIcon icon={faAngleRight} />
+        <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />
         <p>Login</p>
-        <FontAwesomeIcon icon={faAngleRight} />
+        <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />
         <span>Esqueceu a senha</span>
       </div>
       <div className={styles.header}>
         <h2 className={styles.title}>Esqueci minha senha</h2>
         <p className={styles.sub_title}>
           Digite o seu e-mail de cadastro para receber um link de recuperação de
-          senha, onde será possível alterar a seua senha.
+          senha, onde será possível alterar a sua senha.
         </p>
       </div>
       <div className={styles.container_form}>

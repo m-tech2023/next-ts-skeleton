@@ -10,9 +10,9 @@ const ForgetEmail = () => {
     <div className={styles.container}>
       <div className={styles.breadcrumb}>
         <p>Home</p>
-        <FontAwesomeIcon icon={faAngleRight} />
+        <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />
         <p>Login</p>
-        <FontAwesomeIcon icon={faAngleRight} />
+        <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />
         <span>Recuperar e-mail</span>
       </div>
       <div className={styles.header}>

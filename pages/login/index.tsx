@@ -1,10 +1,28 @@
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import LoginForm from "@/components/LoginComponents/form";
+import LoginFormPessoaFisica from "@/components/LoginComponents/LoginFormPf";
+import LoginFormPessoaEstrangeira from "@/components/LoginComponents/LoginFormEstr";
+import LoginFormPessoaJuridica from "@/components/LoginComponents/LoginFormPj";
 
 const Login = () => {
+  const [selectedForm, setSelectedForm] = useState("pessoaFisica");
+
+  const handleFormSelection = (formType) => {
+    setSelectedForm(formType);
+  };
+
+  const renderSelectedForm = () => {
+    if (selectedForm === "pessoaFisica") {
+      return <LoginFormPessoaFisica />;
+    } else if (selectedForm === "estrangeiro") {
+      return <LoginFormPessoaEstrangeira />;
+    } else if (selectedForm === "pessoaJuridica") {
+      return <LoginFormPessoaJuridica />;
+    }
+  };
   return (
     <div className={styles.container}>
       <div className={styles.breadcrumb}>
@@ -16,7 +34,18 @@ const Login = () => {
         <h2 className={styles.title}>Login</h2>
       </div>
       <div className={styles.container_form}>
-        <LoginForm />
+        <div className={styles.container_form_selected}>
+          <button onClick={() => handleFormSelection("pessoaFisica")}>
+            Pessoa Física
+          </button>
+          <button onClick={() => handleFormSelection("estrangeiro")}>
+            Estrangeiro
+          </button>
+          <button onClick={() => handleFormSelection("pessoaJuridica")}>
+            Pessoa Jurídica
+          </button>
+        </div>
+        {renderSelectedForm()}
         <div className={styles.hr} />
         <div className={styles.register}>
           <p>

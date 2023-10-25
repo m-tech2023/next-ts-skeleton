@@ -15,7 +15,7 @@ const LoginForm = () => {
         />
       </div>
       <div className={styles.form_group}>
-        <LoginLabel labelFor="password" text="password" />
+        <LoginLabel labelFor="password" text="Senha" />
         <LoginInput
           type="password"
           id="password"
@@ -23,9 +23,19 @@ const LoginForm = () => {
           placeholder="Digite sua senha"
         />
       </div>
+      <div className={styles.forget_password}>
+        <p>Esqueci minha senha</p>
+      </div>
       <div className={styles.container_buttons}>
         <button className={styles.btn}>ENTRAR</button>
-        <button className={styles.btn}>ENTRAR COM O GOOGLE</button>
+        <button className={styles.btn_google}>
+          <img
+            src="/google-icon.png"
+            alt="google icone"
+            className={styles.icon_google}
+          />
+          ENTRAR COM O GOOGLE
+        </button>
       </div>
     </form>
   );

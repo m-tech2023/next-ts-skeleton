@@ -5,7 +5,7 @@ interface LoginButtonProps {
 }
 const LoginButton: React.FC<LoginButtonProps> = ({ text }) => {
   return (
-    <div className={styles.btn}>
+    <div>
       <p>{text}</p>
     </div>
   );

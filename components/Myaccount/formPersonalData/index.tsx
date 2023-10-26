@@ -1,8 +1,14 @@
 import styles from "../../../pages/area-cliente/styles.module.scss";
 import ComponentButton from "../button";
 import ComponentHeader from "../header";
-import ComponentInput from "../input";
+import ComponentInput from "../inputs/input";
+import ComponentInputSelect, {
+  estadoCivilOptions,
+  nacionalityOptions,
+} from "../inputs/inputSelect";
+import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
 import ComponentLabel from "../label";
+
 const FormPersonalData = () => {
   return (
     <form className={styles.form}>
@@ -50,6 +56,34 @@ const FormPersonalData = () => {
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <ComponentLabel
+            htmlFor="nacionality"
+            text="Nacionalidade"
+            className={styles.label}
+          />
+          <ComponentInputSelect
+            id="nacionality"
+            name="nacionality"
+            className={styles.input}
+            options={nacionalityOptions}
+          />
+        </div>
+        <div className={styles.form_column}>
+          <ComponentLabel
+            htmlFor="civil"
+            text="Estado civil"
+            className={styles.label}
+          />
+          <ComponentInputSelect
+            id="civil"
+            name="civil"
+            className={styles.input}
+            options={estadoCivilOptions}
+          />
+        </div>
+      </div>
+      <div className={styles.form_group}>
+        <div className={styles.form_column}>
+          <ComponentLabel
             htmlFor="nameFather"
             text="Nome do pai"
             className={styles.label}
@@ -67,7 +101,7 @@ const FormPersonalData = () => {
         <div className={styles.form_column}>
           <ComponentLabel
             htmlFor="nameMother"
-            text="Nome do pai"
+            text="Nome da Mãe"
             className={styles.label}
           />
           <ComponentInput
@@ -239,31 +273,17 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="state"
-            text="Estado"
-            className={styles.label}
-          />
-          <ComponentInput
-            type="text"
-            id="state"
-            name="state"
-            placeholder=""
-            className={styles.input_double}
-          />
-        </div>
-        <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="city"
-            text="Cidade"
-            className={styles.label}
-          />
-          <ComponentInput
-            type="text"
-            id="city"
-            name="city"
-            placeholder=""
-            className={styles.input_double}
+          <ComponentInputSelectCitys
+            textState="Estado"
+            htmlForState="state"
+            idState="state"
+            nameState="state"
+            textCity="Cidade"
+            htmlForCity="city"
+            idCity="city"
+            nameCity="city"
+            classNameLabel={styles.label}
+            className={styles.input}
           />
         </div>
       </div>

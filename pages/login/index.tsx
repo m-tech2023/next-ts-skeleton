@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import LoginFormPessoaFisica from "@/components/LoginComponents/LoginFormPf";
 import LoginFormPessoaEstrangeira from "@/components/LoginComponents/LoginFormEstr";
 import LoginFormPessoaJuridica from "@/components/LoginComponents/LoginFormPj";
 import LoginButton from "@/components/LoginComponents/button";
+import BreadCrumb from "@/components/common/breadcrumb";
+import ComponentHeader from "@/components/common/header";
 
 const Login = () => {
   const [selectedForm, setSelectedForm] = useState("pessoaFisica");
@@ -27,13 +27,15 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.breadcrumb}>
-        <p>Home</p>
-        <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />
-        <span>Login</span>
+      <div className={styles.container_breadcrumb}>
+        <BreadCrumb
+          className={styles.link}
+          classNameIcon={styles.icon}
+          lastText={styles.lastName}
+        />
       </div>
       <div className={styles.header}>
-        <h2 className={styles.title}>Login</h2>
+        <ComponentHeader title="Login" classNameTitle={styles.title} />
       </div>
       <div className={styles.container_form}>
         <div className={styles.container_form_selected}>

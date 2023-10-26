@@ -5,23 +5,27 @@ import LoginLabel from "@/components/LoginComponents/label";
 import LoginInput from "@/components/LoginComponents/input";
 import LoginButton from "@/components/LoginComponents/button";
 import Link from "next/link";
+import BreadCrumb from "@/components/common/breadcrumb";
+import ComponentHeader from "@/components/common/header";
 
 const ForgetPassword = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.breadcrumb}>
-        <p>Home</p>
-        <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />
-        <p>Login</p>
-        <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />
-        <span>Esqueceu a senha</span>
+      <div className={styles.container_breadcrumb}>
+        <BreadCrumb
+          className={styles.link}
+          classNameIcon={styles.icon}
+          lastText={styles.lastName}
+        />
       </div>
       <div className={styles.header}>
-        <h2 className={styles.title}>Esqueci minha senha</h2>
-        <p className={styles.sub_title}>
-          Digite o seu e-mail de cadastro para receber um link de recuperação de
-          senha, onde será possível alterar a sua senha.
-        </p>
+        <ComponentHeader
+          title="Esqueci minha senha"
+          subTitle=" Digite o seu e-mail de cadastro para receber um link de recuperação de
+          senha, onde será possível alterar a sua senha."
+          classNameTitle={styles.title}
+          classNameSubTitle={styles.sub_title}
+        />
       </div>
       <div className={styles.container_form}>
         <form className={styles.form}>

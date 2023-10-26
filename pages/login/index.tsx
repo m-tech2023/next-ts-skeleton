@@ -6,15 +6,16 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import LoginFormPessoaFisica from "@/components/LoginComponents/LoginFormPf";
 import LoginFormPessoaEstrangeira from "@/components/LoginComponents/LoginFormEstr";
 import LoginFormPessoaJuridica from "@/components/LoginComponents/LoginFormPj";
+import LoginButton from "@/components/LoginComponents/button";
 
 const Login = () => {
   const [selectedForm, setSelectedForm] = useState("pessoaFisica");
 
-  const handleFormSelection = (formType) => {
+  const handleFormSelection = (formType: string) => {
     setSelectedForm(formType);
   };
 
-  const renderSelectedForm = () => {
+  const renderForm = () => {
     if (selectedForm === "pessoaFisica") {
       return <LoginFormPessoaFisica />;
     } else if (selectedForm === "estrangeiro") {
@@ -23,6 +24,7 @@ const Login = () => {
       return <LoginFormPessoaJuridica />;
     }
   };
+
   return (
     <div className={styles.container}>
       <div className={styles.breadcrumb}>
@@ -35,17 +37,23 @@ const Login = () => {
       </div>
       <div className={styles.container_form}>
         <div className={styles.container_form_selected}>
-          <button onClick={() => handleFormSelection("pessoaFisica")}>
-            Pessoa Física
-          </button>
-          <button onClick={() => handleFormSelection("estrangeiro")}>
-            Estrangeiro
-          </button>
-          <button onClick={() => handleFormSelection("pessoaJuridica")}>
-            Pessoa Jurídica
-          </button>
+          <LoginButton
+            text="Pessoa Física"
+            classNameButton={styles.btn}
+            onClick={() => handleFormSelection("pessoaFisica")}
+          />
+          <LoginButton
+            text="Pessoa Jurídica"
+            classNameButton={styles.btn}
+            onClick={() => handleFormSelection("pessoaJuridica")}
+          />
+          <LoginButton
+            text="Pessoa Estrangeira"
+            classNameButton={styles.btn}
+            onClick={() => handleFormSelection("estrangeiro")}
+          />
         </div>
-        {renderSelectedForm()}
+        {renderForm()}
         <div className={styles.hr} />
         <div className={styles.register}>
           <p>

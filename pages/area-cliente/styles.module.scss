@@ -55,6 +55,12 @@
     }
   }
   .container_grid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
     table {
       th {
         text-align: center;
@@ -114,6 +120,14 @@
           .input_double {
             @extend .input;
           }
+          .container_inputs_flex {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            .classNameContentFlex {
+              width: 100%;
+            }
+          }
         }
       }
       .btn {
@@ -130,6 +144,39 @@
         &:hover {
           background-color: $buttons_hover;
           transition: all 0.5s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    .container_grid {
+      table {
+        th {
+          text-align: center;
+          border: 1px solid $black;
+          padding: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 290px) {
+  .container {
+    .container_breadcrumb {
+      padding: 30px 10px;
+      font-size: 12px;
+    }
+    .container_grid {
+      table {
+        th {
+          text-align: center;
+          border: 1px solid $black;
+          padding: 5px;
+          font-size: 11px;
         }
       }
     }

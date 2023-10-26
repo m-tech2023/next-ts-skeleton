@@ -1,5 +1,5 @@
-import ComponentHeader from "@/components/Myaccount/header";
 import styles from "../styles.module.scss";
+import ComponentHeader from "@/components/Myaccount/header";
 import ComponentGrid from "@/components/Myaccount/grid";
 import BreadCrumb from "@/components/Myaccount/breadcrumb";
 
@@ -19,6 +19,7 @@ const MyFavoritePage = () => {
       <div className={styles.container_grid}>
         <ComponentGrid />
       </div>
+      <div className={styles.container_data}></div>
     </div>
   );
 };

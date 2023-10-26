@@ -1,4 +1,4 @@
-import styles from "../../../pages/area-cliente/styles.module.scss";
+import styles from "@/pages/area-cliente/styles.module.scss";
 import ComponentButton from "../button";
 import ComponentHeader from "../header";
 import ComponentInput from "../inputs/input";
@@ -282,6 +282,8 @@ const FormPersonalData = () => {
             htmlForCity="city"
             idCity="city"
             nameCity="city"
+            classNameFlex={styles.container_inputs_flex}
+            classNameContentFlex={styles.classNameContentFlex}
             classNameLabel={styles.label}
             className={styles.input}
           />

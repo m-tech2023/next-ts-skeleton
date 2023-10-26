@@ -5,6 +5,8 @@ import ComponentLabel from "../../label";
 interface ComponentInputSelectCitysProps {
   className: string;
   classNameLabel: string;
+  classNameFlex: string;
+  classNameContentFlex: string;
   htmlForState: string;
   idState: string;
   nameState: string;
@@ -18,6 +20,8 @@ interface ComponentInputSelectCitysProps {
 const ComponentInputSelectCitys: React.FC<ComponentInputSelectCitysProps> = ({
   className,
   classNameLabel,
+  classNameFlex,
+  classNameContentFlex,
   htmlForState,
   idState,
   nameState,
@@ -63,46 +67,50 @@ const ComponentInputSelectCitys: React.FC<ComponentInputSelectCitysProps> = ({
   }, [selectedState]);
 
   return (
-    <>
-      <ComponentLabel
-        htmlFor={htmlForState}
-        text={textState}
-        className={classNameLabel}
-      />
-      <select
-        id={idState}
-        name={nameState}
-        className={className}
-        value={selectedState}
-        onChange={(e) => setSelectedState(e.target.value)}
-      >
-        <option value="">Selecione um estado</option>
-        {states.map((estado) => (
-          <option key={estado.sigla} value={estado.sigla}>
-            {estado.sigla}
-          </option>
-        ))}
-      </select>
-      <ComponentLabel
-        htmlFor={htmlForCity}
-        text={textCity}
-        className={classNameLabel}
-      />
-      <select
-        id={idCity}
-        name={nameCity}
-        className={className}
-        value={selectedCity}
-        onChange={(e) => setSelectedCity(e.target.value)}
-      >
-        <option value="">Selecione uma cidade</option>
-        {cities.map((city) => (
-          <option key={city.id} value={city.nome}>
-            {city.nome}
-          </option>
-        ))}
-      </select>
-    </>
+    <div className={classNameFlex}>
+      <div className={classNameContentFlex}>
+        <ComponentLabel
+          htmlFor={htmlForState}
+          text={textState}
+          className={classNameLabel}
+        />
+        <select
+          id={idState}
+          name={nameState}
+          className={className}
+          value={selectedState}
+          onChange={(e) => setSelectedState(e.target.value)}
+        >
+          <option value="">Selecione um estado</option>
+          {states.map((estado) => (
+            <option key={estado.sigla} value={estado.sigla}>
+              {estado.sigla}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className={classNameContentFlex}>
+        <ComponentLabel
+          htmlFor={htmlForCity}
+          text={textCity}
+          className={classNameLabel}
+        />
+        <select
+          id={idCity}
+          name={nameCity}
+          className={className}
+          value={selectedCity}
+          onChange={(e) => setSelectedCity(e.target.value)}
+        >
+          <option value="">Selecione uma cidade</option>
+          {cities.map((city) => (
+            <option key={city.id} value={city.nome}>
+              {city.nome}
+            </option>
+          ))}
+        </select>
+      </div>
+    </div>
   );
 };
 export default ComponentInputSelectCitys;

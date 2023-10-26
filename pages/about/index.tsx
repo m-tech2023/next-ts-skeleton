@@ -1,17 +1,17 @@
+import AboutContent from "@/components/AboutContent";
+import BreadCrumb from "@/components/BreadCrumb";
 import Head from "next/head";
-import Link from "next/link";
 
 const About = () => {
   return (
     <>
       <Head>
-          <title>About page</title>
+          <title>Sobre</title>
           <meta name="description" content="About page content description" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap"/>
       </Head>
-      <h2>About page</h2>
-      <Link href="/">Home Page</Link>
-      {' '}
-      <Link href="/counter">Counter Page</Link>
+      <BreadCrumb />
+      <AboutContent />
     </>
   );
 }

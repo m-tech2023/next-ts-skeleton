@@ -2,13 +2,19 @@ import React from "react";
 
 interface ComponentButtonProps {
   text: string;
-  className: string;
+  className?: string;
+  type: "button" | "submit" | "reset";
 }
 
 const ComponentButton: React.FC<ComponentButtonProps> = ({
   text,
   className,
+  type,
 }) => {
-  return <button className={className}>{text}</button>;
+  return (
+    <button type={type} className={className}>
+      {text}
+    </button>
+  );
 };
 export default ComponentButton;

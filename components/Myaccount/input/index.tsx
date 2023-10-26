@@ -5,6 +5,7 @@ interface ComponentInputProps {
   placeholder: string;
   id: string;
   name: string;
+  className?: string;
 }
 
 const ComponentInput: React.FC<ComponentInputProps> = ({
@@ -12,7 +13,16 @@ const ComponentInput: React.FC<ComponentInputProps> = ({
   placeholder,
   id,
   name,
+  className,
 }) => {
-  return <input type={type} id={id} name={name} placeholder={placeholder} />;
+  return (
+    <input
+      className={className}
+      type={type}
+      id={id}
+      name={name}
+      placeholder={placeholder}
+    />
+  );
 };
 export default ComponentInput;

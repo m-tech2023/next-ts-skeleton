@@ -1,13 +1,14 @@
 import React from "react";
 
 interface ComponentHeaderProps {
+  title?: string;
   text: string;
 }
 
-const ComponentHeader: React.FC<ComponentHeaderProps> = ({ text }) => {
+const ComponentHeader: React.FC<ComponentHeaderProps> = ({ text, title }) => {
   return (
     <>
-      <p>Minha conta</p>
+      <p>{title}</p>
       <h2>{text}</h2>
     </>
   );

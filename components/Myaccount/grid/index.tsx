@@ -1,16 +1,48 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
+import { faClipboard } from "@fortawesome/free-solid-svg-icons";
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import { faSheetPlastic } from "@fortawesome/free-solid-svg-icons";
+import { faCoins } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 const ComponentGrid = () => {
   const router = useRouter();
 
   const pages = [
-    { path: "/area-cliente/dados-pessoais", label: "Dados pessoais" },
-    { path: "/area-cliente/dados-da-propriedade", label: "Dados propriedade" },
-    { path: "/area-cliente/dados-de-acesso", label: "Dados de acesso" },
-    { path: "/area-cliente/meus-lances", label: "Meus lances" },
-    { path: "/area-cliente/meus-favoritos", label: "Meus favoritos" },
-    { path: "/area-cliente/log-de-acessos", label: "Log de acessos" },
+    {
+      path: "/area-cliente/dados-pessoais",
+      label: "Dados pessoais",
+      icon: faUser,
+    },
+    {
+      path: "/area-cliente/dados-da-propriedade",
+      label: "Dados da propriedade",
+      icon: faSheetPlastic,
+    },
+    {
+      path: "/area-cliente/dados-de-acesso",
+      label: "Dados de acesso",
+      icon: faLock,
+    },
+    {
+      path: "/area-cliente/meus-lances",
+      label: "Meus lances",
+      icon: faCoins,
+    },
+    {
+      path: "/area-cliente/meus-favoritos",
+      label: "Meus favoritos",
+      icon: faBookmark,
+    },
+    {
+      path: "/area-cliente/logs-de-acessos",
+      label: "Log de acessos",
+      icon: faClipboard,
+    },
   ];
 
   return (
@@ -24,9 +56,25 @@ const ComponentGrid = () => {
                 backgroundColor:
                   router.asPath === page.path ? "#37406d" : "#ffffff",
                 color: router.asPath === page.path ? "#ffffff" : "#000000",
+                marginRight: "8px",
               }}
             >
-              {page.label}
+              <FontAwesomeIcon
+                icon={page.icon}
+                style={{
+                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                  marginRight: "8px",
+                }}
+              />
+              <Link
+                style={{
+                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                  textDecoration: "none",
+                }}
+                href={page.path}
+              >
+                {page.label}
+              </Link>
             </td>
           ))}
         </tr>
@@ -40,7 +88,22 @@ const ComponentGrid = () => {
                 color: router.asPath === page.path ? "#ffffff" : "#000000",
               }}
             >
-              {page.label}
+              <FontAwesomeIcon
+                icon={page.icon}
+                style={{
+                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                  marginRight: "8px",
+                }}
+              />
+              <Link
+                style={{
+                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                  textDecoration: "none",
+                }}
+                href={page.path}
+              >
+                {page.label}
+              </Link>
             </td>
           ))}
         </tr>
@@ -54,7 +117,22 @@ const ComponentGrid = () => {
                 color: router.asPath === page.path ? "#ffffff" : "#000000",
               }}
             >
-              {page.label}
+              <FontAwesomeIcon
+                icon={page.icon}
+                style={{
+                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                  marginRight: "8px",
+                }}
+              />
+              <Link
+                style={{
+                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                  textDecoration: "none",
+                }}
+                href={page.path}
+              >
+                {page.label}
+              </Link>
             </td>
           ))}
         </tr>

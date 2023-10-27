@@ -144,11 +144,11 @@ const FormDataProperties = () => {
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <ComponentInputSelectCitys
-            textState="Estado"
+            textState="Estado *"
             htmlForState="state"
             idState="state"
             nameState="state"
-            textCity="Cidade"
+            textCity="Cidade *"
             htmlForCity="city"
             idCity="city"
             nameCity="city"

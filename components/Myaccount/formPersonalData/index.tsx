@@ -57,7 +57,7 @@ const FormPersonalData = () => {
         <div className={styles.form_column}>
           <ComponentLabel
             htmlFor="nacionality"
-            text="Nacionalidade"
+            text="Nacionalidade *"
             className={styles.label}
           />
           <ComponentInputSelect
@@ -184,7 +184,7 @@ const FormPersonalData = () => {
         <div className={styles.form_column}>
           <ComponentLabel
             htmlFor="tel"
-            text="Telefone"
+            text="Telefone *"
             className={styles.label}
           />
           <ComponentInput
@@ -198,7 +198,7 @@ const FormPersonalData = () => {
         <div className={styles.form_column}>
           <ComponentLabel
             htmlFor="cel"
-            text="Celular"
+            text="Celular *"
             className={styles.label}
           />
           <ComponentInput
@@ -274,11 +274,11 @@ const FormPersonalData = () => {
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <ComponentInputSelectCitys
-            textState="Estado"
+            textState="Estado *"
             htmlForState="state"
             idState="state"
             nameState="state"
-            textCity="Cidade"
+            textCity="Cidade *"
             htmlForCity="city"
             idCity="city"
             nameCity="city"

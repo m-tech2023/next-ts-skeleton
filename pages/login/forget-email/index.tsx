@@ -15,10 +15,10 @@ const ForgetEmail = () => {
           lastText={styles.lastName}
         />
       </div>
-      <div className={styles.header}>
+      <div className={styles.container_header}>
         <ComponentHeader
           title="Recuperar e-mail"
-          subTitle="..."
+          subTitle="Digite seu celular de cadastro para receber um código de recuperação"
           classNameTitle={styles.title}
           classNameSubTitle={styles.sub_title}
         />
@@ -32,6 +32,7 @@ const ForgetEmail = () => {
               className={styles.label}
             />
             <LoginInput
+              required={true}
               type="tel"
               id="telefone"
               name="telefone"

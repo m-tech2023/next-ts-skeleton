@@ -1,6 +1,4 @@
 import styles from "../styles.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import LoginLabel from "@/components/LoginComponents/label";
 import LoginInput from "@/components/LoginComponents/input";
 import LoginButton from "@/components/LoginComponents/button";
@@ -18,7 +16,7 @@ const ForgetPassword = () => {
           lastText={styles.lastName}
         />
       </div>
-      <div className={styles.header}>
+      <div className={styles.container_header}>
         <ComponentHeader
           title="Esqueci minha senha"
           subTitle=" Digite o seu e-mail de cadastro para receber um link de recuperação de
@@ -36,6 +34,7 @@ const ForgetPassword = () => {
               className={styles.label}
             />
             <LoginInput
+              required={true}
               type="text"
               id="email"
               name="email"

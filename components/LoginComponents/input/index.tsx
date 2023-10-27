@@ -7,6 +7,7 @@ interface LoginInputProps {
   placeholder: string;
   value?: string;
   className?: string;
+  required: boolean;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 const LoginInput: React.FC<LoginInputProps> = ({
@@ -16,11 +17,13 @@ const LoginInput: React.FC<LoginInputProps> = ({
   name,
   placeholder,
   value,
+  required,
   onChange,
 }) => {
   return (
     <>
       <input
+        required={required}
         type={type}
         id={id}
         name={name}

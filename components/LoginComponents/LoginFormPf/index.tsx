@@ -4,63 +4,78 @@ import LoginLabel from "../label";
 import LoginInput from "../input";
 import Link from "next/link";
 import LoginButton from "../button";
-import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
-import jwt_decode from "jwt-decode";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
 
 const LoginFormPessoaFisica = () => {
+  const loginAcess = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      try {
+        const userInfo = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
+            headers: {
+              Authorization: `Bearer ${tokenResponse.access_token}`,
+            },
+          }
+        );
+        if (userInfo) {
+          const userData = userInfo.data;
+          console.log(userData);
+        } else {
+          console.log("Resposta vazia ou sem dados de usuário.");
+        }
+      } catch (error) {
+        console.error("Erro ao obter informações do usuário:", error);
+      }
+    },
+    onError: (error) => {
+      console.error("Erro ao fazer login com o Google:", error);
+    },
+  });
   return (
-    <GoogleOAuthProvider clientId="1091851264293-rjetgf1fetcv18aes1d9g2cu7ir1am53.apps.googleusercontent.com">
-      <form className={styles.form}>
-        <div className={styles.form_group}>
-          <LoginLabel
-            labelFor="email"
-            text="E-mail ou CPF"
-            className={styles.label}
-          />
-          <LoginInput
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Digite seu e-mail ou CPF"
-            className={styles.input}
-          />
-        </div>
-        <div className={styles.form_group}>
-          <LoginLabel
-            labelFor="password"
-            text="Senha"
-            className={styles.label}
-          />
-          <LoginInput
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Digite sua senha"
-            className={styles.input}
-          />
-        </div>
-        <div className={styles.forget_password}>
-          <Link href={"/login/forget-password"} className={styles.link}>
-            <p>Esqueci minha senha</p>
-          </Link>
-        </div>
-        <div className={styles.container_buttons}>
-          <LoginButton text="ENTRAR" className={styles.btn} type="submit" />
-          <GoogleLogin
-            width={450}
-            locale="pt-br"
-            size="large"
-            onSuccess={(credentialResponse) => {
-              const decoded = jwt_decode(credentialResponse.credential);
-              console.log(decoded);
-            }}
-            onError={() => {
-              console.log("Login Failed");
-            }}
-          />
-        </div>
-      </form>
-    </GoogleOAuthProvider>
+    <form className={styles.form}>
+      <div className={styles.form_group}>
+        <LoginLabel
+          labelFor="email"
+          text="E-mail ou CPF"
+          className={styles.label}
+        />
+        <LoginInput
+          required={true}
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Digite seu e-mail ou CPF"
+          className={styles.input}
+        />
+      </div>
+      <div className={styles.form_group}>
+        <LoginLabel labelFor="password" text="Senha" className={styles.label} />
+        <LoginInput
+          required={true}
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Digite sua senha"
+          className={styles.input}
+        />
+      </div>
+      <div className={styles.forget_password}>
+        <Link href={"/login/forget-password"} className={styles.link}>
+          <p>Esqueci minha senha</p>
+        </Link>
+      </div>
+      <div className={styles.container_buttons}>
+        <LoginButton text="ENTRAR" className={styles.btn} type="submit" />
+        <LoginButton
+          onClick={() => loginAcess()}
+          img="/google-icon.png"
+          text="ENTRAR COM O GOOGLE"
+          className={styles.btn_google}
+        />
+      </div>
+    </form>
   );
 };
 

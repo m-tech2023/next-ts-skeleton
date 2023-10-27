@@ -34,7 +34,7 @@ const Login = () => {
           lastText={styles.lastName}
         />
       </div>
-      <div className={styles.header}>
+      <div className={styles.container_header}>
         <ComponentHeader title="Login" classNameTitle={styles.title} />
       </div>
       <div className={styles.container_form}>
@@ -54,6 +54,16 @@ const Login = () => {
             classNameButton={styles.btn}
             onClick={() => handleFormSelection("estrangeiro")}
           />
+        </div>
+        <div className={styles.container_form_selected_mobile}>
+          <select
+            onChange={(e) => handleFormSelection(e.target.value)}
+            className={styles.select}
+          >
+            <option value="pessoaFisica">Pessoa Física</option>
+            <option value="pessoaJuridica">Pessoa Jurídica</option>
+            <option value="estrangeiro">Pessoa Estrangeira</option>
+          </select>
         </div>
         {renderForm()}
         <div className={styles.hr} />

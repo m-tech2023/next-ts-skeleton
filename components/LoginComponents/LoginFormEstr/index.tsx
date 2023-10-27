@@ -15,6 +15,7 @@ const LoginFormPessoaEstrangeira = () => {
           className={styles.label}
         />
         <LoginInput
+          required={true}
           type="text"
           id="email"
           name="email"
@@ -25,6 +26,7 @@ const LoginFormPessoaEstrangeira = () => {
       <div className={styles.form_group}>
         <LoginLabel labelFor="password" text="Senha" className={styles.label} />
         <LoginInput
+          required={true}
           type="password"
           id="password"
           name="password"

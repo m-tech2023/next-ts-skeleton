@@ -50,7 +50,7 @@ const Login = () => {
             onClick={() => handleFormSelection("pessoaJuridica")}
           />
           <LoginButton
-            text="Pessoa Estrangeira"
+            text="Estrangeiro"
             classNameButton={styles.btn}
             onClick={() => handleFormSelection("estrangeiro")}
           />

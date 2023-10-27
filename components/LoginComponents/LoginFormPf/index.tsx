@@ -71,7 +71,7 @@ const LoginFormPessoaFisica = () => {
         <LoginButton
           onClick={() => loginAcess()}
           img="/google-icon.png"
-          text="ENTRAR COM O GOOGLE"
+          text="ENTRAR COM GOOGLE"
           className={styles.btn_google}
         />
       </div>

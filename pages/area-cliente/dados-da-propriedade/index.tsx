@@ -1,7 +1,7 @@
 import styles from "../styles.module.scss";
-import ComponentHeader from "@/components/Myaccount/header";
+import ComponentHeader from "@/components/common/header";
 import ComponentGrid from "@/components/Myaccount/grid";
-import BreadCrumb from "@/components/Myaccount/breadcrumb";
+import BreadCrumb from "@/components/common/breadcrumb";
 import FormDataProperties from "@/components/Myaccount/formDataProperties";
 
 const DataProperties = () => {

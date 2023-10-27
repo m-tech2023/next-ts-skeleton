@@ -1,6 +1,6 @@
 import styles from "../styles.module.scss";
-import ComponentHeader from "@/components/Myaccount/header";
-import BreadCrumb from "@/components/Myaccount/breadcrumb";
+import ComponentHeader from "@/components/common/header";
+import BreadCrumb from "@/components/common/breadcrumb";
 import ComponentGrid from "@/components/Myaccount/grid";
 
 const LogsAcessPage = () => {

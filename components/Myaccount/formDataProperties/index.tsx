@@ -1,5 +1,5 @@
 import styles from "@/pages/area-cliente/styles.module.scss";
-import ComponentHeader from "../header";
+import ComponentHeader from "../../common/header";
 import ComponentLabel from "../label";
 import ComponentInput from "../inputs/input";
 import ComponentButton from "../button";

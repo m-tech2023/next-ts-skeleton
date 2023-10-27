@@ -1,6 +1,6 @@
 import styles from "@/pages/area-cliente/styles.module.scss";
 import ComponentButton from "../button";
-import ComponentHeader from "../header";
+import ComponentHeader from "../../common/header";
 import ComponentInput from "../inputs/input";
 import ComponentInputSelect, {
   estadoCivilOptions,

@@ -1,8 +1,8 @@
 import styles from "../styles.module.scss";
-import ComponentHeader from "@/components/Myaccount/header";
+import ComponentHeader from "@/components/common/header";
 import ComponentGrid from "@/components/Myaccount/grid";
 import FormPersonalData from "@/components/Myaccount/formPersonalData";
-import BreadCrumb from "@/components/Myaccount/breadcrumb";
+import BreadCrumb from "@/components/common/breadcrumb";
 const DataPersonalPage = () => {
   return (
     <div className={styles.container}>

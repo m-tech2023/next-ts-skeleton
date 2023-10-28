@@ -1,0 +1,240 @@
+@import "../../styles/fonts.scss";
+@import "../../styles/colors.scss";
+
+.container {
+  width: 100%;
+  height: 100%;
+  .container_breadcrumb {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+    padding: 30px 20px;
+    font-size: 14px;
+    .link {
+      text-decoration: none;
+      color: $black;
+      font-family: $font-secondary;
+      font-weight: 300;
+    }
+    .lastName {
+      font-weight: bold;
+    }
+    .icon {
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .container_header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 38px;
+    height: 100%;
+    text-align: center;
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 420px;
+      width: 100%;
+      font-family: $font-primary;
+      font-weight: bold;
+      color: $blue;
+      font-size: 38px;
+    }
+    .sub_title {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+  .container_form {
+    margin: 0 auto;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    .form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      .form_group {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        .label {
+          font-size: 14px;
+          font-weight: 700;
+          color: $blue;
+        }
+        .input {
+          width: 100%;
+          height: 50px;
+          border-radius: 5px;
+          padding: 0 5px;
+          border: 1px solid $grey;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .forget_password {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        width: 100%;
+        color: $blue_link;
+        .link {
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      .forget_email {
+        @extend .forget_password;
+        color: $light_black;
+      }
+      .container_buttons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 10px;
+        .btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 50px;
+          font-size: 14px;
+          background-color: $buttons_login;
+          border: 2px solid transparent;
+          border-radius: 5px;
+          box-shadow: 2px 2px 5px 0px $buttons_shadow;
+          cursor: pointer;
+          transition: all 0.5s;
+          button {
+            border: none;
+            background-color: transparent;
+            font-family: $font-secondary;
+            color: $white;
+          }
+          p {
+            margin: 0;
+          }
+          &:hover {
+            background-color: $buttons_hover;
+            transition: all 0.5s;
+          }
+        }
+        .btn_google {
+          @extend .btn;
+          gap: 20px;
+          background-color: $white;
+          button {
+            color: $black;
+          }
+          img {
+            width: 30px;
+          }
+          &:hover {
+            background-color: $white_smoke;
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
+    .container_form_selected {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+      margin-bottom: 30px;
+      .btn {
+        width: 100%;
+        border: none;
+        background-color: $buttons_login;
+        padding: 5px;
+        color: $white;
+        border-radius: 5px;
+      }
+    }
+    .container_form_selected_mobile {
+      display: none;
+    }
+  }
+  .hr {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    height: 1px;
+    background-color: $white_smoke;
+  }
+  .register {
+    text-align: center;
+    gap: 5px;
+    .link {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    .container_form {
+      .container_form_selected {
+        .btn {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 390px) {
+  .container {
+    .container_header {
+      .title {
+        font-size: 9vw;
+      }
+      .sub_title {
+        padding: 10px 5px;
+        font-size: 5vw;
+      }
+    }
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    .container_form {
+      .container_form_selected {
+        display: none;
+      }
+      .container_form_selected_mobile {
+        display: flex;
+        margin-bottom: 25px;
+        select {
+          border-radius: 5px;
+          padding: 2px;
+        }
+      }
+    }
+  }
+}

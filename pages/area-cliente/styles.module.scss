@@ -1,0 +1,205 @@
+@import "@/styles/colors.scss";
+@import "@/styles/fonts.scss";
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .container_header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $blue;
+    text-align: center;
+    p {
+      font-size: 20px;
+      margin: 0;
+      color: $buttons_login;
+      font-family: $font-secondary;
+    }
+    h2 {
+      font-size: 32px;
+      color: $white;
+      font-family: $font-primary;
+      font-weight: bold;
+    }
+  }
+  .container_breadcrumb {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+    padding: 30px 20px;
+    font-size: 14px;
+    .link {
+      text-decoration: none;
+      color: $black;
+      font-family: $font-secondary;
+      font-weight: 300;
+    }
+    .lastName {
+      font-weight: bold;
+    }
+    .icon {
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .container_grid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    table {
+      max-width: 520px;
+      width: 100%;
+      th {
+        text-align: center;
+        border: 1px solid $black;
+        padding: 12px;
+      }
+      td {
+        @extend th;
+      }
+    }
+  }
+  .container_data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .form {
+      width: 100%;
+      max-width: 520px;
+      padding: 0 10px;
+      .container_title {
+        display: flex;
+        align-items: center;
+        height: 70px;
+        margin-top: 40px;
+        color: $buttons_login;
+        h2 {
+          font-family: $font-secondary;
+          font-weight: 700;
+          font-size: 25px;
+        }
+      }
+      .form_group {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        .form_column {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .label {
+            font-size: 14px;
+            font-weight: 700;
+            color: $blue;
+            margin: 10px 0;
+          }
+          .input {
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            padding: 0 5px;
+            border: 1px solid $grey;
+            &:focus {
+              outline: none;
+            }
+          }
+          .input_double {
+            @extend .input;
+          }
+          .container_inputs_flex {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            .classNameContentFlex {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .btn {
+        margin: 30px 0;
+        width: 100%;
+        height: 50px;
+        background-color: $buttons_login;
+        color: $white;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        font-family: $font-secondary;
+        box-shadow: 2px 2px 5px 0px $buttons_shadow;
+        transition: all 0.5s;
+        &:hover {
+          background-color: $buttons_hover;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    .container_header {
+      p {
+        font-size: 19px;
+      }
+      h2 {
+        font-size: 26px;
+      }
+    }
+    .container_grid {
+      table {
+        th {
+          text-align: center;
+          border: 1px solid $black;
+          padding: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+    .container_data {
+      .form {
+        .container_title {
+          h2 {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    .container_breadcrumb {
+      padding: 30px 10px;
+      font-size: 12px;
+    }
+    .container_grid {
+      table {
+        th {
+          text-align: center;
+          border: 1px solid $black;
+          padding: 5px;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

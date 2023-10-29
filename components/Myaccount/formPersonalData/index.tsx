@@ -13,7 +13,7 @@ const FormPersonalData = () => {
   return (
     <form className={styles.form}>
       <div className={styles.container_title}>
-        <ComponentHeader text="Dados cadastrais" />
+        <ComponentHeader title="Dados cadastrais" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
@@ -162,7 +162,7 @@ const FormPersonalData = () => {
         </div>
       </div>
       <div className={styles.container_title}>
-        <ComponentHeader text="Dados de Contato" />
+        <ComponentHeader title="Dados de Contato" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
@@ -211,7 +211,7 @@ const FormPersonalData = () => {
         </div>
       </div>
       <div className={styles.container_title}>
-        <ComponentHeader text="Endereço" />
+        <ComponentHeader title="Endereço" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>

@@ -7,7 +7,7 @@ const DataAcessPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_header}>
-        <ComponentHeader title="Minha conta" text="Dados de acesso" />
+        <ComponentHeader title="Minha conta" subTitle="Dados de acesso" />
       </div>
       <div className={styles.container_breadcrumb}>
         <BreadCrumb

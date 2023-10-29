@@ -8,7 +8,7 @@ const DataProperties = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_header}>
-        <ComponentHeader title="Minha conta" text="Dados propriedade" />
+        <ComponentHeader title="Minha conta" subTitle="Dados propriedade" />
       </div>
       <div className={styles.container_breadcrumb}>
         <BreadCrumb

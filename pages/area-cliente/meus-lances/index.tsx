@@ -7,7 +7,7 @@ const MyBidsPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_header}>
-        <ComponentHeader title="Minha conta" text="Meus lances" />
+        <ComponentHeader title="Minha conta" subTitle="Meus lances" />
       </div>
       <div className={styles.container_breadcrumb}>
         <BreadCrumb

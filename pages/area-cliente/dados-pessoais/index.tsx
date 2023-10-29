@@ -7,7 +7,7 @@ const DataPersonalPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_header}>
-        <ComponentHeader title="Minha conta" text="Dados pessoais" />
+        <ComponentHeader title="Minha conta" subTitle="Dados pessoais" />
       </div>
       <div className={styles.container_breadcrumb}>
         <BreadCrumb

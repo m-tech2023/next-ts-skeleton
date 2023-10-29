@@ -7,7 +7,7 @@ const LogsAcessPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_header}>
-        <ComponentHeader title="Minha conta" text="Logs de acessos" />
+        <ComponentHeader title="Minha conta" subTitle="Logs de acessos" />
       </div>
       <div className={styles.container_breadcrumb}>
         <BreadCrumb

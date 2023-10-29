@@ -1,7 +1,7 @@
 interface ComponentHeaderProps {
   title: string;
   subTitle?: string;
-  classNameTitle: string;
+  classNameTitle?: string;
   classNameSubTitle?: string;
 }
 const ComponentHeader: React.FC<ComponentHeaderProps> = ({

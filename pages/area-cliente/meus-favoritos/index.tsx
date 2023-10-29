@@ -7,7 +7,7 @@ const MyFavoritePage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_header}>
-        <ComponentHeader title="Minha conta" text="Meus favoritos" />
+        <ComponentHeader title="Minha conta" subTitle="Meus favoritos" />
       </div>
       <div className={styles.container_breadcrumb}>
         <BreadCrumb

@@ -9,7 +9,7 @@ const FormDataProperties = () => {
   return (
     <form className={styles.form}>
       <div className={styles.container_title}>
-        <ComponentHeader text="Dados cadastrais" />
+        <ComponentHeader title="Dados cadastrais" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
@@ -28,7 +28,7 @@ const FormDataProperties = () => {
         </div>
       </div>
       <div className={styles.container_title}>
-        <ComponentHeader text="Dados de contato" />
+        <ComponentHeader title="Dados de contato" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
@@ -77,7 +77,7 @@ const FormDataProperties = () => {
         </div>
       </div>
       <div className={styles.container_title}>
-        <ComponentHeader text="Endereço" />
+        <ComponentHeader title="Endereço" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_group}>

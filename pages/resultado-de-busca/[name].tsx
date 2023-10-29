@@ -1,6 +1,6 @@
+import BreadCrumb from "@/components/Common/BreadCrumb";
+import Header from "@/components/Common/Header";
 import ComponentSearchInput from "@/components/SearchComponents/input";
-import BreadCrumb from "@/components/common/BreadCrumb";
-import ComponentHeader from "@/components/common/Header";
 import SearchService, { Pokemon } from "@/services/search/search.service";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -30,10 +30,7 @@ const SearchPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_breadcrumb}>
-        <BreadCrumb
-          className={styles.link}
-          classNameIcon={styles.icon}
-          lastText={styles.lastName}
+        <BreadCrumb lastText={styles.lastName}
         />
       </div>
       <div className={styles.container_input_search}>
@@ -46,7 +43,7 @@ const SearchPage = () => {
         />
       </div>
       <div className={styles.container_header}>
-        <ComponentHeader text={`Resultados para "${searchName}"`} />
+        <Header title={`Resultados para "${searchName}"`} />
       </div>
       <div className={styles.container_data}>
         {searchResult ? (

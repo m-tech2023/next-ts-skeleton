@@ -1,4 +1,4 @@
-import BreadCrumb from "@/components/BreadCrumb";
+import BreadCrumb from "@/components/Common/BreadCrumb";
 import Head from "next/head";
 
 const VendaSeuCavalo = () => {
@@ -8,7 +8,7 @@ const VendaSeuCavalo = () => {
           <title>Venda seu cavalo</title>
           <meta name="description" content="Venda seu cavalo na Opportunity Leilões" />
       </Head>
-      <BreadCrumb />
+      <BreadCrumb lastText="Venda seu cavalo" />
     </>
   );
 }

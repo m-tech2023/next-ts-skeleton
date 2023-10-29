@@ -1,5 +1,4 @@
 import styles from "@/pages/area-cliente/styles.module.scss";
-import ComponentHeader from "../../Common/Header";
 import ComponentButton from "../button";
 import ComponentInput from "../inputs/input";
 import ComponentInputSelect, {
@@ -13,7 +12,7 @@ const FormPersonalData = () => {
   return (
     <form className={styles.form}>
       <div className={styles.container_title}>
-        <ComponentHeader title="Dados cadastrais" />
+        <Header title="Dados cadastrais" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
@@ -162,7 +161,7 @@ const FormPersonalData = () => {
         </div>
       </div>
       <div className={styles.container_title}>
-        <ComponentHeader title="Dados de Contato" />
+        <Header title="Dados de Contato" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
@@ -211,7 +210,7 @@ const FormPersonalData = () => {
         </div>
       </div>
       <div className={styles.container_title}>
-        <ComponentHeader title="Endereço" />
+        <Header title="Endereço" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>

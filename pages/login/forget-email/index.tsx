@@ -1,8 +1,7 @@
+import BreadCrumb from "@/components/Common/BreadCrumb";
 import LoginButton from "@/components/LoginComponents/button";
 import LoginInput from "@/components/LoginComponents/input";
 import LoginLabel from "@/components/LoginComponents/label";
-import BreadCrumb from "@/components/common/BreadCrumb";
-import ComponentHeader from "@/components/common/Header";
 import styles from "../styles.module.scss";
 
 const ForgetEmail = () => {
@@ -16,7 +15,7 @@ const ForgetEmail = () => {
         />
       </div>
       <div className={styles.container_header}>
-        <ComponentHeader
+        <Header
           title="Recuperar e-mail"
           subTitle="Digite seu celular de cadastro para receber um código de recuperação"
           classNameTitle={styles.title}

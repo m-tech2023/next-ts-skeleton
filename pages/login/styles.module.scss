@@ -15,7 +15,7 @@
     .link {
       text-decoration: none;
       color: $black;
-      font-family: $font-secondary;
+      font-family: $font_secondary;
       font-weight: 300;
     }
     .lastName {
@@ -44,7 +44,7 @@
       align-items: center;
       max-width: 420px;
       width: 100%;
-      font-family: $font-primary;
+      font-family: $font_primary;
       font-weight: bold;
       color: $blue;
       font-size: 38px;
@@ -133,7 +133,6 @@
           button {
             border: none;
             background-color: transparent;
-            font-family: $font-secondary;
             color: $white;
           }
           p {

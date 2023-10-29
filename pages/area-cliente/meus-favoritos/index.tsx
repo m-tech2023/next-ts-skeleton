@@ -1,6 +1,6 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
 import Header from "@/components/Common/Header";
-import ComponentGrid from "@/components/Myaccount/grid";
+import ComponentGrid from "@/components/Myaccount/Grid";
 import styles from "../styles.module.scss";
 
 const MyFavoritePage = () => {

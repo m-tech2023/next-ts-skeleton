@@ -1,9 +1,9 @@
 import Header from "@/components/Common/Header";
 import styles from "@/pages/area-cliente/styles.module.scss";
-import ComponentButton from "../button";
+import ComponentButton from "../Button";
 import ComponentInput from "../inputs/input";
 import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
-import ComponentLabel from "../label";
+import ComponentLabel from "../Label";
 
 const FormDataProperties = () => {
   return (

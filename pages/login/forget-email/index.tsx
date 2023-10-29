@@ -1,7 +1,7 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
-import LoginButton from "@/components/LoginComponents/button";
-import LoginInput from "@/components/LoginComponents/input";
-import LoginLabel from "@/components/LoginComponents/label";
+import LoginButton from "@/components/LoginComponents/Button";
+import LoginInput from "@/components/LoginComponents/Input";
+import LoginLabel from "@/components/LoginComponents/Label";
 import styles from "../styles.module.scss";
 
 const ForgetEmail = () => {

@@ -1,12 +1,13 @@
 import styles from "@/pages/area-cliente/styles.module.scss";
-import ComponentButton from "../button";
+import ComponentButton from "../Button";
 import ComponentInput from "../inputs/input";
 import ComponentInputSelect, {
-    estadoCivilOptions,
-    nacionalityOptions,
+  estadoCivilOptions,
+  nacionalityOptions,
 } from "../inputs/inputSelect";
 import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
-import ComponentLabel from "../label";
+import ComponentLabel from "../Label";
+import Header from "@/components/Common/Header";
 
 const FormPersonalData = () => {
   return (

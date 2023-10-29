@@ -1,6 +1,6 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
 import Header from "@/components/Common/Header";
-import ComponentGrid from "@/components/Myaccount/grid";
+import ComponentGrid from "@/components/Myaccount/Grid";
 import styles from "../styles.module.scss";
 
 const DataAcessPage = () => {
@@ -10,7 +10,7 @@ const DataAcessPage = () => {
         <Header title="Minha conta" subTitle="Dados de acesso" />
       </div>
       <div className={styles.container_breadcrumb}>
-        <BreadCrumb lastText={styles.lastName}/>
+        <BreadCrumb lastText={styles.lastName} />
       </div>
       <div className={styles.container_grid}>
         <ComponentGrid />

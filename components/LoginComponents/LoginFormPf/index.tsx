@@ -1,9 +1,9 @@
 import styles from "../../../pages/login/styles.module.scss";
 import React from "react";
-import LoginLabel from "../label";
-import LoginInput from "../input";
+import LoginLabel from "../Label";
+import LoginInput from "../Input";
 import Link from "next/link";
-import LoginButton from "../button";
+import LoginButton from "../Button";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 

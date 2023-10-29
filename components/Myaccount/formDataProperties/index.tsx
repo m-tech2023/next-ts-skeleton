@@ -1,5 +1,5 @@
+import Header from "@/components/Common/Header";
 import styles from "@/pages/area-cliente/styles.module.scss";
-import ComponentHeader from "../../Common/Header";
 import ComponentButton from "../button";
 import ComponentInput from "../inputs/input";
 import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
@@ -9,7 +9,7 @@ const FormDataProperties = () => {
   return (
     <form className={styles.form}>
       <div className={styles.container_title}>
-        <ComponentHeader title="Dados cadastrais" />
+        <Header title="Dados cadastrais" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
@@ -28,7 +28,7 @@ const FormDataProperties = () => {
         </div>
       </div>
       <div className={styles.container_title}>
-        <ComponentHeader title="Dados de contato" />
+        <Header title="Dados de contato" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
@@ -77,7 +77,7 @@ const FormDataProperties = () => {
         </div>
       </div>
       <div className={styles.container_title}>
-        <ComponentHeader title="Endereço" />
+        <Header title="Endereço" />
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_group}>

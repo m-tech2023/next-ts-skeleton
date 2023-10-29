@@ -1,9 +1,9 @@
+import BreadCrumb from "@/components/Common/BreadCrumb";
+import Header from "@/components/Common/Header";
 import LoginFormPessoaEstrangeira from "@/components/LoginComponents/LoginFormEstr";
 import LoginFormPessoaFisica from "@/components/LoginComponents/LoginFormPf";
 import LoginFormPessoaJuridica from "@/components/LoginComponents/LoginFormPj";
 import LoginButton from "@/components/LoginComponents/button";
-import BreadCrumb from "@/components/common/BreadCrumb";
-import ComponentHeader from "@/components/common/Header";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./styles.module.scss";
@@ -28,14 +28,10 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_breadcrumb}>
-        <BreadCrumb
-          className={styles.link}
-          classNameIcon={styles.icon}
-          lastText={styles.lastName}
-        />
+        <BreadCrumb lastText={styles.lastName}/>
       </div>
       <div className={styles.container_header}>
-        <ComponentHeader title="Login" classNameTitle={styles.title} />
+        <Header title="Login" />
       </div>
       <div className={styles.container_form}>
         <div className={styles.container_form_selected}>

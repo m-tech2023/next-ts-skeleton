@@ -1,8 +1,8 @@
+import BreadCrumb from "@/components/Common/BreadCrumb";
+import Header from "@/components/Common/Header";
 import LoginButton from "@/components/LoginComponents/button";
 import LoginInput from "@/components/LoginComponents/input";
 import LoginLabel from "@/components/LoginComponents/label";
-import BreadCrumb from "@/components/common/BreadCrumb";
-import ComponentHeader from "@/components/common/Header";
 import Link from "next/link";
 import styles from "../styles.module.scss";
 
@@ -10,19 +10,13 @@ const ForgetPassword = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_breadcrumb}>
-        <BreadCrumb
-          className={styles.link}
-          classNameIcon={styles.icon}
-          lastText={styles.lastName}
-        />
+        <BreadCrumb lastText={styles.lastName} />
       </div>
       <div className={styles.container_header}>
-        <ComponentHeader
+        <Header
           title="Esqueci minha senha"
           subTitle=" Digite o seu e-mail de cadastro para receber um link de recuperação de
           senha, onde será possível alterar a sua senha."
-          classNameTitle={styles.title}
-          classNameSubTitle={styles.sub_title}
         />
       </div>
       <div className={styles.container_form}>

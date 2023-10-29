@@ -1,11 +1,10 @@
-import React from "react";
-import styles from "./styles.module.scss";
 import ComponentSearchInput from "@/components/SearchComponents/input";
-import BreadCrumb from "@/components/common/breadcrumb";
-import ComponentHeader from "@/components/common/header";
+import BreadCrumb from "@/components/common/BreadCrumb";
+import ComponentHeader from "@/components/common/Header";
+import SearchService, { Pokemon } from "@/services/search/search.service";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import SearchService, { Pokemon } from "@/services/search/search.service";
+import styles from "./styles.module.scss";
 
 const SearchPage = () => {
   const router = useRouter();

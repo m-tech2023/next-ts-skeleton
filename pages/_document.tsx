@@ -1,10 +1,9 @@
-import { Head, Html, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -12,12 +11,10 @@ export default function Document() {
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&family=Roboto:wght@300&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap"/>
       </Head>
       <body>
+        <Main />
         <NextScript />
       </body>
     </Html>

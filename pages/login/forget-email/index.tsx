@@ -1,9 +1,9 @@
-import styles from "../styles.module.scss";
-import LoginLabel from "@/components/LoginComponents/label";
-import LoginInput from "@/components/LoginComponents/input";
 import LoginButton from "@/components/LoginComponents/button";
-import BreadCrumb from "@/components/common/breadcrumb";
-import ComponentHeader from "@/components/common/header";
+import LoginInput from "@/components/LoginComponents/input";
+import LoginLabel from "@/components/LoginComponents/label";
+import BreadCrumb from "@/components/common/BreadCrumb";
+import ComponentHeader from "@/components/common/Header";
+import styles from "../styles.module.scss";
 
 const ForgetEmail = () => {
   return (

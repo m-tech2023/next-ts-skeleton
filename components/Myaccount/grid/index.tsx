@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./styles.module.scss";
 import { useRouter } from "next/router";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
@@ -46,98 +47,100 @@ const ComponentGrid = () => {
   ];
 
   return (
-    <table>
-      <tbody>
-        <tr>
-          {pages.slice(0, 2).map((page) => (
-            <td
-              key={page.path}
-              style={{
-                backgroundColor:
-                  router.asPath === page.path ? "#37406d" : "#ffffff",
-                color: router.asPath === page.path ? "#ffffff" : "#000000",
-                marginRight: "8px",
-              }}
-            >
-              <FontAwesomeIcon
-                icon={page.icon}
+    <div className={styles.container_grid}>
+      <table>
+        <tbody>
+          <tr>
+            {pages.slice(0, 2).map((page) => (
+              <td
+                key={page.path}
                 style={{
-                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                  backgroundColor:
+                    router.asPath === page.path ? "#37406d" : "#ffffff",
+                  color: router.asPath === page.path ? "#ffffff" : "#000000",
                   marginRight: "8px",
                 }}
-              />
-              <Link
-                style={{
-                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
-                  textDecoration: "none",
-                }}
-                href={page.path}
               >
-                {page.label}
-              </Link>
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {pages.slice(2, 4).map((page) => (
-            <td
-              key={page.path}
-              style={{
-                backgroundColor:
-                  router.asPath === page.path ? "#37406d" : "#ffffff",
-                color: router.asPath === page.path ? "#ffffff" : "#000000",
-              }}
-            >
-              <FontAwesomeIcon
-                icon={page.icon}
+                <FontAwesomeIcon
+                  icon={page.icon}
+                  style={{
+                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                    marginRight: "8px",
+                  }}
+                />
+                <Link
+                  style={{
+                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                    textDecoration: "none",
+                  }}
+                  href={page.path}
+                >
+                  {page.label}
+                </Link>
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {pages.slice(2, 4).map((page) => (
+              <td
+                key={page.path}
                 style={{
-                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
-                  marginRight: "8px",
+                  backgroundColor:
+                    router.asPath === page.path ? "#37406d" : "#ffffff",
+                  color: router.asPath === page.path ? "#ffffff" : "#000000",
                 }}
-              />
-              <Link
-                style={{
-                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
-                  textDecoration: "none",
-                }}
-                href={page.path}
               >
-                {page.label}
-              </Link>
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {pages.slice(4, 6).map((page) => (
-            <td
-              key={page.path}
-              style={{
-                backgroundColor:
-                  router.asPath === page.path ? "#37406d" : "#ffffff",
-                color: router.asPath === page.path ? "#ffffff" : "#000000",
-              }}
-            >
-              <FontAwesomeIcon
-                icon={page.icon}
+                <FontAwesomeIcon
+                  icon={page.icon}
+                  style={{
+                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                    marginRight: "8px",
+                  }}
+                />
+                <Link
+                  style={{
+                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                    textDecoration: "none",
+                  }}
+                  href={page.path}
+                >
+                  {page.label}
+                </Link>
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {pages.slice(4, 6).map((page) => (
+              <td
+                key={page.path}
                 style={{
-                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
-                  marginRight: "8px",
+                  backgroundColor:
+                    router.asPath === page.path ? "#37406d" : "#ffffff",
+                  color: router.asPath === page.path ? "#ffffff" : "#000000",
                 }}
-              />
-              <Link
-                style={{
-                  color: router.asPath === page.path ? "#ffffff" : "#37406d",
-                  textDecoration: "none",
-                }}
-                href={page.path}
               >
-                {page.label}
-              </Link>
-            </td>
-          ))}
-        </tr>
-      </tbody>
-    </table>
+                <FontAwesomeIcon
+                  icon={page.icon}
+                  style={{
+                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                    marginRight: "8px",
+                  }}
+                />
+                <Link
+                  style={{
+                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
+                    textDecoration: "none",
+                  }}
+                  href={page.path}
+                >
+                  {page.label}
+                </Link>
+              </td>
+            ))}
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 };
 

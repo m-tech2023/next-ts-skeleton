@@ -9,12 +9,8 @@ const LogsAcessPage = () => {
       <div className={styles.container_header}>
         <Header title="Minha conta" subTitle="Logs de acessos" />
       </div>
-      <div className={styles.container_breadcrumb}>
-        <BreadCrumb lastText={styles.lastName} />
-      </div>
-      <div className={styles.container_grid}>
-        <ComponentGrid />
-      </div>
+      <BreadCrumb lastText={styles.lastName} />
+      <ComponentGrid />
     </div>
   );
 };

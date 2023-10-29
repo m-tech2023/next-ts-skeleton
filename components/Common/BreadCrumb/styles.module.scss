@@ -1,0 +1,32 @@
+@import "@/styles/colors.scss";
+@import "@/styles/fonts.scss";
+
+
+.container_breadcrumb {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 5px;
+  padding: 30px 20px;
+  font-size: 14px;
+
+  .link {
+    color: $black;
+    font-family: 'Roboto', Arial;
+    font-weight: 300;
+  }
+
+  .lastName {
+    font-weight: bold;
+  }
+
+  .icon {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  
+  p {
+    margin: 0;
+  }
+}

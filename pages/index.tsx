@@ -13,7 +13,7 @@ const Home = () => {
       </Head>
       <h2>Home page</h2>
       <Link href="/about">
-        <FontAwesomeIcon icon={faCheck} className="fas fa-check"></FontAwesomeIcon> About Page
+        <FontAwesomeIcon icon={faCheck} className="fas fa-check"></FontAwesomeIcon> Home Page
       </Link>
     </>
   );

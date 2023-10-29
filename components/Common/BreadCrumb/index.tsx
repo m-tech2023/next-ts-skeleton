@@ -1,27 +1,24 @@
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import styles from './styles.module.scss';
 
 interface BreadCrumbProps {
-  className: string;
-  classNameIcon: string;
   lastText: string;
 }
 
 const BreadCrumb: React.FC<BreadCrumbProps> = ({
-  className,
-  classNameIcon,
   lastText,
 }) => {
   const router = useRouter();
   const pathnames = router.asPath.split("/").filter((x) => x);
 
   return (
-    <>
-      <Link href="/" className={className}>
+    <div className={styles.container_breadcrumb}>
+      <Link href="/">
         Home
-        <FontAwesomeIcon icon={faAngleRight} className={classNameIcon} />
+        <FontAwesomeIcon icon={faAngleRight} />
       </Link>
       {pathnames.map((pathname, index) => {
         const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
@@ -30,17 +27,17 @@ const BreadCrumb: React.FC<BreadCrumbProps> = ({
           <span key={pathname}>
             <Link
               href={routeTo}
-              className={`${className} ${isLast ? lastText : ""}`}
+              className={`${styles.link} ${isLast ? lastText : ""}`}
             >
               {pathname}
             </Link>
             {!isLast && (
-              <FontAwesomeIcon icon={faAngleRight} className={classNameIcon} />
+              <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />
             )}
           </span>
         );
       })}
-    </>
+    </div>
   );
 };
 export default BreadCrumb;

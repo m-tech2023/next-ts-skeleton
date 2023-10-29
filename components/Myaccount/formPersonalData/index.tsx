@@ -1,10 +1,10 @@
 import styles from "@/pages/area-cliente/styles.module.scss";
+import ComponentHeader from "../../Common/Header";
 import ComponentButton from "../button";
-import ComponentHeader from "../../common/header";
 import ComponentInput from "../inputs/input";
 import ComponentInputSelect, {
-  estadoCivilOptions,
-  nacionalityOptions,
+    estadoCivilOptions,
+    nacionalityOptions,
 } from "../inputs/inputSelect";
 import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
 import ComponentLabel from "../label";

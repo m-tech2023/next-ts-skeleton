@@ -1,7 +1,7 @@
-import styles from "../styles.module.scss";
-import ComponentHeader from "@/components/common/header";
 import ComponentGrid from "@/components/Myaccount/grid";
-import BreadCrumb from "@/components/common/breadcrumb";
+import BreadCrumb from "@/components/common/BreadCrumb";
+import ComponentHeader from "@/components/common/Header";
+import styles from "../styles.module.scss";
 
 const DataAcessPage = () => {
   return (

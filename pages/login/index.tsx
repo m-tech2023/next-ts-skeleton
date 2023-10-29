@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import styles from "./styles.module.scss";
-import Link from "next/link";
-import LoginFormPessoaFisica from "@/components/LoginComponents/LoginFormPf";
 import LoginFormPessoaEstrangeira from "@/components/LoginComponents/LoginFormEstr";
+import LoginFormPessoaFisica from "@/components/LoginComponents/LoginFormPf";
 import LoginFormPessoaJuridica from "@/components/LoginComponents/LoginFormPj";
 import LoginButton from "@/components/LoginComponents/button";
-import BreadCrumb from "@/components/common/breadcrumb";
-import ComponentHeader from "@/components/common/header";
+import BreadCrumb from "@/components/common/BreadCrumb";
+import ComponentHeader from "@/components/common/Header";
+import Link from "next/link";
+import { useState } from "react";
+import styles from "./styles.module.scss";
 
 const Login = () => {
   const [selectedForm, setSelectedForm] = useState("pessoaFisica");

@@ -1,8 +1,8 @@
-import styles from "../styles.module.scss";
-import ComponentHeader from "@/components/common/header";
-import ComponentGrid from "@/components/Myaccount/grid";
-import BreadCrumb from "@/components/common/breadcrumb";
 import FormDataProperties from "@/components/Myaccount/formDataProperties";
+import ComponentGrid from "@/components/Myaccount/grid";
+import BreadCrumb from "@/components/common/BreadCrumb";
+import ComponentHeader from "@/components/common/Header";
+import styles from "../styles.module.scss";
 
 const DataProperties = () => {
   return (

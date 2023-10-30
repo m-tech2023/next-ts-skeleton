@@ -1,4 +1,4 @@
-import styles from "../../../pages/gestor/mensagens/styles.module.scss";
+import styles from "../../../pages/gestor/cadastro-de-mensagens/styles.module.scss";
 import LoginInput from "@/components/LoginComponents/Input";
 import LoginLabel from "@/components/LoginComponents/Label";
 import ComponentButton from "@/components/Myaccount/Button";

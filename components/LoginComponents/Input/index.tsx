@@ -21,18 +21,16 @@ const LoginInput: React.FC<LoginInputProps> = ({
   onChange,
 }) => {
   return (
-    <>
-      <input
-        required={required}
-        type={type}
-        id={id}
-        name={name}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        className={className}
-      />
-    </>
+    <input
+      required={required}
+      type={type}
+      id={id}
+      name={name}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      className={className}
+    />
   );
 };
 export default LoginInput;

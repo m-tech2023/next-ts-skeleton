@@ -11,11 +11,9 @@ const LoginLabel: React.FC<LoginLabelProps> = ({
   className,
 }) => {
   return (
-    <>
-      <label htmlFor={labelFor} className={className}>
-        {text}
-      </label>
-    </>
+    <label htmlFor={labelFor} className={className}>
+      {text}
+    </label>
   );
 };
 export default LoginLabel;

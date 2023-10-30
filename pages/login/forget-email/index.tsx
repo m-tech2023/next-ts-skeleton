@@ -3,23 +3,16 @@ import LoginButton from "@/components/LoginComponents/Button";
 import LoginInput from "@/components/LoginComponents/Input";
 import LoginLabel from "@/components/LoginComponents/Label";
 import styles from "../styles.module.scss";
+import Header from "@/components/Common/Header";
 
 const ForgetEmail = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.container_breadcrumb}>
-        <BreadCrumb
-          className={styles.link}
-          classNameIcon={styles.icon}
-          lastText={styles.lastName}
-        />
-      </div>
-      <div className={styles.container_header}>
+      <BreadCrumb lastText={styles.lastName} />
+      <div className={styles.container_title}>
         <Header
           title="Recuperar e-mail"
           subTitle="Digite seu celular de cadastro para receber um código de recuperação"
-          classNameTitle={styles.title}
-          classNameSubTitle={styles.sub_title}
         />
       </div>
       <div className={styles.container_form}>

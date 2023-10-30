@@ -9,10 +9,8 @@ import styles from "../styles.module.scss";
 const ForgetPassword = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.container_breadcrumb}>
-        <BreadCrumb lastText={styles.lastName} />
-      </div>
-      <div className={styles.container_header}>
+      <BreadCrumb lastText={styles.lastName} />
+      <div className={styles.container_title}>
         <Header
           title="Esqueci minha senha"
           subTitle=" Digite o seu e-mail de cadastro para receber um link de recuperação de

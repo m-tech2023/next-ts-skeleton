@@ -7,7 +7,7 @@
   justify-content: left;
   align-items: center;
   gap: 5px;
-  padding: 30px 0px;
+  padding: 30px;
   font-size: 14px;
 
   .link {
@@ -17,8 +17,10 @@
     text-decoration: none;
   }
 
-  .lastName {
+  .lastText {
     font-weight: bold;
+    text-decoration: none;
+    color: $black;
   }
 
   .icon {

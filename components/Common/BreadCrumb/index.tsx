@@ -25,9 +25,9 @@ const BreadCrumb: React.FC<BreadCrumbProps> = ({ lastText }) => {
           <span key={pathname}>
             <Link
               href={routeTo}
-              className={`${styles.link} ${isLast ? lastText : ""}`}
+              className={`${styles.link} ${isLast ? styles.lastText : ""}`}
             >
-              {pathname}
+              {pathname.charAt(0).toUpperCase() + pathname.slice(1)}
             </Link>
             {!isLast && (
               <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />

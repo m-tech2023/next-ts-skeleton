@@ -1,13 +1,45 @@
 import styles from "../../../pages/login/styles.module.scss";
-import React from "react";
+import React, { FormEvent } from "react";
 import LoginLabel from "../Label";
 import LoginInput from "../Input";
 import Link from "next/link";
 import LoginButton from "../Button";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
+import authService from "@/services/auth/auth.service";
 
 const LoginFormPessoaFisica = () => {
+  const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const username = formData.get("username")!.toString();
+    const password = formData.get("password")!.toString();
+
+    const attributes = { username, password };
+
+    try {
+      const { status } = await authService.login(attributes);
+      if (status === 200 || status === 201) {
+        console.log("logado");
+      } else {
+        console.log("Algo deu errado no servidor. Tente novamente mais tarde.");
+      }
+    } catch (error) {
+      console.error("Erro ao efetuar o login:", error);
+
+      if (error.response) {
+        console.log(`Status de erro: ${error.response.status}`);
+        console.log(`Mensagem de erro: ${error.response.data.message}`);
+      } else if (error.message) {
+        console.log(`Erro: ${error.message}`);
+      } else {
+        console.log(
+          "Erro desconhecido. Verifique sua conexão e tente novamente."
+        );
+      }
+    }
+  };
+
   const loginAcess = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
@@ -34,18 +66,18 @@ const LoginFormPessoaFisica = () => {
     },
   });
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleLogin}>
       <div className={styles.form_group}>
         <LoginLabel
-          labelFor="email"
+          labelFor="username"
           text="E-mail ou CPF"
           className={styles.label}
         />
         <LoginInput
           required={true}
           type="text"
-          id="email"
-          name="email"
+          id="username"
+          name="username"
           placeholder="Digite seu e-mail ou CPF"
           className={styles.input}
         />

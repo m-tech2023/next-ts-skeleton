@@ -1,13 +1,13 @@
 import styles from "../FormDataProperties/styles.module.scss";
-import ComponentButton from "../Button";
-import ComponentInput from "../inputs/input";
+import ComponentButton from "../../Button";
+import ComponentInput from "../../Inputs/input";
 import ComponentInputSelect, {
   estadoCivilOptions,
   nacionalityOptions,
-} from "../inputs/inputSelect";
-import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
-import ComponentLabel from "../Label";
-import Title from "../Title";
+} from "../../Inputs/inputSelect";
+import ComponentInputSelectCitys from "../../Inputs/inputSelectCitys";
+import ComponentLabel from "../../Label";
+import Title from "../../Title";
 
 const FormPersonalData = () => {
   return (

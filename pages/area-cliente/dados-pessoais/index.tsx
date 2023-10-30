@@ -1,6 +1,6 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
 import Header from "@/components/Common/Header";
-import FormPersonalData from "@/components/Myaccount/FormPersonalData";
+import FormPersonalData from "@/components/Myaccount/Forms/FormPersonalData";
 import ComponentGrid from "@/components/Myaccount/Grid";
 import styles from "../styles.module.scss";
 const DataPersonalPage = () => {

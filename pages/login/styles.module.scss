@@ -2,8 +2,13 @@
 @import "../../styles/colors.scss";
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   .container_breadcrumb {
     width: 100%;
     display: flex;
@@ -28,9 +33,6 @@
     p {
       margin: 0;
     }
-  }
-  .container_title {
-    margin-bottom: 20px;
   }
   .container_form {
     margin: 0 auto;
@@ -125,6 +127,7 @@
           @extend .btn;
           gap: 20px;
           background-color: $white;
+          font-family: $font_secondary;
           button {
             color: $black;
           }

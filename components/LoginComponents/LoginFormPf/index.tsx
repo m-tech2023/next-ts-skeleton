@@ -1,7 +1,5 @@
 import styles from "../../../pages/login/styles.module.scss";
 import React, { FormEvent } from "react";
-import LoginLabel from "../Label";
-import LoginInput from "../Input";
 import Link from "next/link";
 import LoginButton from "../Button";
 import { useGoogleLogin } from "@react-oauth/google";
@@ -10,6 +8,9 @@ import authService from "@/services/auth/auth.service";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { SET_USER_TOKEN } from "@/store/user/action-types";
+import Label from "@/components/Common/Label";
+import Input from "@/components/Common/Input";
+import Button from "@/components/Common/Button";
 
 const LoginFormPessoaFisica = () => {
   const router = useRouter();
@@ -79,12 +80,12 @@ const LoginFormPessoaFisica = () => {
   return (
     <form className={styles.form} onSubmit={handleLogin}>
       <div className={styles.form_group}>
-        <LoginLabel
+        <Label
           labelFor="username"
           text="E-mail ou CPF"
           className={styles.label}
         />
-        <LoginInput
+        <Input
           required={true}
           type="text"
           id="username"
@@ -94,8 +95,8 @@ const LoginFormPessoaFisica = () => {
         />
       </div>
       <div className={styles.form_group}>
-        <LoginLabel labelFor="password" text="Senha" className={styles.label} />
-        <LoginInput
+        <Label labelFor="password" text="Senha" className={styles.label} />
+        <Input
           required={true}
           type="password"
           id="password"
@@ -110,7 +111,7 @@ const LoginFormPessoaFisica = () => {
         </Link>
       </div>
       <div className={styles.container_buttons}>
-        <LoginButton text="ENTRAR" className={styles.btn} type="submit" />
+        <Button text="ENTRAR" className={styles.btn} type="submit" />
         <LoginButton
           onClick={() => loginAcess()}
           img="/google-icon.png"

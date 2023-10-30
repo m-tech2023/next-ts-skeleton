@@ -1,13 +1,13 @@
 import styles from "../../../pages/login/styles.module.scss";
 import React, { FormEvent } from "react";
-import LoginLabel from "../Label";
-import LoginInput from "../Input";
 import Link from "next/link";
-import LoginButton from "../Button";
 import authService from "@/services/auth/auth.service";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { SET_USER_TOKEN } from "@/store/user/action-types";
+import Label from "@/components/Common/Label";
+import Input from "@/components/Common/Input";
+import Button from "@/components/Common/Button";
 
 const LoginFormPessoaJuridica = () => {
   const router = useRouter();
@@ -52,12 +52,12 @@ const LoginFormPessoaJuridica = () => {
   return (
     <form className={styles.form} onSubmit={handleLogin}>
       <div className={styles.form_group}>
-        <LoginLabel
+        <Label
           labelFor="email"
           text="E-mail ou CNPJ"
           className={styles.label}
         />
-        <LoginInput
+        <Input
           required={true}
           type="text"
           id="email"
@@ -67,8 +67,8 @@ const LoginFormPessoaJuridica = () => {
         />
       </div>
       <div className={styles.form_group}>
-        <LoginLabel labelFor="password" text="Senha" className={styles.label} />
-        <LoginInput
+        <Label labelFor="password" text="Senha" className={styles.label} />
+        <Input
           required={true}
           type="password"
           id="password"
@@ -83,7 +83,7 @@ const LoginFormPessoaJuridica = () => {
         </Link>
       </div>
       <div className={styles.container_buttons}>
-        <LoginButton text="ENTRAR" className={styles.btn} type="submit" />
+        <Button text="ENTRAR" className={styles.btn} type="submit" />
       </div>
     </form>
   );

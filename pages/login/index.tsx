@@ -28,9 +28,7 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <BreadCrumb lastText={styles.lastName} />
-      <div className={styles.container_title}>
-        <Header title="Login" />
-      </div>
+      <Header title="Login" />
       <div className={styles.container_form}>
         <div className={styles.container_form_selected}>
           <LoginButton

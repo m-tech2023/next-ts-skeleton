@@ -1,0 +1,16 @@
+/* Header.scss */
+
+.header {
+  background-color:  #37406d;
+
+ .links{
+  margin-top: 40px;
+  .link{
+    background-color: #37406d;
+    color: #fff !important;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+}
+}

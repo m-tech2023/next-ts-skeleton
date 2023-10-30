@@ -1,0 +1,9 @@
+@import "@/styles/colors.scss";
+
+.bgPrimary {
+  background-color: $buttons_login;
+}
+
+.bgPrimary:hover {
+  background-color: $buttons_hover;
+}

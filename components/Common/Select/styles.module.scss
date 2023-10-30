@@ -1,0 +1,12 @@
+@import "@/styles/colors.scss";
+
+.select {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0 5px;
+  border: 1px solid $grey;
+  &:focus {
+    outline: none;
+  }
+}

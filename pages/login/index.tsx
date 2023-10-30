@@ -27,10 +27,8 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.container_breadcrumb}>
-        <BreadCrumb lastText={styles.lastName} />
-      </div>
-      <div className={styles.container_header}>
+      <BreadCrumb lastText={styles.lastName} />
+      <div className={styles.container_title}>
         <Header title="Login" />
       </div>
       <div className={styles.container_form}>

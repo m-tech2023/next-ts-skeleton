@@ -7,7 +7,6 @@ import LoginButton from "../Button";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import authService from "@/services/auth/auth.service";
-import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 
 const LoginFormPessoaFisica = () => {

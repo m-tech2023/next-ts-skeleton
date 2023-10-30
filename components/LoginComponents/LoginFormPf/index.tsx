@@ -8,9 +8,12 @@ import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import authService from "@/services/auth/auth.service";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { SET_USER_TOKEN } from "@/store/user/action-types";
 
 const LoginFormPessoaFisica = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,6 +27,10 @@ const LoginFormPessoaFisica = () => {
       const { status } = await authService.login(attributes);
       if (status === 200 || status === 201) {
         console.log("logado");
+        dispatch({
+          type: SET_USER_TOKEN,
+          payload: sessionStorage.getItem("opportunity-token"),
+        });
         router.push("/area-cliente/dados-pessoais");
       } else {
         console.log("Algo deu errado no servidor. Tente novamente mais tarde.");

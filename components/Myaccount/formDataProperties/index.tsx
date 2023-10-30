@@ -1,16 +1,14 @@
-import Header from "@/components/Common/Header";
-import styles from "@/pages/area-cliente/styles.module.scss";
+import styles from "./styles.module.scss";
 import ComponentButton from "../Button";
 import ComponentInput from "../inputs/input";
 import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
 import ComponentLabel from "../Label";
+import Title from "../Title";
 
 const FormDataProperties = () => {
   return (
     <form className={styles.form}>
-      <div className={styles.container_title}>
-        <Header title="Dados cadastrais" />
-      </div>
+      <Title title="Dados cadastrais" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <ComponentLabel
@@ -27,9 +25,7 @@ const FormDataProperties = () => {
           />
         </div>
       </div>
-      <div className={styles.container_title}>
-        <Header title="Dados de contato" />
-      </div>
+      <Title title="Dados de contato" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <ComponentLabel
@@ -76,9 +72,7 @@ const FormDataProperties = () => {
           />
         </div>
       </div>
-      <div className={styles.container_title}>
-        <Header title="Endereço" />
-      </div>
+      <Title title="Endereço" />
       <div className={styles.form_group}>
         <div className={styles.form_group}>
           <div className={styles.form_column}>

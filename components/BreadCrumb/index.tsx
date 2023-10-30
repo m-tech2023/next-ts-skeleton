@@ -8,6 +8,7 @@ const BreadCrumb = () => {
   const pathParts = pathName.split('/').filter(part => part !== '').map((each) => {
     each === 'about' && spanContent.push('Sobre');
     each === 'contact' && spanContent.push('Contato')
+    each === 'pre-registration' && spanContent.push('Cadastre-se')
   })
 
   return (

@@ -8,24 +8,84 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  gap: 20px;
-  .container_buttons {
-    width: 100%;
+  .form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    .buttons {
+    gap: 10px;
+    max-width: 420px;
+    width: 100%;
+    height: 100%;
+    .form_group {
       width: 100%;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: left;
+      align-items: left;
       gap: 10px;
-
-      .btn {
-        max-width: 120px;
-        padding: 5px 10px;
+      .input {
+        max-width: 40px;
+        border-radius: 5px;
+        border: 1px solid $black;
+        text-align: center;
+        &:focus {
+          outline: none;
+        }
+      }
+      .textarea {
+        @extend .input;
+        max-width: 100%;
+        text-align: left;
+        padding: 5px;
+        min-height: 180px;
+        height: 100%;
+      }
+      .label {
+        font-size: 20px;
+        color: $buttons_login;
+        font-family: $font_secondary;
+      }
+    }
+    .form_group_text_area {
+      @extend .form_group;
+      flex-direction: column;
+    }
+    .container_buttons {
+      margin: 15px 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .buttons {
         width: 100%;
-        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        .btn {
+          padding: 5px 10px;
+          width: 100%;
+          margin-bottom: 10px;
+          border: 1px solid $black;
+          border-radius: 5px;
+          transition: all 0.4s;
+          &:hover {
+            transition: all 0.4s;
+            transform: scale(95%);
+            background-color: $white_smoke;
+          }
+        }
+      }
+    }
+    .btn_submit {
+      width: 100%;
+      height: 45px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      background-color: $buttons_login;
+      color: $white;
+      transition: all 0.4s;
+      &:hover {
+        transition: all 0.4s;
+        background-color: $buttons_hover;
       }
     }
   }

@@ -1,4 +1,4 @@
-import styles from "@/pages/area-cliente/styles.module.scss";
+import styles from "../FormDataProperties/styles.module.scss";
 import ComponentButton from "../Button";
 import ComponentInput from "../inputs/input";
 import ComponentInputSelect, {
@@ -7,14 +7,12 @@ import ComponentInputSelect, {
 } from "../inputs/inputSelect";
 import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
 import ComponentLabel from "../Label";
-import Header from "@/components/Common/Header";
+import Title from "../Title";
 
 const FormPersonalData = () => {
   return (
     <form className={styles.form}>
-      <div className={styles.container_title}>
-        <Header title="Dados cadastrais" />
-      </div>
+      <Title title="Dados cadastrais" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <ComponentLabel
@@ -161,9 +159,7 @@ const FormPersonalData = () => {
           />
         </div>
       </div>
-      <div className={styles.container_title}>
-        <Header title="Dados de Contato" />
-      </div>
+      <Title title="Dados de Contato" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <ComponentLabel
@@ -210,9 +206,7 @@ const FormPersonalData = () => {
           />
         </div>
       </div>
-      <div className={styles.container_title}>
-        <Header title="Endereço" />
-      </div>
+      <Title title="Endereço" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <ComponentLabel htmlFor="cep" text="CEP" className={styles.label} />

@@ -69,6 +69,7 @@ const LoginFormPessoaFisica = () => {
       console.error("Erro ao fazer login com o Google:", error);
     },
   });
+
   return (
     <form className={styles.form} onSubmit={handleLogin}>
       <div className={styles.form_group}>

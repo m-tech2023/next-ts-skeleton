@@ -5,7 +5,7 @@ const BreadCrumb = () => {
   const spanContent = [];
   const router = useRouter();
   const pathName = router.pathname;  
-  const pathParts = pathName.split('/').filter(part => part !== '').map((each) => {
+  pathName.split('/').filter(part => part !== '').map((each) => {
     each === 'about' && spanContent.push('Sobre');
     each === 'contact' && spanContent.push('Contato')
     each === 'pre-registration' && spanContent.push('Cadastre-se')

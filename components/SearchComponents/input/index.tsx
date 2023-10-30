@@ -1,3 +1,4 @@
+import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState, FormEvent } from "react";
@@ -5,18 +6,12 @@ import { useRouter } from "next/router";
 
 interface ComponentSearchProps {
   type: string;
-  placeholder: string;
-  className: string;
-  classNameIcon: string;
-  classNameForm: string;
+  placeholder?: string;
 }
 
 const ComponentSearchInput: React.FC<ComponentSearchProps> = ({
   type,
   placeholder,
-  className,
-  classNameIcon,
-  classNameForm,
 }) => {
   const router = useRouter();
   const [searchName, setSearchName] = useState("");
@@ -28,8 +23,8 @@ const ComponentSearchInput: React.FC<ComponentSearchProps> = ({
   };
 
   return (
-    <>
-      <form className={classNameForm} onSubmit={handleSearch}>
+    <div className={styles.container_input_search}>
+      <form className={styles.form} onSubmit={handleSearch}>
         <input
           value={searchName}
           onChange={(e) => {
@@ -37,15 +32,15 @@ const ComponentSearchInput: React.FC<ComponentSearchProps> = ({
           }}
           type={type}
           placeholder={placeholder}
-          className={className}
+          className={styles.input}
         />
         <FontAwesomeIcon
           onClick={handleSearch}
           icon={faMagnifyingGlass}
-          className={classNameIcon}
+          className={styles.icon}
         />
       </form>
-    </>
+    </div>
   );
 };
 export default ComponentSearchInput;

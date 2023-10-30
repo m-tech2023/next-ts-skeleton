@@ -32,15 +32,7 @@ const SearchPage = () => {
       <div className={styles.container_breadcrumb}>
         <BreadCrumb lastText={styles.lastName} />
       </div>
-      <div className={styles.container_input_search}>
-        <ComponentSearchInput
-          classNameForm={styles.form}
-          className={styles.input}
-          classNameIcon={styles.icon}
-          placeholder="Digite aqui..."
-          type="text"
-        />
-      </div>
+      <ComponentSearchInput placeholder="Digite aqui..." type="text" />
       <div className={styles.container_header}>
         <Header title={`Resultados para "${searchName}"`} />
       </div>

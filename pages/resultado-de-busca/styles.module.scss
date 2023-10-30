@@ -10,27 +10,8 @@
   align-items: center;
   .container_breadcrumb {
     width: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 5px;
-    padding: 30px 20px;
-    font-size: 14px;
-    .link {
-      text-decoration: none;
-      color: $black;
-      font-family: $font_secondary;
-      font-weight: 300;
-    }
     .lastName {
       font-weight: bold;
-    }
-    .icon {
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-    p {
-      margin: 0;
     }
   }
   .container_header {
@@ -40,46 +21,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    h2 {
-      font-size: 32px;
-      color: $blue;
-      font-family: $font_secondary;
-      font-weight: bold;
-    }
-  }
-  .container_input_search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    .form {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      padding: 0 10px;
-      .input {
-        max-width: 420px;
-        width: 100%;
-        height: 50px;
-        border: 1px solid $light_black;
-        padding: 0 5px;
-        border-radius: 5px;
-        &:focus {
-          outline: none;
-        }
-      }
-      .icon {
-        margin-left: -8px;
-        padding: 12px;
-        font-size: 26px;
-        background-color: $blue;
-        color: $white;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        cursor: pointer;
-      }
-    }
   }
   .container_data {
     img {

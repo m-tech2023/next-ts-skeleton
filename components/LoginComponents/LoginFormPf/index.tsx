@@ -1,7 +1,6 @@
 import styles from "../../../pages/login/styles.module.scss";
 import React, { FormEvent } from "react";
 import Link from "next/link";
-import LoginButton from "../Button";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import authService from "@/services/auth/auth.service";
@@ -10,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { SET_USER_TOKEN } from "@/store/user/action-types";
 import Label from "@/components/Common/Label";
 import Input from "@/components/Common/Input";
+import ButtonGoogle from "../ButtonGoogle";
 import Button from "@/components/Common/Button";
 
 const LoginFormPessoaFisica = () => {
@@ -28,14 +28,11 @@ const LoginFormPessoaFisica = () => {
       const { status } = await authService.login(attributes);
       if (status === 200 || status === 201) {
         console.log("logado");
-<<<<<<< HEAD
         dispatch({
           type: SET_USER_TOKEN,
           payload: sessionStorage.getItem("opportunity-token"),
         });
         router.push("/area-cliente/dados-pessoais");
-=======
->>>>>>> feat: inserido auth service e handleLogin em PF
       } else {
         console.log("Algo deu errado no servidor. Tente novamente mais tarde.");
       }
@@ -54,10 +51,6 @@ const LoginFormPessoaFisica = () => {
       }
     }
   };
-<<<<<<< HEAD
-=======
-
->>>>>>> feat: inserido auth service e handleLogin em PF
   const loginAcess = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
@@ -87,11 +80,7 @@ const LoginFormPessoaFisica = () => {
   return (
     <form className={styles.form} onSubmit={handleLogin}>
       <div className={styles.form_group}>
-<<<<<<< HEAD
         <Label
-=======
-        <LoginLabel
->>>>>>> feat: inserido auth service e handleLogin em PF
           labelFor="username"
           text="E-mail ou CPF"
           className={styles.label}
@@ -123,7 +112,7 @@ const LoginFormPessoaFisica = () => {
       </div>
       <div className={styles.container_buttons}>
         <Button text="ENTRAR" className={styles.btn} type="submit" />
-        <LoginButton
+        <ButtonGoogle
           onClick={() => loginAcess()}
           img="/google-icon.png"
           text="ENTRAR COM GOOGLE"

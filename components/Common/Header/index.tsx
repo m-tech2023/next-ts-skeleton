@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <div className={styles.container_header}>
-      <h2 className={styles.title}>{title}</h2>
+      <h1 className={styles.title}>{title}</h1>
       <p className={styles.subtitle}>{subTitle}</p>
     </div>
   );

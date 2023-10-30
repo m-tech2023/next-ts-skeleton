@@ -10,7 +10,7 @@ interface BreadCrumbProps {
 
 const BreadCrumb: React.FC<BreadCrumbProps> = ({ lastText }) => {
   const router = useRouter();
-  const pathnames = router.asPath.split("/").filter((x) => x);
+  const pathNames = router.asPath.split("/").filter((x) => x);
 
   return (
     <div className={styles.container_breadcrumb}>
@@ -18,16 +18,16 @@ const BreadCrumb: React.FC<BreadCrumbProps> = ({ lastText }) => {
         Home
         <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />
       </Link>
-      {pathnames.map((pathname, index) => {
-        const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
-        const isLast = index === pathnames.length - 1;
+      {pathNames.map((pathname, index) => {
+        const routeTo = `/${pathNames.slice(0, index + 1).join("/")}`;
+        const isLast = index === pathNames.length - 1;
         return (
           <span key={pathname}>
             <Link
               href={routeTo}
-              className={`${styles.link} ${isLast ? lastText : ""}`}
+              className="fw-bold text-dark text-decoration-none"
             >
-              {pathname}
+              {pathname.charAt(0).toUpperCase() + pathname.slice(1).toLocaleLowerCase().replaceAll('-', ' ')}
             </Link>
             {!isLast && (
               <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />

@@ -1,8 +1,12 @@
+import Footer from "@/components/Common/Footer";
+import Navbar from "@/components/Common/Navbar";
+
 const DefaultLayout = ({ children }) => {
   return (
     <div>
-      <h1>Default Layout</h1>
-      {children}
+      <Navbar />
+        {children}
+      <Footer />
     </div>
   );
 };

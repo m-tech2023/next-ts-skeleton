@@ -1,4 +1,5 @@
 import styles from "../FormDataProperties/styles.module.scss";
+<<<<<<< HEAD:components/Myaccount/Forms/FormPersonalData/index.tsx
 import ComponentButton from "../../Button";
 import ComponentInput from "../../Inputs/input";
 import ComponentInputSelect, {
@@ -8,6 +9,17 @@ import ComponentInputSelect, {
 import ComponentInputSelectCitys from "../../Inputs/inputSelectCitys";
 import ComponentLabel from "../../Label";
 import Title from "../../Title";
+=======
+import ComponentButton from "../Button";
+import ComponentInput from "../inputs/input";
+import ComponentInputSelect, {
+  estadoCivilOptions,
+  nacionalityOptions,
+} from "../inputs/inputSelect";
+import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
+import ComponentLabel from "../Label";
+import Title from "../Title";
+>>>>>>> feat: isolamento de componentes myaccount:components/Myaccount/formPersonalData/index.tsx
 
 const FormPersonalData = () => {
   return (

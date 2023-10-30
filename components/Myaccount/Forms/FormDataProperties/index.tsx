@@ -1,9 +1,17 @@
 import styles from "./styles.module.scss";
+<<<<<<< HEAD:components/Myaccount/Forms/FormDataProperties/index.tsx
 import ComponentButton from "../../Button";
 import ComponentInput from "../../Inputs/input";
 import ComponentInputSelectCitys from "../../Inputs/inputSelectCitys";
 import ComponentLabel from "../../Label";
 import Title from "../../Title";
+=======
+import ComponentButton from "../Button";
+import ComponentInput from "../inputs/input";
+import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
+import ComponentLabel from "../Label";
+import Title from "../Title";
+>>>>>>> feat: isolamento de componentes myaccount:components/Myaccount/formDataProperties/index.tsx
 
 const FormDataProperties = () => {
   return (

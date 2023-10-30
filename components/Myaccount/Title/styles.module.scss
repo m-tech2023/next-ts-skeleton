@@ -1,0 +1,15 @@
+@import "@/styles/colors.scss";
+@import "@/styles/fonts.scss";
+
+.container_title {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  margin-top: 40px;
+  color: $buttons_login;
+  h2 {
+    font-family: $font_secondary;
+    font-weight: 700;
+    font-size: 25px;
+  }
+}

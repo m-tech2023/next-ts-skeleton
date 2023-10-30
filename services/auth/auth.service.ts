@@ -9,12 +9,16 @@ const authService = {
   login: async (attributes: Login) => {
     try {
       const res = await api.post("/auth/login", attributes);
+
       if (res.status === 201 || res.status === 200) {
         sessionStorage.setItem("opportunity-token", res.data.token);
+        return res.data;
+      } else {
+        throw new Error(`Falha na autenticação. Status: ${res.status}`);
       }
-      return res;
     } catch (error) {
-      console.log(error);
+      console.error("Erro durante a autenticação:", error);
+      throw error;
     }
   },
 };

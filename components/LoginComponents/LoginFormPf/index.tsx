@@ -7,8 +7,12 @@ import LoginButton from "../Button";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import authService from "@/services/auth/auth.service";
+import { useDispatch } from "react-redux";
+import { useRouter } from "next/router";
 
 const LoginFormPessoaFisica = () => {
+  const router = useRouter();
+
   const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -21,6 +25,7 @@ const LoginFormPessoaFisica = () => {
       const { status } = await authService.login(attributes);
       if (status === 200 || status === 201) {
         console.log("logado");
+        router.push("/area-cliente/dados-pessoais");
       } else {
         console.log("Algo deu errado no servidor. Tente novamente mais tarde.");
       }
@@ -39,7 +44,6 @@ const LoginFormPessoaFisica = () => {
       }
     }
   };
-
   const loginAcess = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {

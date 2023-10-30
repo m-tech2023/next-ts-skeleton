@@ -11,8 +11,8 @@ const authService = {
       const res = await api.post("/auth/login", attributes);
 
       if (res.status === 201 || res.status === 200) {
-        sessionStorage.setItem("opportunity-token", res.data.token);
-        return res.data;
+        sessionStorage.setItem("opportunity-token", res.data.access_token);
+        return res;
       } else {
         throw new Error(`Falha na autenticação. Status: ${res.status}`);
       }

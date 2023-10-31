@@ -2,6 +2,7 @@
 @import "@/styles/fonts.scss";
 
 .container {
+  margin: 70px 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -18,41 +19,14 @@
     background-color: $blue;
     text-align: center;
     p {
-      font-size: 21px;
+      font-size: 20px;
       margin: 0;
       color: $buttons_login;
       font-family: $font_secondary;
     }
-    h2 {
-      font-size: 32px;
+    h1 {
+      text-align: center;
       color: $white;
-      font-family: $font_primary;
-      font-weight: bold;
-    }
-  }
-  .container_breadcrumb {
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 5px;
-    padding: 30px 20px;
-    font-size: 14px;
-    .link {
-      text-decoration: none;
-      color: $black;
-      font-family: $font_secondary;
-      font-weight: 300;
-    }
-    .lastName {
-      font-weight: bold;
-    }
-    .icon {
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-    p {
-      margin: 0;
     }
   }
   .container_data {

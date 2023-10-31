@@ -1,0 +1,77 @@
+.custom-carousel-control-prev, .custom-carousel-control-next {
+  position: inherit !important;
+}
+.carouselContainer {
+  width: 100%;
+  
+  position: relative;
+  
+  //max-width: 600px;
+  .carousel {
+    display: flex;
+    transition: transform 0.3s;
+  }
+
+.carouselCard {
+  min-width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: none;
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+
+  }
+  .controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .controlButton {
+    width: 30px;  
+    
+    border-radius: 100%;
+    cursor: pointer;
+  }
+
+  .buttonIndicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .indicator {
+    width: 15px;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .activeIndicator {
+    background-color: #000;
+  }
+
+
+
+  
+  
+  .prevButton{
+    left: 0;
+  }
+  
+  .nextButton {
+    right: 0;
+  }
+
+
+
+
+
+

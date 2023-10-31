@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import Menu from '../Menu';
-import ModalLang from './Modal';
+import ModalLang from '../Modal';
 
 
 function Navbar() {
@@ -32,7 +32,7 @@ function Navbar() {
   return (
     <div>
       <ModalLang />
-      <nav className="navbar fixed-top shadow bg-body-tertiary rounded-0">
+      <nav className="navbar fixed-top shadow bg-body-tertiary rounded-0 py-0">
         <div className="container">
           <span className="navbar-brand">
             <Image
@@ -55,15 +55,15 @@ function Navbar() {
           </span>
 
           <span className="navbar-brand">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto py-1 mb-lg-0">
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle">
+                <a data-bs-toggle="modal"
+                  data-bs-target="#exampleModal" 
+                  role="button"
+                  className="nav-link dropdown-toggle">
                   <Image
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
                     src={LOGO_BRAZIL}
                     alt="Opportunity Logo"
-                    role="button"
                     width={24}
                     height={24}
                   />
@@ -77,9 +77,11 @@ function Navbar() {
               href="/login"
               style={{ color: '#37406D' }}
             >
-              Entrar ou
-              <br />
-              cadastrar
+             <small>
+                Entrar ou
+                  <br />
+                cadastrar
+             </small>
             </Link>
           </span>
 

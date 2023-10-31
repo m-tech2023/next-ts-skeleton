@@ -1,7 +1,9 @@
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Auctions from "@/components/Common/Auctions";
+import Card from "@/components/Common/Card";
+import CardContato from "@/components/Common/CardContato";
+import CardsHome from "@/components/Common/CardHome";
+import ControlledCarousel from "@/components/Common/ControlledCarousel";
 import Head from "next/head";
-import Link from "next/link";
 
 const Home = () => {
   return (
@@ -10,11 +12,19 @@ const Home = () => {
           <title>Home page</title>
           <meta name="description" content="Home page content description" />
       </Head>
-      <h2>Home page</h2>
-      <Link href="/about">
-        <FontAwesomeIcon icon={faCheck} className="fas fa-check"></FontAwesomeIcon> Home Page
-      </Link>
+      
+
+     <ControlledCarousel/>
+
+     <Auctions/>
+
+     <CardsHome/>
+
+     <Card/>
+
+     <CardContato/>
     </>
+
   );
 }
 

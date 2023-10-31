@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface LoginButtonProps {
   text: string;
   className?: string;
@@ -18,7 +20,7 @@ const LoginButton: React.FC<LoginButtonProps> = ({
 }) => {
   return (
     <div className={className}>
-      <img src={img} alt={alt} />
+      <Image src={img} alt={alt} />
       <button className={classNameButton} onClick={onClick} type={type}>
         {text}
       </button>

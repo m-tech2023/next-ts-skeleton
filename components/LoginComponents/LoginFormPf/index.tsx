@@ -1,7 +1,6 @@
 import styles from "../../../pages/login/styles.module.scss";
 import React, { FormEvent } from "react";
 import Link from "next/link";
-import LoginButton from "../Button";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import authService from "@/services/auth/auth.service";
@@ -10,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { SET_USER_TOKEN } from "@/store/user/action-types";
 import Label from "@/components/Common/Label";
 import Input from "@/components/Common/Input";
+import ButtonGoogle from "../ButtonGoogle";
 import Button from "@/components/Common/Button";
 
 const LoginFormPessoaFisica = () => {
@@ -112,7 +112,7 @@ const LoginFormPessoaFisica = () => {
       </div>
       <div className={styles.container_buttons}>
         <Button text="ENTRAR" className={styles.btn} type="submit" />
-        <LoginButton
+        <ButtonGoogle
           onClick={() => loginAcess()}
           img="/google-icon.png"
           text="ENTRAR COM GOOGLE"

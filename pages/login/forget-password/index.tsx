@@ -1,10 +1,10 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
 import Header from "@/components/Common/Header";
-import LoginButton from "@/components/LoginComponents/Button";
-import LoginInput from "@/components/LoginComponents/Input";
-import LoginLabel from "@/components/LoginComponents/Label";
 import Link from "next/link";
 import styles from "../styles.module.scss";
+import Label from "@/components/Common/Label";
+import Input from "@/components/Common/Input";
+import Button from "@/components/Common/Button";
 
 const ForgetPassword = () => {
   return (
@@ -18,12 +18,12 @@ const ForgetPassword = () => {
       <div className={styles.container_form}>
         <form className={styles.form}>
           <div className={styles.form_group}>
-            <LoginLabel
+            <Label
               labelFor="email"
               text="E-mail de cadastro"
               className={styles.label}
             />
-            <LoginInput
+            <Input
               required={true}
               type="text"
               id="email"
@@ -41,7 +41,7 @@ const ForgetPassword = () => {
             </p>
           </div>
           <div className={styles.container_buttons}>
-            <LoginButton text="ENVIAR" className={styles.btn} />
+            <Button text="ENVIAR" className={styles.btn} />
           </div>
         </form>
       </div>

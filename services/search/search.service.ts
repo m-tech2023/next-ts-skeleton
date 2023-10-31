@@ -1,4 +1,4 @@
-import createApi from "@/boot/api";
+import axios from "axios";
 
 export type Pokemon = {
   id?: number;
@@ -11,6 +11,11 @@ export type Pokemon = {
       };
     };
   };
+};
+
+const createApi = (endpoint: string) => {
+  const baseURL = `https://pokeapi.co/api/v2/${endpoint}`;
+  return axios.create({ baseURL });
 };
 
 const SearchService = {

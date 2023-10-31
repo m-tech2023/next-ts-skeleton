@@ -29,9 +29,7 @@ const SearchPage = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.container_breadcrumb}>
-        <BreadCrumb lastText={styles.lastName} />
-      </div>
+      <BreadCrumb lastText={styles.lastName} />
       <ComponentSearchInput placeholder="Digite aqui..." type="text" />
       <div className={styles.container_header}>
         <Header title={`Resultados para "${searchName}"`} />

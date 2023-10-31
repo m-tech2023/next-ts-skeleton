@@ -9,10 +9,12 @@ const ForgetEmail = () => {
   return (
     <div className={styles.container}>
       <BreadCrumb lastText={styles.lastName} />
-      <Header
-        title="Recuperar e-mail"
-        subTitle="Digite seu celular de cadastro para receber um código de recuperação"
-      />
+      <div className={styles.container_header}>
+        <Header
+          title="Recuperar e-mail"
+          subTitle="Digite seu celular de cadastro para receber um código de recuperação"
+        />
+      </div>
       <div className={styles.container_form}>
         <form className={styles.form}>
           <div className={styles.form_group}>

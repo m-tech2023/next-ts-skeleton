@@ -18,10 +18,10 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
 }) => {
   return (
-    <button 
-      disabled={disabled} 
-      className={`btn btn-lg btn-block w-100 text-white shadow-sm ${styles.bgPrimary}`} 
-      onClick={onClick} 
+    <button
+      disabled={disabled}
+      className={`${className} btn btn-lg btn-block w-100 text-white shadow-sm ${styles.bgPrimary}`}
+      onClick={onClick}
       type={type}
     >
       {text}

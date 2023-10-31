@@ -2,57 +2,15 @@
 @import "../../styles/colors.scss";
 
 .container {
+  margin: 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  .container_breadcrumb {
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 5px;
-    padding: 30px 20px;
-    font-size: 14px;
-    .link {
-      text-decoration: none;
-      color: $black;
-      font-family: $font_secondary;
-      font-weight: 300;
-    }
-    .lastName {
-      font-weight: bold;
-    }
-    .icon {
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-    p {
-      margin: 0;
-    }
-  }
   .container_header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 38px;
-    height: 100%;
-    text-align: center;
-    .title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 420px;
-      width: 100%;
-      font-family: $font_primary;
-      font-weight: bold;
-      color: $blue;
-      font-size: 38px;
-    }
-    .sub_title {
-      text-align: center;
-      padding: 10px;
-    }
+    height: 120px;
   }
   .container_form {
     margin: 0 auto;
@@ -147,6 +105,7 @@
           @extend .btn;
           gap: 20px;
           background-color: $white;
+          font-family: $font_secondary;
           button {
             color: $black;
           }
@@ -170,10 +129,17 @@
       .btn {
         width: 100%;
         border: none;
+        height: 35px;
         background-color: $buttons_login;
         padding: 5px;
         color: $white;
         border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.4s;
+        &:hover {
+          background-color: $buttons_hover;
+          transition: all 0.4s;
+        }
       }
     }
     .container_form_selected_mobile {

@@ -3,10 +3,10 @@ import Header from "@/components/Common/Header";
 import LoginFormPessoaEstrangeira from "@/components/LoginComponents/LoginFormEstr";
 import LoginFormPessoaFisica from "@/components/LoginComponents/LoginFormPf";
 import LoginFormPessoaJuridica from "@/components/LoginComponents/LoginFormPj";
-import LoginButton from "@/components/LoginComponents/Button";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./styles.module.scss";
+import Button from "@/components/Common/Button";
 
 const Login = () => {
   const [selectedForm, setSelectedForm] = useState("pessoaFisica");
@@ -27,27 +27,23 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.container_breadcrumb}>
-        <BreadCrumb lastText={styles.lastName} />
-      </div>
-      <div className={styles.container_header}>
-        <Header title="Login" />
-      </div>
+      <BreadCrumb lastText={styles.lastName} />
+      <Header title="Login" />
       <div className={styles.container_form}>
         <div className={styles.container_form_selected}>
-          <LoginButton
+          <Button
             text="Pessoa Física"
-            classNameButton={styles.btn}
+            className={styles.btn}
             onClick={() => handleFormSelection("pessoaFisica")}
           />
-          <LoginButton
+          <Button
             text="Pessoa Jurídica"
-            classNameButton={styles.btn}
+            className={styles.btn}
             onClick={() => handleFormSelection("pessoaJuridica")}
           />
-          <LoginButton
+          <Button
             text="Estrangeiro"
-            classNameButton={styles.btn}
+            className={styles.btn}
             onClick={() => handleFormSelection("estrangeiro")}
           />
         </div>

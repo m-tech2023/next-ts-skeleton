@@ -27,7 +27,8 @@ const BreadCrumb: React.FC<BreadCrumbProps> = ({ lastText }) => {
               href={routeTo}
               className="fw-bold text-dark text-decoration-none"
             >
-              {pathname.charAt(0).toUpperCase() + pathname.slice(1).toLocaleLowerCase().replaceAll('-', ' ')}
+              {pathname.charAt(0).toUpperCase() +
+                pathname.slice(1).toLocaleLowerCase().replaceAll("-", " ")}
             </Link>
             {!isLast && (
               <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />

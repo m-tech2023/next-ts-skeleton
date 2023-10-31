@@ -1,4 +1,4 @@
-interface LoginButtonProps {
+interface ButtonGoogleProps {
   text: string;
   className?: string;
   img?: string;
@@ -7,7 +7,7 @@ interface LoginButtonProps {
   onClick?: () => void;
   classNameButton?: string;
 }
-const LoginButton: React.FC<LoginButtonProps> = ({
+const ButtonGoogle: React.FC<ButtonGoogleProps> = ({
   text,
   className,
   classNameButton,
@@ -25,4 +25,4 @@ const LoginButton: React.FC<LoginButtonProps> = ({
     </div>
   );
 };
-export default LoginButton;
+export default ButtonGoogle;

@@ -1,9 +1,9 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
-import LoginButton from "@/components/LoginComponents/Button";
-import LoginInput from "@/components/LoginComponents/Input";
-import LoginLabel from "@/components/LoginComponents/Label";
 import styles from "../styles.module.scss";
 import Header from "@/components/Common/Header";
+import Label from "@/components/Common/Label";
+import Input from "@/components/Common/Input";
+import Button from "@/components/Common/Button";
 
 const ForgetEmail = () => {
   return (
@@ -16,12 +16,12 @@ const ForgetEmail = () => {
       <div className={styles.container_form}>
         <form className={styles.form}>
           <div className={styles.form_group}>
-            <LoginLabel
+            <Label
               labelFor="telefone"
               text="Celular de cadastro"
               className={styles.label}
             />
-            <LoginInput
+            <Input
               required={true}
               type="tel"
               id="telefone"
@@ -31,7 +31,7 @@ const ForgetEmail = () => {
             />
           </div>
           <div className={styles.container_buttons}>
-            <LoginButton text="ENVIAR" className={styles.btn} />
+            <Button text="ENVIAR" className={styles.btn} />
           </div>
         </form>
       </div>

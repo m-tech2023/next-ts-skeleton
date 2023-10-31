@@ -1,6 +1,6 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
 import Header from "@/components/Common/Header";
-import FormDataProperties from "@/components/Myaccount/FormDataProperties";
+import FormDataProperties from "@/components/Myaccount/Forms/FormDataProperties";
 import ComponentGrid from "@/components/Myaccount/Grid";
 import styles from "../styles.module.scss";
 

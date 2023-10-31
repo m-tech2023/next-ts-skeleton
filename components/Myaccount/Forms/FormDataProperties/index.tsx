@@ -1,24 +1,22 @@
-import Header from "@/components/Common/Header";
-import styles from "@/pages/area-cliente/styles.module.scss";
-import ComponentButton from "../Button";
-import ComponentInput from "../inputs/input";
-import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
-import ComponentLabel from "../Label";
+import styles from "./styles.module.scss";
+import ComponentInputSelectCitys from "../../Inputs/inputSelectCitys";
+import Title from "../../Title";
+import Label from "@/components/Common/Label";
+import Input from "@/components/Common/Input";
+import Button from "@/components/Common/Button";
 
 const FormDataProperties = () => {
   return (
     <form className={styles.form}>
-      <div className={styles.container_title}>
-        <Header title="Dados cadastrais" />
-      </div>
+      <Title title="Dados cadastrais" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="name"
+          <Label
+            labelFor="name"
             text="Nome da Fazenda / Haras"
             className={styles.label}
           />
-          <ComponentInput
+          <Input
             type="text"
             id="name"
             name="name"
@@ -27,17 +25,11 @@ const FormDataProperties = () => {
           />
         </div>
       </div>
-      <div className={styles.container_title}>
-        <Header title="Dados de contato" />
-      </div>
+      <Title title="Dados de contato" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="email"
-            text="E-mail"
-            className={styles.label}
-          />
-          <ComponentInput
+          <Label labelFor="email" text="E-mail" className={styles.label} />
+          <Input
             type="email"
             id="email"
             name="email"
@@ -48,12 +40,8 @@ const FormDataProperties = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="tel"
-            text="Telefone *"
-            className={styles.label}
-          />
-          <ComponentInput
+          <Label labelFor="tel" text="Telefone *" className={styles.label} />
+          <Input
             type="tel"
             id="tel"
             name="tel"
@@ -62,12 +50,8 @@ const FormDataProperties = () => {
           />
         </div>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="cel"
-            text="Celular *"
-            className={styles.label}
-          />
-          <ComponentInput
+          <Label labelFor="cel" text="Celular *" className={styles.label} />
+          <Input
             type="tel"
             id="cel"
             name="cel"
@@ -76,14 +60,12 @@ const FormDataProperties = () => {
           />
         </div>
       </div>
-      <div className={styles.container_title}>
-        <Header title="Endereço" />
-      </div>
+      <Title title="Endereço" />
       <div className={styles.form_group}>
         <div className={styles.form_group}>
           <div className={styles.form_column}>
-            <ComponentLabel htmlFor="cep" text="CEP" className={styles.label} />
-            <ComponentInput
+            <Label labelFor="cep" text="CEP" className={styles.label} />
+            <Input
               type="text"
               id="cep"
               name="cep"
@@ -96,12 +78,12 @@ const FormDataProperties = () => {
       <div className={styles.form_group}>
         <div className={styles.form_group}>
           <div className={styles.form_column}>
-            <ComponentLabel
-              htmlFor="address"
+            <Label
+              labelFor="address"
               text="Endereço"
               className={styles.label}
             />
-            <ComponentInput
+            <Input
               type="address"
               id="address"
               name="address"
@@ -110,12 +92,12 @@ const FormDataProperties = () => {
             />
           </div>
           <div className={styles.form_column}>
-            <ComponentLabel
-              htmlFor="numberAddress"
+            <Label
+              labelFor="numberAddress"
               text="Número"
               className={styles.label}
             />
-            <ComponentInput
+            <Input
               type="text"
               id="numberAddress"
               name="numberAddress"
@@ -127,12 +109,12 @@ const FormDataProperties = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="neighborhood"
+          <Label
+            labelFor="neighborhood"
             text="Bairro"
             className={styles.label}
           />
-          <ComponentInput
+          <Input
             type="address"
             id="neighborhood"
             name="neighborhood"
@@ -159,7 +141,9 @@ const FormDataProperties = () => {
           />
         </div>
       </div>
-      <ComponentButton type="submit" text="SALVAR" className={styles.btn} />
+      <div className={styles.container_btn}>
+        <Button type="submit" text="SALVAR" />
+      </div>
     </form>
   );
 };

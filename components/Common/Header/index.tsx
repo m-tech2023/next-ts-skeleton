@@ -5,10 +5,7 @@ interface HeaderProps {
   subTitle?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({
-  title,
-  subTitle,
-}) => {
+const Header: React.FC<HeaderProps> = ({ title, subTitle }) => {
   return (
     <div className={styles.container_header}>
       <h1 className={styles.title}>{title}</h1>

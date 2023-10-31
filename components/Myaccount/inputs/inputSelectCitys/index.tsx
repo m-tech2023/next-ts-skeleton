@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ComponentLabel from "../../Label";
+import Label from "@/components/Common/Label";
 
 interface ComponentInputSelectCitysProps {
   className: string;
@@ -69,8 +69,8 @@ const ComponentInputSelectCitys: React.FC<ComponentInputSelectCitysProps> = ({
   return (
     <div className={classNameFlex}>
       <div className={classNameContentFlex}>
-        <ComponentLabel
-          htmlFor={htmlForState}
+        <Label
+          labelFor={htmlForState}
           text={textState}
           className={classNameLabel}
         />
@@ -90,8 +90,8 @@ const ComponentInputSelectCitys: React.FC<ComponentInputSelectCitysProps> = ({
         </select>
       </div>
       <div className={classNameContentFlex}>
-        <ComponentLabel
-          htmlFor={htmlForCity}
+        <Label
+          labelFor={htmlForCity}
           text={textCity}
           className={classNameLabel}
         />

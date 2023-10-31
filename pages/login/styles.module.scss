@@ -129,10 +129,17 @@
       .btn {
         width: 100%;
         border: none;
+        height: 35px;
         background-color: $buttons_login;
         padding: 5px;
         color: $white;
         border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.4s;
+        &:hover {
+          background-color: $buttons_hover;
+          transition: all 0.4s;
+        }
       }
     }
     .container_form_selected_mobile {

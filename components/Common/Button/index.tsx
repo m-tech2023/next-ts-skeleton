@@ -8,6 +8,7 @@ interface ButtonProps {
   disabled?: boolean;
   type?: "submit" | "reset";
   onClick?: () => void;
+  onChange?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -16,6 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   type,
   disabled,
   onClick,
+  onChange,
 }) => {
   return (
     <button

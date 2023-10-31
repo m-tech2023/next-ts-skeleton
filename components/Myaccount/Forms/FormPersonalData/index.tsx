@@ -1,25 +1,13 @@
 import styles from "../FormDataProperties/styles.module.scss";
-<<<<<<< HEAD:components/Myaccount/Forms/FormPersonalData/index.tsx
-import ComponentButton from "../../Button";
-import ComponentInput from "../../Inputs/input";
 import ComponentInputSelect, {
   estadoCivilOptions,
   nacionalityOptions,
 } from "../../Inputs/inputSelect";
 import ComponentInputSelectCitys from "../../Inputs/inputSelectCitys";
-import ComponentLabel from "../../Label";
 import Title from "../../Title";
-=======
-import ComponentButton from "../Button";
-import ComponentInput from "../inputs/input";
-import ComponentInputSelect, {
-  estadoCivilOptions,
-  nacionalityOptions,
-} from "../inputs/inputSelect";
-import ComponentInputSelectCitys from "../inputs/inputSelectCitys";
-import ComponentLabel from "../Label";
-import Title from "../Title";
->>>>>>> feat: isolamento de componentes myaccount:components/Myaccount/formPersonalData/index.tsx
+import Label from "@/components/Common/Label";
+import Input from "@/components/Common/Input";
+import Button from "@/components/Common/Button";
 
 const FormPersonalData = () => {
   return (
@@ -27,12 +15,12 @@ const FormPersonalData = () => {
       <Title title="Dados cadastrais" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="name"
+          <Label
+            labelFor="name"
             text="Nome completo"
             className={styles.label}
           />
-          <ComponentInput
+          <Input
             type="text"
             id="name"
             name="name"
@@ -43,8 +31,8 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel htmlFor="cpf" text="CPF" className={styles.label} />
-          <ComponentInput
+          <Label labelFor="cpf" text="CPF" className={styles.label} />
+          <Input
             type="text"
             id="cpf"
             name="cpf"
@@ -53,8 +41,8 @@ const FormPersonalData = () => {
           />
         </div>
         <div className={styles.form_column}>
-          <ComponentLabel htmlFor="rg" text="RG" className={styles.label} />
-          <ComponentInput
+          <Label labelFor="rg" text="RG" className={styles.label} />
+          <Input
             type="text"
             id="rg"
             name="rg"
@@ -65,8 +53,8 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="nacionality"
+          <Label
+            labelFor="nacionality"
             text="Nacionalidade *"
             className={styles.label}
           />
@@ -78,8 +66,8 @@ const FormPersonalData = () => {
           />
         </div>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="civil"
+          <Label
+            labelFor="civil"
             text="Estado civil"
             className={styles.label}
           />
@@ -93,12 +81,12 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="nameFather"
+          <Label
+            labelFor="nameFather"
             text="Nome do pai"
             className={styles.label}
           />
-          <ComponentInput
+          <Input
             type="text"
             id="nameFather"
             name="nameFather"
@@ -109,12 +97,12 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="nameMother"
+          <Label
+            labelFor="nameMother"
             text="Nome da Mãe"
             className={styles.label}
           />
-          <ComponentInput
+          <Input
             type="text"
             id="nameMother"
             name="nameMother"
@@ -125,12 +113,12 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="profession"
+          <Label
+            labelFor="profession"
             text="Profissão"
             className={styles.label}
           />
-          <ComponentInput
+          <Input
             type="text"
             id="profession"
             name="profession"
@@ -141,12 +129,8 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="empress"
-            text="Empressa"
-            className={styles.label}
-          />
-          <ComponentInput
+          <Label labelFor="empress" text="Empressa" className={styles.label} />
+          <Input
             type="empress"
             id="empress"
             name="empress"
@@ -157,12 +141,12 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="site"
+          <Label
+            labelFor="site"
             text="Site da empresa"
             className={styles.label}
           />
-          <ComponentInput
+          <Input
             type="text"
             id="site"
             name="site"
@@ -174,12 +158,8 @@ const FormPersonalData = () => {
       <Title title="Dados de Contato" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="email"
-            text="E-mail"
-            className={styles.label}
-          />
-          <ComponentInput
+          <Label labelFor="email" text="E-mail" className={styles.label} />
+          <Input
             type="text"
             id="email"
             name="email"
@@ -190,12 +170,8 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="tel"
-            text="Telefone *"
-            className={styles.label}
-          />
-          <ComponentInput
+          <Label labelFor="tel" text="Telefone *" className={styles.label} />
+          <Input
             type="tel"
             id="tel"
             name="tel"
@@ -204,12 +180,8 @@ const FormPersonalData = () => {
           />
         </div>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="cel"
-            text="Celular *"
-            className={styles.label}
-          />
-          <ComponentInput
+          <Label labelFor="cel" text="Celular *" className={styles.label} />
+          <Input
             type="tel"
             id="cel"
             name="cel"
@@ -221,8 +193,8 @@ const FormPersonalData = () => {
       <Title title="Endereço" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel htmlFor="cep" text="CEP" className={styles.label} />
-          <ComponentInput
+          <Label labelFor="cep" text="CEP" className={styles.label} />
+          <Input
             type="text"
             id="cep"
             name="cep"
@@ -233,12 +205,8 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="address"
-            text="Endereço"
-            className={styles.label}
-          />
-          <ComponentInput
+          <Label labelFor="address" text="Endereço" className={styles.label} />
+          <Input
             type="text"
             id="address"
             name="address"
@@ -247,12 +215,12 @@ const FormPersonalData = () => {
           />
         </div>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="addressNumber"
+          <Label
+            labelFor="addressNumber"
             text="Número"
             className={styles.label}
           />
-          <ComponentInput
+          <Input
             type="text"
             id="addressNumber"
             name="addressNumber"
@@ -263,12 +231,12 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentLabel
-            htmlFor="neighborhood"
+          <Label
+            labelFor="neighborhood"
             text="Bairro"
             className={styles.label}
           />
-          <ComponentInput
+          <Input
             type="text"
             id="neighborhood"
             name="neighborhood"
@@ -295,7 +263,9 @@ const FormPersonalData = () => {
           />
         </div>
       </div>
-      <ComponentButton type="submit" text="SALVAR" className={styles.btn} />
+      <div className={styles.container_btn}>
+        <Button type="submit" text="SALVAR" />
+      </div>
     </form>
   );
 };

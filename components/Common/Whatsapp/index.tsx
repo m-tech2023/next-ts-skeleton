@@ -8,7 +8,7 @@ import send from "@/public/whatsapp-send.png";
 import logo from "@/public/opportunity-icon.png";
 import Input from "../Input";
 import Image from "next/image";
-import InputMask from "react-input-mask";
+import { InputMask } from "primereact/inputmask";
 
 const Whatsapp = () => {
   const [open, setOpen] = useState(false);
@@ -100,16 +100,15 @@ const Whatsapp = () => {
         <div className={styles.container_footer}>
           <Input
             className={styles.input}
-            id=""
-            name=""
+            id="name"
+            name="name"
             placeholder="Nome"
           ></Input>
           <InputMask
-            mask="(99) 99999-9999"
-            maskChar=""
+            mask="(99) 999-9999"
             className={styles.input}
-            id=""
-            name=""
+            id="tel"
+            name="tel"
             placeholder="(DD)0000-0000"
           ></InputMask>
           <Image

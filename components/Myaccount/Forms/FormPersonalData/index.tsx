@@ -1,43 +1,139 @@
 import styles from "../FormDataProperties/styles.module.scss";
-import ComponentInputSelect, {
-  estadoCivilOptions,
-  nacionalityOptions,
-} from "../../Inputs/inputSelect";
-import ComponentInputSelectCitys from "../../Inputs/inputSelectCitys";
 import Title from "../../Title";
 import Label from "@/components/Common/Label";
 import Input from "@/components/Common/Input";
 import Button from "@/components/Common/Button";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/types/user";
+import userService, { UserUpdate } from "@/services/user/user.service";
+import { FormEvent, useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { SET_USER_DETAILS } from "@/store/user/action-types";
 
 const FormPersonalData = () => {
+  const dispatch = useDispatch();
+  const userDetails = useSelector((state: RootState) => state.user.userDetails);
+  const [attributes, setAttributes] = useState<UserUpdate>({
+    registrationData: {
+      fullName: "",
+      document: {
+        cpf: "",
+        rg: "",
+        cnpj: "",
+        passport: "",
+        ie: "",
+      },
+      nationality: "",
+      maritalStatus: "",
+      motherName: "",
+      fatherName: "",
+      occupation: "",
+      company: "",
+      companyWebsite: "",
+    },
+    contactDetails: {
+      email: "",
+      telephone: "",
+      cellPhone: "",
+    },
+    address: {
+      zipCode: "",
+      address: "",
+      number: "",
+      neighborhood: "",
+      city: "",
+      state: "",
+    },
+  });
+
+  console.log(attributes);
+
+  useEffect(() => {
+    const handleInfo = async () => {
+      try {
+        const res = await userService.myaccountShow();
+        dispatch({
+          type: SET_USER_DETAILS,
+          payload: res.data,
+        });
+        console.log("Ação de detalhes do usuário despachada com sucesso!");
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    if (!userDetails) {
+      handleInfo();
+    } else {
+      setAttributes(userDetails);
+    }
+  }, [userDetails]);
+
+  const handleUpdate = async (e: FormEvent) => {
+    e.preventDefault();
+    try {
+      const res = await userService.myaccountPut(attributes);
+      return res;
+    } catch (error) {
+      console.error("Erro ao atualizar o usuário:", error);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    const [section, fieldName] = name.split(".");
+
+    setAttributes((prevAttributes) => ({
+      ...prevAttributes,
+      [section]: {
+        ...prevAttributes[section],
+        [fieldName]: value,
+      },
+    }));
+
+    setAttributes((prevAttributes) => ({
+      ...prevAttributes,
+      registrationData: {
+        ...prevAttributes.registrationData,
+        document: {
+          ...prevAttributes.registrationData.document,
+          [name]: value,
+        },
+      },
+      [name]: value,
+    }));
+  };
+
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleUpdate}>
       <Title title="Dados cadastrais" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <Label
             labelFor="name"
-            text="Nome completo"
+            text={"Nome completo"}
             className={styles.label}
           />
           <Input
             type="text"
-            id="name"
-            name="name"
-            placeholder=""
+            id="fullName"
+            name="registrationData.fullName"
+            value={attributes.registrationData.fullName}
             className={styles.input}
+            onChange={handleChange}
           />
         </div>
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <Label labelFor="cpf" text="CPF" className={styles.label} />
+          <Label labelFor="cpf" text={"CPF"} className={styles.label} />
           <Input
             type="text"
             id="cpf"
             name="cpf"
-            placeholder=""
+            value={attributes.registrationData.document.cpf}
             className={styles.input_double}
+            onChange={handleChange}
           />
         </div>
         <div className={styles.form_column}>
@@ -46,51 +142,57 @@ const FormPersonalData = () => {
             type="text"
             id="rg"
             name="rg"
-            placeholder=""
+            value={attributes.registrationData.document.rg}
             className={styles.input_double}
+            onChange={handleChange}
           />
         </div>
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <Label
-            labelFor="nacionality"
+            labelFor="nationality"
             text="Nacionalidade *"
             className={styles.label}
           />
-          <ComponentInputSelect
-            id="nacionality"
-            name="nacionality"
+          <Input
+            type="text"
+            id="nationality"
+            name="registrationData.nationality"
             className={styles.input}
-            options={nacionalityOptions}
+            value={attributes.registrationData.nationality}
+            onChange={handleChange}
           />
         </div>
         <div className={styles.form_column}>
           <Label
-            labelFor="civil"
+            labelFor="maritalStatus"
             text="Estado civil"
             className={styles.label}
           />
-          <ComponentInputSelect
-            id="civil"
-            name="civil"
+          <Input
+            type="text"
+            id="maritalStatus"
+            name="registrationData.maritalStatus"
             className={styles.input}
-            options={estadoCivilOptions}
+            value={attributes.registrationData.maritalStatus}
+            onChange={handleChange}
           />
         </div>
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <Label
-            labelFor="nameFather"
+            labelFor="fatherName"
             text="Nome do pai"
             className={styles.label}
           />
           <Input
             type="text"
-            id="nameFather"
-            name="nameFather"
-            placeholder=""
+            id="fatherName"
+            name="registrationData.fatherName"
+            value={attributes.registrationData.fatherName}
+            onChange={handleChange}
             className={styles.input}
           />
         </div>
@@ -98,15 +200,16 @@ const FormPersonalData = () => {
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <Label
-            labelFor="nameMother"
+            labelFor="motherName"
             text="Nome da Mãe"
             className={styles.label}
           />
           <Input
             type="text"
-            id="nameMother"
-            name="nameMother"
-            placeholder=""
+            id="motherName"
+            name="registrationData.motherName"
+            value={attributes.registrationData.motherName}
+            onChange={handleChange}
             className={styles.input}
           />
         </div>
@@ -114,27 +217,29 @@ const FormPersonalData = () => {
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <Label
-            labelFor="profession"
+            labelFor="occupation"
             text="Profissão"
             className={styles.label}
           />
           <Input
             type="text"
-            id="profession"
-            name="profession"
-            placeholder=""
+            id="occupation"
+            name="registrationData.occupation"
+            value={attributes.registrationData.occupation}
+            onChange={handleChange}
             className={styles.input}
           />
         </div>
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <Label labelFor="empress" text="Empressa" className={styles.label} />
+          <Label labelFor="company" text="Empressa" className={styles.label} />
           <Input
-            type="empress"
-            id="empress"
-            name="empress"
-            placeholder=""
+            type="text"
+            id="company"
+            name="registrationData.company"
+            value={attributes.registrationData.company}
+            onChange={handleChange}
             className={styles.input}
           />
         </div>
@@ -142,15 +247,16 @@ const FormPersonalData = () => {
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <Label
-            labelFor="site"
+            labelFor="companyWebsite"
             text="Site da empresa"
             className={styles.label}
           />
           <Input
             type="text"
-            id="site"
-            name="site"
-            placeholder=""
+            id="companyWebsite"
+            name="registrationData.companyWebsite"
+            value={attributes.registrationData.companyWebsite}
+            onChange={handleChange}
             className={styles.input}
           />
         </div>
@@ -162,30 +268,41 @@ const FormPersonalData = () => {
           <Input
             type="text"
             id="email"
-            name="email"
-            placeholder=""
+            name="contactDetails.email"
+            value={attributes.contactDetails.email}
+            onChange={handleChange}
             className={styles.input}
           />
         </div>
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <Label labelFor="tel" text="Telefone *" className={styles.label} />
+          <Label
+            labelFor="telephone"
+            text="Telefone *"
+            className={styles.label}
+          />
           <Input
-            type="tel"
-            id="tel"
-            name="tel"
-            placeholder=""
+            type="text"
+            id="telephone"
+            name="contactDetails.telephone"
+            value={attributes.contactDetails.telephone}
+            onChange={handleChange}
             className={styles.input_double}
           />
         </div>
         <div className={styles.form_column}>
-          <Label labelFor="cel" text="Celular *" className={styles.label} />
+          <Label
+            labelFor="cellPhone"
+            text="Celular *"
+            className={styles.label}
+          />
           <Input
-            type="tel"
-            id="cel"
-            name="cel"
-            placeholder=""
+            type="text"
+            id="cellPhone"
+            name="contactDetails.cellPhone"
+            value={attributes.contactDetails.cellPhone}
+            onChange={handleChange}
             className={styles.input_double}
           />
         </div>
@@ -193,12 +310,13 @@ const FormPersonalData = () => {
       <Title title="Endereço" />
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <Label labelFor="cep" text="CEP" className={styles.label} />
+          <Label labelFor="zipCode" text="CEP" className={styles.label} />
           <Input
             type="text"
-            id="cep"
-            name="cep"
-            placeholder=""
+            id="zipCode"
+            name="contactDetails.zipCode"
+            value={attributes.address.zipCode}
+            onChange={handleChange}
             className={styles.input}
           />
         </div>
@@ -209,22 +327,20 @@ const FormPersonalData = () => {
           <Input
             type="text"
             id="address"
-            name="address"
-            placeholder=""
+            name="contactDetails.address"
+            value={attributes.address.address}
+            onChange={handleChange}
             className={styles.input_double}
           />
         </div>
         <div className={styles.form_column}>
-          <Label
-            labelFor="addressNumber"
-            text="Número"
-            className={styles.label}
-          />
+          <Label labelFor="number" text="Número" className={styles.label} />
           <Input
             type="text"
-            id="addressNumber"
-            name="addressNumber"
-            placeholder=""
+            id="number"
+            name="address.number"
+            value={attributes.address.number}
+            onChange={handleChange}
             className={styles.input_double}
           />
         </div>
@@ -239,26 +355,33 @@ const FormPersonalData = () => {
           <Input
             type="text"
             id="neighborhood"
-            name="neighborhood"
-            placeholder=""
+            name="address.neighborhood"
+            value={attributes.address.neighborhood}
+            onChange={handleChange}
             className={styles.input}
           />
         </div>
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentInputSelectCitys
-            textState="Estado *"
-            htmlForState="state"
-            idState="state"
-            nameState="state"
-            textCity="Cidade *"
-            htmlForCity="city"
-            idCity="city"
-            nameCity="city"
-            classNameFlex={styles.container_inputs_flex}
-            classNameContentFlex={styles.classNameContentFlex}
-            classNameLabel={styles.label}
+          <Label labelFor="state" text="Estado" className={styles.label} />
+          <Input
+            type="text"
+            id="state"
+            name="address.state"
+            value={attributes.address.state}
+            onChange={handleChange}
+            className={styles.input}
+          />
+        </div>
+        <div className={styles.form_column}>
+          <Label labelFor="city" text="Estado" className={styles.label} />
+          <Input
+            type="text"
+            id="city"
+            name="address.city"
+            value={attributes.address.city}
+            onChange={handleChange}
             className={styles.input}
           />
         </div>

@@ -397,7 +397,7 @@ const FormPersonalData = () => {
           />
         </div>
         <div className={styles.form_column}>
-          <Label labelFor="city" text="Estado" className={styles.label} />
+          <Label labelFor="city" text="Cidade" className={styles.label} />
           <Input
             type="text"
             id="city"

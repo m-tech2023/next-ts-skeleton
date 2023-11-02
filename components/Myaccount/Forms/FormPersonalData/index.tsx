@@ -9,8 +9,14 @@ import userService, { UserUpdate } from "@/services/user/user.service";
 import { FormEvent, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { SET_USER_DETAILS } from "@/store/user/action-types";
+import ComponentInputSelect, {
+  estadoCivilOptions,
+  nacionalityOptions,
+} from "../../Inputs/inputSelect";
+import { useRouter } from "next/router";
 
 const FormPersonalData = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
   const userDetails = useSelector((state: RootState) => state.user.userDetails);
   const [attributes, setAttributes] = useState<UserUpdate>({
@@ -72,13 +78,14 @@ const FormPersonalData = () => {
   const handleUpdate = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      const res = await userService.myaccountPut(attributes);
-      return res;
+      await userService.myaccountPut(attributes);
+      setTimeout(() => {
+        router.reload();
+      }, 2000);
     } catch (error) {
       console.error("Erro ao atualizar o usuário:", error);
     }
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     const [section, fieldName] = name.split(".");
@@ -90,7 +97,9 @@ const FormPersonalData = () => {
         [fieldName]: value,
       },
     }));
-
+  };
+  const handleChangeDoc = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
     setAttributes((prevAttributes) => ({
       ...prevAttributes,
       registrationData: {
@@ -101,6 +110,15 @@ const FormPersonalData = () => {
         },
       },
       [name]: value,
+    }));
+  };
+  const handleSelectChange = (field: string, selectedValue: string) => {
+    setAttributes((prevAttributes) => ({
+      ...prevAttributes,
+      registrationData: {
+        ...prevAttributes.registrationData,
+        [field]: selectedValue,
+      },
     }));
   };
 
@@ -133,7 +151,7 @@ const FormPersonalData = () => {
             name="cpf"
             value={attributes.registrationData.document.cpf}
             className={styles.input_double}
-            onChange={handleChange}
+            onChange={handleChangeDoc}
           />
         </div>
         <div className={styles.form_column}>
@@ -144,7 +162,7 @@ const FormPersonalData = () => {
             name="rg"
             value={attributes.registrationData.document.rg}
             className={styles.input_double}
-            onChange={handleChange}
+            onChange={handleChangeDoc}
           />
         </div>
       </div>
@@ -155,13 +173,15 @@ const FormPersonalData = () => {
             text="Nacionalidade *"
             className={styles.label}
           />
-          <Input
-            type="text"
+          <ComponentInputSelect
             id="nationality"
             name="registrationData.nationality"
-            className={styles.input}
+            options={nacionalityOptions}
             value={attributes.registrationData.nationality}
-            onChange={handleChange}
+            onChange={(selectedValue) =>
+              handleSelectChange("nationality", selectedValue)
+            }
+            className={styles.input}
           />
         </div>
         <div className={styles.form_column}>
@@ -170,13 +190,15 @@ const FormPersonalData = () => {
             text="Estado civil"
             className={styles.label}
           />
-          <Input
-            type="text"
+          <ComponentInputSelect
             id="maritalStatus"
             name="registrationData.maritalStatus"
-            className={styles.input}
+            options={estadoCivilOptions}
             value={attributes.registrationData.maritalStatus}
-            onChange={handleChange}
+            onChange={(selectedValue) =>
+              handleSelectChange("maritalStatus", selectedValue)
+            }
+            className={styles.input}
           />
         </div>
       </div>
@@ -314,7 +336,7 @@ const FormPersonalData = () => {
           <Input
             type="text"
             id="zipCode"
-            name="contactDetails.zipCode"
+            name="address.zipCode"
             value={attributes.address.zipCode}
             onChange={handleChange}
             className={styles.input}
@@ -327,7 +349,7 @@ const FormPersonalData = () => {
           <Input
             type="text"
             id="address"
-            name="contactDetails.address"
+            name="address.address"
             value={attributes.address.address}
             onChange={handleChange}
             className={styles.input_double}

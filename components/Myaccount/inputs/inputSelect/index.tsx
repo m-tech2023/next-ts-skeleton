@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 
 interface ComponentInputSelectProps {
   id: string;
   name: string;
   className?: string;
   options: string[];
+  value: string;
+  onChange: (value: string) => void;
 }
 
 export const estadoCivilOptions = [
@@ -213,39 +214,34 @@ export const nacionalityOptions = [
   "Zâmbia",
   "Zimbábue",
 ];
-export const statesOptions = [];
-export const citysOptions = [];
 
 const ComponentInputSelect: React.FC<ComponentInputSelectProps> = ({
   id,
   name,
   className,
   options,
+  value,
+  onChange,
 }) => {
-  const [states, setStates] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [selectedState, setSelectedState] = useState("");
-  const [selectedCity, setSelectedCity] = useState("");
-
-  useEffect(() => {
-    async function fetchStates() {
-      try {
-        const res = await axios.get(
-          "https://servicodados.ibge.gov.br/api/v1/localidades/estados"
-        );
-        setStates(res.data);
-      } catch (error) {
-        console.error("Erro ao buscar os estados:", error);
-      }
-    }
-    fetchStates();
-  });
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedValue = e.target.value;
+    onChange(selectedValue);
+  };
   return (
-    <select id={id} name={name} className={className}>
+    <select
+      id={id}
+      name={name}
+      className={className}
+      value={value}
+      onChange={handleSelectChange}
+    >
       {options.map((option, index) => (
-        <option key={index}>{option}</option>
+        <option key={index} value={option}>
+          {option}
+        </option>
       ))}
     </select>
   );
 };
+
 export default ComponentInputSelect;

@@ -1,0 +1,71 @@
+/* admin theme   */
+.AppAdmin {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #414141;
+}
+
+.headerAdmin,
+.footerAdmin {
+  font-size: 28px;
+  text-align: center;
+  background: #DDDDDDFF;
+  height: 47px;
+  color: #000000;
+  // margin-bottom: 30px;
+}
+
+.containerAdmin {
+  display: flex;
+  flex: 1;
+}
+
+.drawerAdmin {
+  text-align: left;
+
+  background: #EEEEEEFF;
+  width: 240px;
+}
+
+.mainAdmin {
+  flex: 1;
+  background: #EEEEEEFF;
+}
+
+input.adminForm {
+  border-bottom: 2px solid #a7a7a7 !important;
+}
+
+.container-admin {
+  padding-top: 30px;
+  background-color: #eeeeee;
+  padding-bottom: 20px;
+}
+
+// icones 
+svg.svg-inline--fa.fa-bell {
+  position: absolute;
+  left: auto;
+  right: 52px;
+  top: 7px;
+}
+
+svg.svg-inline--fa.fa-ellipsis-vertical {
+  position: absolute;
+  left: auto;
+  right: 24px;
+  top: 8px;
+}
+
+svg.svg-inline--fa.fa-caret-down {
+  margin-left: 8px;
+  font-size: 22px;
+}
+
+svg.svg-inline--fa.fa-bars {
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  right: auto;
+}

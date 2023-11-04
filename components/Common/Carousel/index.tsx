@@ -1,34 +1,78 @@
+import React, { useState } from "react";
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+} from "reactstrap";
 import styles from "./styles.module.scss";
-import CarouselComponent from "react-bootstrap/Carousel";
-import img_teste from "@/public/img-teste.jpg";
-import img_teste_two from "@/public/img-teste-two.png";
-import img_teste_third from "@/public/img-teste-third.jpg";
-import Image from "next/image";
 
-const data = [
-  {
-    img: img_teste,
-    alt: "Cavalo",
-  },
-  {
-    img: img_teste_two,
-    alt: "Cavalo",
-  },
-  {
-    img: img_teste_third,
-    alt: "Cavalo",
-  },
-];
+interface CarouselProps {
+  slides: React.ReactNode[];
+}
 
-const Carousel = () => {
+const CarouselComponent: React.FC<CarouselProps> = ({ slides }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  const next = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === slides.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);
+  };
+
+  const previous = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === 0 ? slides.length - 1 : activeIndex - 1;
+    setActiveIndex(nextIndex);
+  };
+
+  const goToIndex = (newIndex) => {
+    if (animating) return;
+    setActiveIndex(newIndex);
+  };
+
+  const slideItems = slides.map((slide, index) => (
+    <CarouselItem
+      onExiting={() => setAnimating(true)}
+      onExited={() => setAnimating(false)}
+      key={index}
+      className={styles.item}
+    >
+      {slide}
+    </CarouselItem>
+  ));
+
   return (
-    <CarouselComponent className={styles.carousel}>
-      {data.map((data) => (
-        <CarouselComponent.Item>
-          <Image src={data.img} alt={data.alt} className={styles.img}></Image>
-        </CarouselComponent.Item>
-      ))}
-    </CarouselComponent>
+    <Carousel
+      activeIndex={activeIndex}
+      next={next}
+      previous={previous}
+      className={styles.carousel}
+    >
+      {slideItems}
+      <div className={styles.container_control}>
+        <CarouselControl
+          direction="prev"
+          directionText="Previous"
+          onClickHandler={previous}
+          className={styles.control_previous}
+        />
+        <CarouselControl
+          direction="next"
+          directionText="Next"
+          onClickHandler={next}
+          className={styles.control_next}
+        />
+        <CarouselIndicators
+          items={slideItems}
+          activeIndex={activeIndex}
+          onClickHandler={goToIndex}
+          className={styles.indicators}
+        />
+      </div>
+    </Carousel>
   );
 };
-export default Carousel;
+
+export default CarouselComponent;

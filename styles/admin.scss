@@ -23,7 +23,6 @@
 
 .drawerAdmin {
   text-align: left;
-
   background: #EEEEEEFF;
   width: 240px;
 }
@@ -68,4 +67,77 @@ svg.svg-inline--fa.fa-bars {
   left: 15px;
   top: 8px;
   right: auto;
+}
+
+// media queries  
+@media screen and (max-width: 354px) {
+  .headerAdmin,
+  .footerAdmin {
+    font-size: 14px;
+    height: 34px;
+  }
+  
+  .container-admin {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  
+  svg.svg-inline--fa.fa-caret-down {
+    margin-left: 8px;
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+}
+
+@media screen and (min-width: 355px) and (max-width: 455px) {
+  .headerAdmin,
+  .footerAdmin {
+    font-size: 18px;
+    height: 36px;
+  }
+  
+  .container-admin {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  
+  svg.svg-inline--fa.fa-caret-down {
+    margin-left: 8px;
+    font-size: 16px;
+    margin-top: 9px;
+  }
+  
+}
+
+@media screen and (min-width: 456px) {
+  .headerAdmin,
+  .footerAdmin {
+    font-size: 28px;
+  }
+  
+  .container-admin {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  
+  svg.svg-inline--fa.fa-bell {
+    right: 52px;
+    top: 7px;
+  }
+  
+  svg.svg-inline--fa.fa-ellipsis-vertical {
+    right: 24px;
+    top: 8px;
+  }
+  
+  svg.svg-inline--fa.fa-caret-down {
+    margin-left: 8px;
+    font-size: 22px;
+  }
+  
+  svg.svg-inline--fa.fa-bars {
+    left: 15px;
+    top: 8px;
+  }
 }

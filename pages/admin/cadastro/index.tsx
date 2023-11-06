@@ -38,11 +38,11 @@ Page.getLayout = function getLayout(page: ReactElement) {
             <input type="password" className="form-control adminForm" id="exampleInputPassword1" />
           </div>
           <div className="mb-3 form-check">
-            <input type="checkbox" className="form-check-input adminForm" id="exampleCheck1" />
+            <input type="checkbox" className="form-check-input " id="exampleCheck1" />
             <label className="form-check-label">Senha bloqueada</label>
           </div>
           <div className="mb-3 form-check">
-            <input type="checkbox" className="form-check-input adminForm" id="exampleCheck1" />
+            <input type="checkbox" className="form-check-input " id="exampleCheck1" />
             <label className="form-check-label">Usuário bloqueado</label>
           </div>
           <div className="d-grid gap-2">

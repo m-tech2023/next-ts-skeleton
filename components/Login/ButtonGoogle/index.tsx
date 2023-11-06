@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface ButtonGoogleProps {
   text: string;
   className?: string;
@@ -18,7 +20,7 @@ const ButtonGoogle: React.FC<ButtonGoogleProps> = ({
 }) => {
   return (
     <div className={className}>
-      <img src={img} alt={alt} />
+      <Image src={img} alt={alt} />
       <button className={classNameButton} onClick={onClick} type={type}>
         {text}
       </button>

@@ -1,5 +1,5 @@
-import Head from "next/head";
-import Breadcrumb from "../../components/Common/BreadCrumb";
+import styles from "./styles.module.scss";
+import BreadCrumb from "@/components/Common/BreadCrumb";
 
 const Sobre = () => {
   const aboutText: string[] = [
@@ -7,27 +7,27 @@ const Sobre = () => {
     "Nossa equipe esta preparada para atender as necessidades dos clientes com planejamento e estruturação na realização do leilão, tornado o mais acessivel ao maior número possivel de interessados ao negócio.",
     "Prezamos pelo cuidado com a realização de um bom negócio, que vai além da segurança das transações; estende-se a uma analise criteriosa na seleção do cadastro, ao marketing de cada leilão, atendimento a cada cliente, acompanhamento de foto e filmagem, cuidado com a devida documentação dos animais, gestão e assessoria cobrança pós-venda e entre outros princípios que prezam para a eficiência de nossos serviços.",
     "Venha nos conhecer e seja nosso parceiro, prepare seus animais e deixe que nós executamos os negócios!!!",
-    "Opportunity Leilões - Oportunidade de bons negócios!!!"
+    "Opportunity Leilões - Oportunidade de bons negócios!!!",
   ];
 
   return (
-    <>
-      <Head>
-          <title>Sobre</title>
-          <meta name="description" content="About page content description" />
-      </Head>
-      <Breadcrumb lastText="Sobre" />
-      
-      <div>
-        <h2 className="p-4 fw-bold" style={ { color: '#37406d', fontFamily: 'Roboto' } }>Sobre</h2>
-          {aboutText.map((text: string, key: number) => {
-            return (
-              <p className="px-4 text-start" key={key}>{text}</p>
-            );
-          })}
-      </div>
-    </>
+    <div className={styles.container}>
+      <BreadCrumb lastText="" />
+      <h2
+        className="p-4 fw-bold"
+        style={{ color: "#37406d", fontFamily: "Roboto" }}
+      >
+        Sobre
+      </h2>
+      {aboutText.map((text: string, key: number) => {
+        return (
+          <p className="px-4 text-start" key={key}>
+            {text}
+          </p>
+        );
+      })}
+    </div>
   );
-}
+};
 
 export default Sobre;

@@ -1,56 +1,28 @@
 import styles from "../../../pages/login/styles.module.scss";
 import React, { FormEvent } from "react";
 import Link from "next/link";
-import { useGoogleLogin } from "@react-oauth/google";
-import axios from "axios";
-import authService from "@/services/auth/auth.service";
 import { useRouter } from "next/router";
-import { useDispatch } from "react-redux";
-import { SET_USER_TOKEN } from "@/store/user/action-types";
 import Label from "@/components/Common/Label";
 import Input from "@/components/Common/Input";
 import ButtonGoogle from "../ButtonGoogle";
 import Button from "@/components/Common/Button";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
 
 const LoginFormPessoaFisica = () => {
   const router = useRouter();
-  const dispatch = useDispatch();
 
-  const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = (e: FormEvent) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const username = formData.get("username")!.toString();
-    const password = formData.get("password")!.toString();
+    const fakeLoginSuccessful = true;
 
-    const attributes = { username, password };
-
-    try {
-      const { status } = await authService.login(attributes);
-      if (status === 200 || status === 201) {
-        console.log("logado");
-        dispatch({
-          type: SET_USER_TOKEN,
-          payload: sessionStorage.getItem("opportunity-token"),
-        });
-        router.push("/area-cliente/dados-pessoais");
-      } else {
-        console.log("Algo deu errado no servidor. Tente novamente mais tarde.");
-      }
-    } catch (error) {
-      console.error("Erro ao efetuar o login:", error);
-
-      if (error.response) {
-        console.log(`Status de erro: ${error.response.status}`);
-        console.log(`Mensagem de erro: ${error.response.data.message}`);
-      } else if (error.message) {
-        console.log(`Erro: ${error.message}`);
-      } else {
-        console.log(
-          "Erro desconhecido. Verifique sua conexão e tente novamente."
-        );
-      }
+    if (fakeLoginSuccessful) {
+      router.push("/area-cliente/dados-pessoais");
+    } else {
+      alert("Login falhou. Verifique suas credenciais.");
     }
   };
+
   const loginAcess = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {
@@ -65,6 +37,7 @@ const LoginFormPessoaFisica = () => {
         if (userInfo) {
           const userData = userInfo.data;
           console.log(userData);
+          router.push("/area-cliente/dados-pessoais");
         } else {
           console.log("Resposta vazia ou sem dados de usuário.");
         }
@@ -78,7 +51,7 @@ const LoginFormPessoaFisica = () => {
   });
 
   return (
-    <form className={styles.form} onSubmit={handleLogin}>
+    <form className={styles.form} onSubmit={handleFormSubmit}>
       <div className={styles.form_group}>
         <Label
           labelFor="username"
@@ -113,9 +86,9 @@ const LoginFormPessoaFisica = () => {
       <div className={styles.container_buttons}>
         <Button text="ENTRAR" className={styles.btn} type="submit" />
         <ButtonGoogle
-          onClick={() => loginAcess()}
           img="/google-icon.png"
           text="ENTRAR COM GOOGLE"
+          onClick={() => loginAcess()}
           className={styles.btn_google}
         />
       </div>

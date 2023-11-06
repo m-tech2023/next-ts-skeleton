@@ -1,5 +1,4 @@
 import styles from "./styles.module.scss";
-import ComponentInputSelectCitys from "../../Inputs/inputSelectCitys";
 import Title from "../../Title";
 import Label from "@/components/Common/Label";
 import Input from "@/components/Common/Input";
@@ -20,6 +19,7 @@ const FormDataProperties = () => {
             type="text"
             id="name"
             name="name"
+            value="Haras da Sotéia"
             placeholder=""
             className={styles.input}
           />
@@ -33,6 +33,7 @@ const FormDataProperties = () => {
             type="email"
             id="email"
             name="email"
+            value="marcio_castro@gmail.com"
             placeholder=""
             className={styles.input}
           />
@@ -45,6 +46,7 @@ const FormDataProperties = () => {
             type="tel"
             id="tel"
             name="tel"
+            value="(51) 985356782"
             placeholder=""
             className={styles.input}
           />
@@ -55,6 +57,7 @@ const FormDataProperties = () => {
             type="tel"
             id="cel"
             name="cel"
+            value="(51) 985981382"
             placeholder=""
             className={styles.input}
           />
@@ -69,6 +72,7 @@ const FormDataProperties = () => {
               type="text"
               id="cep"
               name="cep"
+              value="94571-230"
               placeholder=""
               className={styles.input}
             />
@@ -87,6 +91,7 @@ const FormDataProperties = () => {
               type="address"
               id="address"
               name="address"
+              value="Estr. da Capororoca"
               placeholder=""
               className={styles.input}
             />
@@ -101,6 +106,7 @@ const FormDataProperties = () => {
               type="text"
               id="numberAddress"
               name="numberAddress"
+              value="695"
               placeholder=""
               className={styles.input}
             />
@@ -118,6 +124,7 @@ const FormDataProperties = () => {
             type="address"
             id="neighborhood"
             name="neighborhood"
+            value="Vila Universal"
             placeholder=""
             className={styles.input}
           />
@@ -125,18 +132,32 @@ const FormDataProperties = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentInputSelectCitys
-            textState="Estado *"
-            htmlForState="state"
-            idState="state"
-            nameState="state"
-            textCity="Cidade *"
-            htmlForCity="city"
-            idCity="city"
-            nameCity="city"
-            classNameFlex={styles.container_inputs_flex}
-            classNameContentFlex={styles.classNameContentFlex}
-            classNameLabel={styles.label}
+          <Label
+            labelFor="neighborhood"
+            text="Estado"
+            className={styles.label}
+          />
+          <Input
+            type="text"
+            id="neighborhood"
+            name="neighborhood"
+            value="Rio Grande do Sul"
+            placeholder=""
+            className={styles.input}
+          />
+        </div>
+        <div className={styles.form_column}>
+          <Label
+            labelFor="neighborhood"
+            text="Cidade"
+            className={styles.label}
+          />
+          <Input
+            type="text"
+            id="neighborhood"
+            name="neighborhood"
+            value="Viamão"
+            placeholder=""
             className={styles.input}
           />
         </div>

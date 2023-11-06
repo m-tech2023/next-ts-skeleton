@@ -1,9 +1,4 @@
 import styles from "../FormDataProperties/styles.module.scss";
-import ComponentInputSelect, {
-  estadoCivilOptions,
-  nacionalityOptions,
-} from "../../Inputs/inputSelect";
-import ComponentInputSelectCitys from "../../Inputs/inputSelectCitys";
 import Title from "../../Title";
 import Label from "@/components/Common/Label";
 import Input from "@/components/Common/Input";
@@ -24,6 +19,7 @@ const FormPersonalData = () => {
             type="text"
             id="name"
             name="name"
+            value="Marcio Castro Silveira"
             placeholder=""
             className={styles.input}
           />
@@ -36,6 +32,7 @@ const FormPersonalData = () => {
             type="text"
             id="cpf"
             name="cpf"
+            value="984.098.870-02"
             placeholder=""
             className={styles.input_double}
           />
@@ -46,6 +43,7 @@ const FormPersonalData = () => {
             type="text"
             id="rg"
             name="rg"
+            value="18.685.256-3"
             placeholder=""
             className={styles.input_double}
           />
@@ -54,28 +52,28 @@ const FormPersonalData = () => {
       <div className={styles.form_group}>
         <div className={styles.form_column}>
           <Label
-            labelFor="nacionality"
-            text="Nacionalidade *"
+            labelFor="nameFather"
+            text="Nacionalidade"
             className={styles.label}
           />
-          <ComponentInputSelect
-            id="nacionality"
-            name="nacionality"
+          <Input
+            type="text"
+            id="nameFather"
+            name="nameFather"
+            value="Brasileiro"
+            placeholder=""
             className={styles.input}
-            options={nacionalityOptions}
           />
         </div>
         <div className={styles.form_column}>
-          <Label
-            labelFor="civil"
-            text="Estado civil"
-            className={styles.label}
-          />
-          <ComponentInputSelect
-            id="civil"
-            name="civil"
+          <Label labelFor="nameFather" text="Civíl" className={styles.label} />
+          <Input
+            type="text"
+            id="nameFather"
+            name="nameFather"
+            value="Solteiro (a)"
+            placeholder=""
             className={styles.input}
-            options={estadoCivilOptions}
           />
         </div>
       </div>
@@ -90,6 +88,7 @@ const FormPersonalData = () => {
             type="text"
             id="nameFather"
             name="nameFather"
+            value="Pedro Alves Silveira"
             placeholder=""
             className={styles.input}
           />
@@ -106,6 +105,7 @@ const FormPersonalData = () => {
             type="text"
             id="nameMother"
             name="nameMother"
+            value="Maria Castro"
             placeholder=""
             className={styles.input}
           />
@@ -122,6 +122,7 @@ const FormPersonalData = () => {
             type="text"
             id="profession"
             name="profession"
+            value="Engenheiro Elétrico"
             placeholder=""
             className={styles.input}
           />
@@ -134,6 +135,7 @@ const FormPersonalData = () => {
             type="empress"
             id="empress"
             name="empress"
+            value="Energy Company"
             placeholder=""
             className={styles.input}
           />
@@ -150,6 +152,7 @@ const FormPersonalData = () => {
             type="text"
             id="site"
             name="site"
+            value="www.energycompany.com"
             placeholder=""
             className={styles.input}
           />
@@ -163,6 +166,7 @@ const FormPersonalData = () => {
             type="text"
             id="email"
             name="email"
+            value="marcus_silveira@gmail.com"
             placeholder=""
             className={styles.input}
           />
@@ -175,6 +179,7 @@ const FormPersonalData = () => {
             type="tel"
             id="tel"
             name="tel"
+            value="(51) 985356782"
             placeholder=""
             className={styles.input_double}
           />
@@ -185,6 +190,7 @@ const FormPersonalData = () => {
             type="tel"
             id="cel"
             name="cel"
+            value="(51) 985981382"
             placeholder=""
             className={styles.input_double}
           />
@@ -198,6 +204,7 @@ const FormPersonalData = () => {
             type="text"
             id="cep"
             name="cep"
+            value="94571-230"
             placeholder=""
             className={styles.input}
           />
@@ -210,6 +217,7 @@ const FormPersonalData = () => {
             type="text"
             id="address"
             name="address"
+            value="Estr. da Capororoca"
             placeholder=""
             className={styles.input_double}
           />
@@ -224,6 +232,7 @@ const FormPersonalData = () => {
             type="text"
             id="addressNumber"
             name="addressNumber"
+            value="695"
             placeholder=""
             className={styles.input_double}
           />
@@ -240,6 +249,7 @@ const FormPersonalData = () => {
             type="text"
             id="neighborhood"
             name="neighborhood"
+            value="Vila Universal"
             placeholder=""
             className={styles.input}
           />
@@ -247,18 +257,32 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <ComponentInputSelectCitys
-            textState="Estado *"
-            htmlForState="state"
-            idState="state"
-            nameState="state"
-            textCity="Cidade *"
-            htmlForCity="city"
-            idCity="city"
-            nameCity="city"
-            classNameFlex={styles.container_inputs_flex}
-            classNameContentFlex={styles.classNameContentFlex}
-            classNameLabel={styles.label}
+          <Label
+            labelFor="neighborhood"
+            text="Estado"
+            className={styles.label}
+          />
+          <Input
+            type="text"
+            id="neighborhood"
+            name="neighborhood"
+            value="Rio Grande do Sul"
+            placeholder=""
+            className={styles.input}
+          />
+        </div>
+        <div className={styles.form_column}>
+          <Label
+            labelFor="neighborhood"
+            text="Cidade"
+            className={styles.label}
+          />
+          <Input
+            type="text"
+            id="neighborhood"
+            name="neighborhood"
+            value="Viamão"
+            placeholder=""
             className={styles.input}
           />
         </div>

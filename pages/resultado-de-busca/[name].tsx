@@ -5,6 +5,7 @@ import SearchService, { Pokemon } from "@/services/search/search.service";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
+import Image from "next/image";
 
 const SearchPage = () => {
   const router = useRouter();
@@ -38,10 +39,11 @@ const SearchPage = () => {
         {searchResult ? (
           <>
             <p>{searchResult?.name}</p>
-            <img
+            <Image
               src={
                 searchResult?.sprites.other["official-artwork"].front_default
               }
+              alt=""
             />
           </>
         ) : (

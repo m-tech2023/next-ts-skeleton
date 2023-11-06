@@ -57,7 +57,7 @@
           font-family: $font_secondary;
         }
         .icon {
-          width: 35px;
+          width: 30px;
         }
       }
       .date {
@@ -216,14 +216,14 @@
     .info {
       .title {
         h1 {
-          font-size: 15px;
+          font-size: 18px;
         }
       }
       .transmission {
         max-height: 40px;
         .transmisison_title {
           h1 {
-            font-size: 12px;
+            font-size: 15px;
           }
           img {
             width: 25px;
@@ -234,14 +234,14 @@
         }
       }
       .lance {
+        width: 180px;
         p {
           font-size: 12px;
         }
       }
       .race {
-        max-height: 50px;
         p {
-          font-size: 9px;
+          font-size: 10px;
         }
       }
     }

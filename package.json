@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "next-ts-skeleton",
   "version": "0.1.0",
@@ -58,3 +59,63 @@
     "typescript": "^5"
   }
 }
+=======
+{
+  "name": "next-ts-skeleton",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@popperjs/core": "^2.11.8",
+    "@react-oauth/google": "^0.11.1",
+    "@reduxjs/toolkit": "^1.9.7",
+    "@types/react-dom": "^18.2.14",
+    "@types/reactstrap": "^8.7.2",
+    "axios": "^1.5.1",
+    "bootstrap": "5.3",
+    "bootstrap-icons": "^1.11.1",
+    "formik": "^2.4.5",
+    "fs": "^0.0.1-security",
+    "i18next": "^23.6.0",
+    "i18next-browser-languagedetector": "^7.1.0",
+    "jwt-decode": "^3.1.2",
+    "moment": "^2.29.4",
+    "next": "13.5.6",
+    "primereact": "^10.0.9",
+    "react": "^18",
+    "react-bootstrap": "^2.9.1",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.3.1",
+    "react-redux": "^8.1.3",
+    "reactstrap": "^9.2.0",
+    "redux-logger": "^3.0.6",
+    "ts-node": "^10.9.1",
+    "yup": "^1.3.2"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/jwt-decode": "^3.1.0",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-redux": "^7.1.28",
+    "@types/redux-logger": "^3.0.11",
+    "@types/yup": "^0.32.0",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.6",
+    "sass": "^1.69.4",
+    "typescript": "^5"
+  }
+}
+>>>>>>> fix: bugs

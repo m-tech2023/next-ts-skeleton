@@ -101,8 +101,10 @@ function Footer() {
       </div>
 
       <div className={`${styles.footerInfo} px-4 py-3`}>
-        <h6>Opportunity Organizacão de Leilões Eireli</h6>
-        <p>CNPJ 33.034.852/0001-59</p>
+        <h6 style={{ fontWeight: "600" }}>
+          Opportunity Organizacão de Leilões Eireli
+        </h6>
+        <p style={{ fontWeight: "600" }}>CNPJ 33.034.852/0001-59</p>
         <p className={styles.footerInfoItalico}>
           © 2023 - Todos direitos reservados.
         </p>

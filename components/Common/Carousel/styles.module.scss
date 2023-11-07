@@ -24,7 +24,7 @@
       padding: 15px;
       gap: 20px;
       color: $white;
-      width: 80%;
+      width: 70%;
       height: 100%;
       font-size: 10px;
       background-color: $black;
@@ -38,6 +38,7 @@
         border-bottom: 1px solid $light_black;
         h1 {
           font-size: 30px;
+          font-weight: 600;
         }
       }
       .transmission {
@@ -59,6 +60,7 @@
             font-size: 20px;
             margin: 0;
             font-family: $font_secondary;
+            font-weight: 600;
           }
           .icon {
             width: 30px;
@@ -106,7 +108,7 @@
           background-color: $white;
           border-radius: 10px;
           color: $black;
-          padding: 2px 4px;
+          padding: 2px 5px;
           margin: 0;
           font-size: 12px;
           font-style: italic;
@@ -195,65 +197,70 @@
 }
 
 @media (max-width: 780px) {
-  .container {
-    .info {
-      width: 60%;
-      .title {
-        h1 {
-          font-size: 20px;
-        }
-      }
-      .transmission {
-        .transmisison_title {
+  .containerCarousel {
+    .container {
+      .info {
+        width: 60%;
+        .title {
           h1 {
-            font-size: 18px;
+            font-size: 20px;
           }
         }
-      }
-      .lance {
-        p {
-          font-size: 15px;
+        .transmission {
+          .transmisison_title {
+            h1 {
+              font-size: 18px;
+            }
+          }
+        }
+        .lance {
+          p {
+            font-size: 15px;
+          }
         }
       }
     }
   }
 }
 @media (max-width: 420px) {
-  .container {
-    .info {
-      .title {
-        h1 {
-          font-size: 18px;
-        }
-      }
-      .transmission {
-        max-height: 40px;
-        .transmisison_title {
+  .containerCarousel {
+    .container {
+      .info {
+        .title {
+          width: 200px;
           h1 {
             font-size: 15px;
           }
-          img {
-            width: 25px;
+        }
+        .transmission {
+          max-height: 40px;
+          .transmisison_title {
+            h1 {
+              font-size: 15px;
+            }
+            img {
+              width: 25px;
+            }
+          }
+          .date {
+            font-size: 12px;
           }
         }
-        .date {
-          font-size: 12px;
+        .lance {
+          width: 180px;
+          p {
+            font-size: 12px;
+          }
+        }
+        .race {
+          p {
+            font-size: 10px;
+          }
         }
       }
-      .lance {
-        width: 180px;
-        p {
-          font-size: 12px;
-        }
+      .info::before {
+        right: -32px;
       }
-      .race {
-        p {
-          font-size: 10px;
-        }
-      }
-    }
-    .info::before {
-      right: -32px;
     }
   }
 }

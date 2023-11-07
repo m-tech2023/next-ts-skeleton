@@ -2,6 +2,7 @@ import BreadCrumb from "@/components/Common/BreadCrumb";
 import Header from "@/components/Common/Header";
 import ComponentSearchInput from "@/components/Search/Input";
 import SearchService, { Pokemon } from "@/services/search/search.service";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
@@ -38,7 +39,8 @@ const SearchPage = () => {
         {searchResult ? (
           <>
             <p>{searchResult?.name}</p>
-            <img
+            <Image
+              alt="teste"
               src={
                 searchResult?.sprites.other["official-artwork"].front_default
               }

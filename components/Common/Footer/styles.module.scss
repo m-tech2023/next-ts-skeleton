@@ -1,59 +1,55 @@
 /* Footer.scss */
 
 .footer {
-  background-color:  #37406d;
+  background-color: #37406d;
   color: #fff;
-  padding:  20px;
-  .footerLinks{
+  padding: 20px;
+
+  .footerLinks {
     margin: 40px 0 0 0;
-    background-color:  #37406d;
-  .footerLink{
-    background-color:  #37406d;
-    
-    color: #fff;
-  }
-  .links{
-    .link{
+    background-color: #37406d;
+
+    .footerLink {
       background-color: #37406d;
       color: #fff;
-     
-     
+    }
+
+    .links {
+      .link {
+        background-color: #37406d;
+        color: #fff;
+      }
+    }
+
+    .accordion-button {
+      background-color: transparent;
+      color: #fff;
     }
   }
-  .accordion-button{
-    background-color: transparent;
-    color: #fff;
-    }
-    
-}
-  .icons{
+
+  .icons {
     margin: 40px 0 20px 0;
-   
   }
-  .contacts{
+
+  .contacts {
     background-color: rgba(255, 255, 255, 0);
     box-sizing: border-box;
   }
-  
 }
 
-.footerInfo{
-  background-color:   #1b2234;
+.footerInfo {
+  background-color: #1b2234;
   color: #fff;
   padding: 16px 20px 0 20px;
   font-family: "Roboto Italic", "Roboto", sans-serif;
   line-height: 20px;
 
-  .footerInfoItalico{
+  .footerInfoItalico {
     font-family: "Roboto Italic", "Roboto", sans-serif;
     font-style: italic;
     color: rgba(255, 255, 255, 0.5);
   }
 }
-
-
-
-
 
 .col {
   h3 {
@@ -63,10 +59,9 @@
 
   p {
     margin-bottom: 20px;
-    
-
   }
 }
+
 .custom-div {
   background-color: #1b2234;
   color: #fff;
@@ -74,10 +69,11 @@
   text-align: center;
   width: 100vw;
 }
-.contact{
+
+.contact {
   font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-    color: '#fff';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: '#fff';
 }

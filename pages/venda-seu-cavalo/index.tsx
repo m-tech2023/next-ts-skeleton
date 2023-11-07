@@ -3,8 +3,6 @@ import Button from "@/components/Common/Button";
 import Header from "@/components/Common/Header";
 import Input from "@/components/Common/Input";
 import Label from "@/components/Common/Label";
-import Select from "@/components/Common/Select";
-import ufBrazilList from "@/utils/uf-brazil-list";
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import Head from "next/head";
 import validationSchema from "./validations";
@@ -33,9 +31,9 @@ const VendaSeuCavalo = () => {
           <title>Venda seu cavalo</title>
           <meta name="description" content="Venda seu cavalo na Opportunity Leilões" />
       </Head>
-      <div className="container mb-5">
-        <div className="row pt-4 mt-1">
-          <div className="col-12 mt-5">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 mt-5 pt-3">
             <BreadCrumb lastText="Venda seu cavalo" />
           </div>
         </div>
@@ -87,20 +85,22 @@ const VendaSeuCavalo = () => {
             <div className="form-group col-12 col-md-12 mb-3">
               <Label required labelFor="uf" text="Estado" />
               <Field
-                as={Select}
-                options={ufBrazilList}
+                type="text"
                 id="uf"
                 name="uf"
+                placeholder="Digite seu estado"
+                as={Input}
               />
               <ErrorMessage name="uf" component="div" className="text-danger" />
             </div>
             <div className="form-group col-12 col-md-12 mb-3">
-              <Label required labelFor="city" text="Cidades" />
+              <Label required labelFor="city" text="Cidade" />
               <Field
-                as={Select}
-                options={ufBrazilList}
+                type="text"
                 id="city"
                 name="city"
+                placeholder="Digite sua cidade"
+                as={Input}
               />
               <ErrorMessage name="city" component="div" className="text-danger" />
             </div>

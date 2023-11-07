@@ -1,5 +1,5 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
-import ComponentGrid from "@/components/Myaccount/Grid";
+import Grid from "@/components/Common/Grid";
 import styles from "../styles.module.scss";
 import Header from "@/components/Common/Header";
 
@@ -10,7 +10,7 @@ const MyBidsPage = () => {
         <Header title="Minha conta" subTitle="Meus lances" />
       </div>
       <BreadCrumb lastText={styles.lastName} />
-      <ComponentGrid />
+      <Grid />
       <div className={styles.container_data}></div>
     </div>
   );

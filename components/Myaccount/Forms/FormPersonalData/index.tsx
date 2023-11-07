@@ -1,5 +1,5 @@
 import styles from "../FormDataProperties/styles.module.scss";
-import Title from "../../Title";
+import Title from "../../../Common/Title";
 import Label from "@/components/Common/Label";
 import Input from "@/components/Common/Input";
 import Button from "@/components/Common/Button";
@@ -9,10 +9,10 @@ import userService, { UserUpdate } from "@/services/user/user.service";
 import { FormEvent, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { SET_USER_DETAILS } from "@/store/user/action-types";
-import ComponentInputSelect, {
+import Select, {
   estadoCivilOptions,
   nacionalityOptions,
-} from "../../Inputs/inputSelect";
+} from "../../Selects/InputSelect";
 import { useRouter } from "next/router";
 
 const FormPersonalData = () => {
@@ -173,7 +173,7 @@ const FormPersonalData = () => {
             text="Nacionalidade *"
             className={styles.label}
           />
-          <ComponentInputSelect
+          <Select
             id="nationality"
             name="registrationData.nationality"
             options={nacionalityOptions}
@@ -190,7 +190,7 @@ const FormPersonalData = () => {
             text="Estado civil"
             className={styles.label}
           />
-          <ComponentInputSelect
+          <Select
             id="maritalStatus"
             name="registrationData.maritalStatus"
             options={estadoCivilOptions}

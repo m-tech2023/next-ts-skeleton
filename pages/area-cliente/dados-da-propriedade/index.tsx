@@ -1,7 +1,7 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
 import Header from "@/components/Common/Header";
 import FormDataProperties from "@/components/Myaccount/Forms/FormDataProperties";
-import ComponentGrid from "@/components/Myaccount/Grid";
+import Grid from "@/components/Common/Grid";
 import styles from "../styles.module.scss";
 
 const DataProperties = () => {
@@ -11,7 +11,7 @@ const DataProperties = () => {
         <Header title="Minha conta" subTitle="Dados propriedade" />
       </div>
       <BreadCrumb lastText={styles.lastName} />
-      <ComponentGrid />
+      <Grid />
       <div className={styles.container_data}>
         <FormDataProperties />
       </div>

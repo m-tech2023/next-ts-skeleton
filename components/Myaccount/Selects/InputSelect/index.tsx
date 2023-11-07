@@ -215,7 +215,7 @@ export const nacionalityOptions = [
   "Zimbábue",
 ];
 
-const ComponentInputSelect: React.FC<ComponentInputSelectProps> = ({
+const Select: React.FC<ComponentInputSelectProps> = ({
   id,
   name,
   className,
@@ -244,4 +244,4 @@ const ComponentInputSelect: React.FC<ComponentInputSelectProps> = ({
   );
 };
 
-export default ComponentInputSelect;
+export default Select;

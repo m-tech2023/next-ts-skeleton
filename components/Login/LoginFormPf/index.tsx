@@ -64,7 +64,11 @@ const LoginFormPessoaFisica = () => {
         );
         if (userInfo) {
           const userData = userInfo.data;
-          console.log(userData);
+          router.push("/area-cliente/dados-pessoais");
+          dispatch({
+            type: SET_USER_TOKEN,
+            payload: userData,
+          });
         } else {
           console.log("Resposta vazia ou sem dados de usuário.");
         }

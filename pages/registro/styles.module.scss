@@ -1,0 +1,84 @@
+@import "@/styles/colors.scss";
+@import "@/styles/fonts.scss";
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0;
+  .container_form {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 0 10px;
+    .label {
+      padding-bottom: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: $blue;
+    }
+    .input {
+      width: 100%;
+      height: 50px;
+      border-radius: 5px;
+      padding: 0 10px;
+      border: 1px solid $grey;
+      font-size: 16px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+      font-size: 14px;
+      background-color: $buttons_login;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px 0px $buttons_shadow;
+      cursor: pointer;
+      transition: all 0.5s;
+      button {
+        border: none;
+        background-color: transparent;
+        color: $white;
+      }
+      p {
+        margin: 0;
+      }
+      &:hover {
+        background-color: $buttons_hover;
+        transition: all 0.5s;
+      }
+    }
+    .btn_google {
+      @extend .btn;
+      gap: 20px;
+      background-color: $white;
+      font-family: $font_secondary;
+      button {
+        color: $black;
+      }
+      img {
+        width: 30px;
+      }
+      &:hover {
+        background-color: $white_smoke;
+        transition: all 0.5s;
+      }
+    }
+    .container_rules_password {
+      ul {
+        padding: 0;
+        margin: 0;
+        li {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

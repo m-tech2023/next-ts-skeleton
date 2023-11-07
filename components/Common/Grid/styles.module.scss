@@ -79,3 +79,13 @@
     }
   }
 }
+
+@media (max-width: 390px) {
+  .container_grid {
+    table {
+      th {
+        font-size: 4vw;
+      }
+    }
+  }
+}

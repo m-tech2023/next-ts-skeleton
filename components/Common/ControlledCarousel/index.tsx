@@ -1,3 +1,4 @@
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import { useState } from 'react';
 import Badge from 'react-bootstrap/Badge';
 import Image from 'react-bootstrap/Image';

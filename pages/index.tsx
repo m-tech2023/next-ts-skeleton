@@ -53,8 +53,8 @@ const Home = () => {
 
       <Carousel
           slides={slides.map((slide, index) => (
-            <div className={styles.containerCarousel}>
-              <div className={`${styles.container} mt-5`} key={index}>
+            <div key={index} className={styles.containerCarousel}>
+              <div className={`${styles.container} mt-5`}>
                 <div className={styles.info}>
                   <div className={styles.title}>
                     <h1>{slide.title}</h1>

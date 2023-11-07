@@ -46,60 +46,58 @@ const Home = () => {
   return (
     <>
       <Head>
-          <title>Home page</title>
-          <meta name="description" content="Home page content description" />
+        <title>Home page</title>
+        <meta name="description" content="Home page content description" />
       </Head>
-      
 
       <Carousel
-          slides={slides.map((slide, index) => (
-            <div key={index} className={styles.containerCarousel}>
-              <div className={`${styles.container} mt-5`}>
-                <div className={styles.info}>
-                  <div className={styles.title}>
-                    <h1>{slide.title}</h1>
-                  </div>
-                  <div className={styles.transmission}>
-                    <div className={styles.transmisison_title}>
-                      <img
-                        src="https://files.axshare.com/gsc/VPA5BX/58/62/f8/5862f8046670489a9b64a09628bcd39b/images/home/streaming_icon_u10.svg?pageId=410ff80e-364a-4d6b-ba72-a7540e2c7725"
-                        alt=""
-                      />
-                      <h1>TRANSMISSÃO</h1>
-                    </div>
-                    <p className={styles.date}>
-                      {slide.date} às {slide.hour_live}
-                    </p>
-                  </div>
-                  <div className={styles.lance}>
-                    <p>Pré lances:</p>
-                    <p className={styles.start}>Inicio: {slide.start}</p>
-                    <p className={styles.end}>Término: {slide.end}</p>
-                  </div>
-                  <div className={styles.race}>
-                    {slide.races.map((race, raceIndex) => (
-                      <p key={raceIndex}>{race}</p>
-                    ))}
-                  </div>
+        slides={slides.map((slide, index) => (
+          <div key={index} className={styles.containerCarousel}>
+            <div className={`${styles.container} mt-5`}>
+              <div className={styles.info}>
+                <div className={styles.title}>
+                  <h1>{slide.title}</h1>
                 </div>
-                <div className={styles.horse}>
-                  <img src={slide.image} alt={slide.alt_image} />
+                <div className={styles.transmission}>
+                  <div className={styles.transmisison_title}>
+                    <img
+                      src="https://files.axshare.com/gsc/VPA5BX/58/62/f8/5862f8046670489a9b64a09628bcd39b/images/home/streaming_icon_u10.svg?pageId=410ff80e-364a-4d6b-ba72-a7540e2c7725"
+                      alt=""
+                    />
+                    <h1>Transmissão</h1>
+                  </div>
+                  <p className={styles.date}>
+                    {slide.date} às {slide.hour_live}
+                  </p>
+                </div>
+                <div className={styles.lance}>
+                  <p style={{ fontWeight: "600" }}>Pré lances:</p>
+                  <p className={styles.start}>Inicio: {slide.start}</p>
+                  <p className={styles.end}>Término: {slide.end}</p>
+                </div>
+                <div className={styles.race}>
+                  {slide.races.map((race, raceIndex) => (
+                    <p key={raceIndex}>{race}</p>
+                  ))}
                 </div>
               </div>
+              <div className={styles.horse}>
+                <img src={slide.image} alt={slide.alt_image} />
+              </div>
             </div>
-          ))}
-        ></Carousel>
+          </div>
+        ))}
+      ></Carousel>
 
-     <Auctions/>
+      <Auctions />
 
-     <CardsHome/>
+      <CardsHome />
 
-     <Card/>
+      <Card />
 
-     <CardContato/>
+      <CardContato />
     </>
-
   );
-}
+};
 
 export default Home;

@@ -7,6 +7,8 @@ interface TextAreaProps {
   className?: string;
   required: boolean;
   maxLength: number;
+  value?: string;
+  onChange?: (e: any) => void;
 }
 const TextArea: React.FC<TextAreaProps> = ({
   className,
@@ -15,6 +17,8 @@ const TextArea: React.FC<TextAreaProps> = ({
   placeholder,
   required,
   maxLength,
+  value,
+  onChange,
 }) => {
   return (
     <textarea
@@ -24,6 +28,8 @@ const TextArea: React.FC<TextAreaProps> = ({
       placeholder={placeholder}
       className={className}
       maxLength={maxLength}
+      value={value}
+      onChange={onChange}
     />
   );
 };

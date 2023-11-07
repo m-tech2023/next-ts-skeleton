@@ -1,10 +1,11 @@
-import Form from 'react-bootstrap/Form';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import styles from './styles.module.scss';
+import Form from "react-bootstrap/Form";
+import ListGroup from "react-bootstrap/ListGroup";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import styles from "./styles.module.scss";
 
-import LOGO_SEARCH from '@/public/icon/normal_search_icon.svg';
-import Image from 'next/image';
+import LOGO_SEARCH from "@/public/icon/normal_search_icon.svg";
+import Image from "next/image";
+import Link from "next/link";
 
 function Menu({ show, handleClose }) {
   return (
@@ -13,7 +14,7 @@ function Menu({ show, handleClose }) {
         <Offcanvas.Header className={styles.link} closeButton>
           <Offcanvas.Title></Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body className='px-0'>
+        <Offcanvas.Body className="px-0">
           <div className="input-group p-2">
             <Form.Control
               type="string"
@@ -26,24 +27,32 @@ function Menu({ show, handleClose }) {
           </div>
 
           <ListGroup className={styles.links} variant="flush">
-            <ListGroup.Item className={styles.link} action href="#link1">
-              Home <i className="bi bi-chevron-right" />
-            </ListGroup.Item>
+            <Link href={"/"} style={{ textDecoration: "none" }}>
+              <ListGroup.Item className={styles.link} action href="#link1">
+                Home <i className="bi bi-chevron-right" />
+              </ListGroup.Item>
+            </Link>
             <ListGroup.Item className={styles.link}>
               Leilões <i className="bi bi-chevron-right" />
-              </ListGroup.Item>
-            <ListGroup.Item className={styles.link}>
-              Venda seu cavalo <i className="bi bi-chevron-right" />
             </ListGroup.Item>
+            <Link href={"/venda-seu-cavalo"} style={{ textDecoration: "none" }}>
+              <ListGroup.Item className={styles.link}>
+                Venda seu cavalo <i className="bi bi-chevron-right" />
+              </ListGroup.Item>
+            </Link>
             <ListGroup.Item className={styles.link}>
               Noticias <i className="bi bi-chevron-right" />
+            </ListGroup.Item>
+            <Link href={"/sobre"} style={{ textDecoration: "none" }}>
+              <ListGroup.Item className={styles.link}>
+                Sobre <i className="bi bi-chevron-right" />
               </ListGroup.Item>
-            <ListGroup.Item className={styles.link}>
-              Sobre <i className="bi bi-chevron-right" />
-            </ListGroup.Item>
-            <ListGroup.Item className={styles.link}>
-              Contato <i className="bi bi-chevron-right" />
-            </ListGroup.Item>
+            </Link>
+            <Link href={"/contato"} style={{ textDecoration: "none" }}>
+              <ListGroup.Item className={styles.link}>
+                Contato <i className="bi bi-chevron-right" />
+              </ListGroup.Item>
+            </Link>
           </ListGroup>
         </Offcanvas.Body>
       </Offcanvas>

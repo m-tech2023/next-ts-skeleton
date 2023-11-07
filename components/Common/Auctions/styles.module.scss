@@ -1,7 +1,21 @@
-.customCard {
-  background-image: url('../../../public/img/normal_appaloosa.svg');
-  background-size: cover;
-  background-position: right -6.5rem  top -5% ;
-  background-repeat: no-repeat; 
-  background-size: 100%; 
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 100%;
+  .customCard {
+    background-image: url("../../../public/img/normal_appaloosa.svg");
+    background-size: contain;
+    background-position: right 5px;
+    background-repeat: no-repeat;
+    background-size: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    .customCard {
+      background-size: 90px;
+    }
+  }
 }

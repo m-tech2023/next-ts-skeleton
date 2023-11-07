@@ -4,6 +4,9 @@
   background-color: #37406d;
   color: #fff;
   padding: 20px;
+  .btn {
+    color: white !important;
+  }
 
   .footerLinks {
     margin: 40px 0 0 0;
@@ -38,6 +41,7 @@
 }
 
 .footerInfo {
+  max-height: 120px;
   background-color: #1b2234;
   color: #fff;
   padding: 16px 20px 0 20px;
@@ -75,5 +79,5 @@
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  color: '#fff';
+  color: "#fff";
 }

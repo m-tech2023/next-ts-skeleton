@@ -1,13 +1,12 @@
-import LOGO_BRAZIL from '@/public/icon/brazil.svg';
-import LOGO_HEADER from '@/public/icon/menu_and_search_icon.svg';
-import LOGO_OPPORTUNITY from '@/public/icon/opportunity_leil_es_logo.svg';
+import LOGO_BRAZIL from "@/public/icon/brazil.svg";
+import LOGO_HEADER from "@/public/icon/menu_and_search_icon.svg";
+import LOGO_OPPORTUNITY from "@/public/icon/opportunity_leil_es_logo.svg";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import Menu from '../Menu';
-import ModalLang from '../Modal';
-
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import Menu from "../Menu";
+import ModalLang from "../Modal";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,25 +41,31 @@ function Navbar() {
               onClick={handleShow}
               width={30}
               height={30}
+              style={{ cursor: "pointer" }}
             />
           </span>
 
           <span className="navbar-brand">
-            <Image
-              src={LOGO_OPPORTUNITY}
-              alt="Opportunity Logo"
-              width={100}
-              height={34}
-            />
+            <Link href={"/"}>
+              <Image
+                src={LOGO_OPPORTUNITY}
+                alt="Opportunity Logo"
+                width={100}
+                height={34}
+                style={{ cursor: "pointer" }}
+              />
+            </Link>
           </span>
 
           <span className="navbar-brand">
             <ul className="navbar-nav me-auto py-1 mb-lg-0">
               <li className="nav-item dropdown">
-                <a data-bs-toggle="modal"
-                  data-bs-target="#exampleModal" 
+                <a
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
                   role="button"
-                  className="nav-link dropdown-toggle">
+                  className="nav-link dropdown-toggle"
+                >
                   <Image
                     src={LOGO_BRAZIL}
                     alt="Opportunity Logo"
@@ -75,19 +80,22 @@ function Navbar() {
             <Link
               className="text-decoration-none text-break fs-6 lh-1"
               href="/login"
-              style={{ color: '#37406D' }}
+              style={{ color: "#37406D" }}
             >
-             <small>
+              <small>
                 Entrar ou
-                  <br />
+                <br />
                 cadastrar
-             </small>
+              </small>
             </Link>
           </span>
 
           <Menu show={show} handleClose={handleClose} />
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent"></div>
+          <div
+            className="collapse navbar-collapse"
+            id="navbarSupportedContent"
+          ></div>
         </div>
       </nav>
     </div>

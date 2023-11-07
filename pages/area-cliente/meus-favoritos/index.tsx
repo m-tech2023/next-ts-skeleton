@@ -1,6 +1,6 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
 import Header from "@/components/Common/Header";
-import ComponentGrid from "@/components/Myaccount/Grid";
+import Grid from "@/components/Common/Grid";
 import styles from "../styles.module.scss";
 
 const MyFavoritePage = () => {
@@ -10,7 +10,7 @@ const MyFavoritePage = () => {
         <Header title="Minha conta" subTitle="Meus favoritos" />
       </div>
       <BreadCrumb lastText={styles.lastName} />
-      <ComponentGrid />
+      <Grid />
       <div className={styles.container_data}></div>
     </div>
   );

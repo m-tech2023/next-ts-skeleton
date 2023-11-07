@@ -1,5 +1,5 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
-import ComponentGrid from "@/components/Myaccount/Grid";
+import Grid from "@/components/Common/Grid";
 import styles from "../styles.module.scss";
 import Header from "@/components/Common/Header";
 
@@ -10,7 +10,7 @@ const LogsAcessPage = () => {
         <Header title="Minha conta" subTitle="Logs de acessos" />
       </div>
       <BreadCrumb lastText={styles.lastName} />
-      <ComponentGrid />
+      <Grid />
     </div>
   );
 };

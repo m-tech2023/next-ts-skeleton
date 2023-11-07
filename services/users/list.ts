@@ -1,3 +1,0 @@
-const list = async () => {
-  // code...
-};

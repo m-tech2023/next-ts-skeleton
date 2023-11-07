@@ -13,10 +13,20 @@
     th {
       text-align: center;
       border: 1px solid $black;
-      padding: 12px;
+      padding: 12px 5px;
     }
     td {
       @extend th;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .container_grid {
+    table {
+      th {
+        font-size: 4vw;
+      }
     }
   }
 }

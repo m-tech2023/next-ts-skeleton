@@ -2,7 +2,7 @@ import styles from './styles.module.scss';
 
 function Footer() {
   return (
-    <div>
+    <div className='mt-5'>
       <div className={styles.footer}>
         <div className="accordion accordion-flush" id="accordionFlushExample">
           <div className="accordion-item bg-transparent">
@@ -85,13 +85,13 @@ function Footer() {
         <div className="row">
           <ul className="list-group d-flex flex-row justify-content-around mt-2">
             <li className="list-group-item border border-0 bg-transparent text-white d-flex align-items-center">
-              <i className="bi bi-instagram me-2"> </i>Intagram
+              <i className="bi bi-instagram me-2"></i> Instagram
             </li>
             <li className="list-group-item text-white border border-0 bg-transparent d-flex align-items-center">
-              <i className="bi bi-youtube me-2"> </i>Youtube
+              <i className="bi bi-youtube me-2"></i> Youtube
             </li>
             <li className="list-group-item text-white border border-0 bg-transparent d-flex align-items-center">
-              <i className="bi bi-facebook me-2"> </i>Facebook
+              <i className="bi bi-facebook me-2"></i> Facebook
             </li>
           </ul>
         </div>

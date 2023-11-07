@@ -1,14 +1,10 @@
-import "@/styles/globals.scss";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import "bootstrap/dist/css/bootstrap.css";
-config.autoAddCss = false;
-
 import DefaultLayout from "@/layouts/default-layout";
 import store from "@/store";
+import "@/styles/globals.scss";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
-import { GoogleOAuthProvider } from "@react-oauth/google";
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

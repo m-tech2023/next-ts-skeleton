@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import {
   Carousel,
-  CarouselItem,
   CarouselControl,
   CarouselIndicators,
+  CarouselItem,
 } from "reactstrap";
 import styles from "./styles.module.scss";
 

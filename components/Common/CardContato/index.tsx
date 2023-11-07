@@ -1,4 +1,4 @@
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 function CardContato() {
   return (
@@ -8,23 +8,23 @@ function CardContato() {
         <ul className="list-group list-group-flush">
           <li className={`${styles.customBgLight} list-group-item p-3`}>
             <p>
-              <i className="bi bi-telephone-fill"></i>{' '}
-              (11) 4858-5115 (Escritório)
+              <i className="bi bi-telephone-fill"></i> (11) 4858-5115
+              (Escritório)
             </p>
             <p>
-              <i className="bi bi-telephone-fill"></i>{' '}
-              (15) 98177-4112 (Carlos Santana)
+              <i className="bi bi-telephone-fill"></i> (15) 98177-4112 (Carlos
+              Santana)
             </p>
             <p>
-              <i className="bi bi-telephone-fill"></i>{' '}
-              (11) 99669-9022 (Freitas Neto)
+              <i className="bi bi-telephone-fill"></i> (11) 99669-9022 (Freitas
+              Neto)
             </p>
           </li>
           <li className={`${styles.customBgLight} list-group-item p-3`}>
-            <p>
-              <i className="bi bi-envelope"></i> { '' }
+            <div className={styles.contact_email}>
+              <i className="bi bi-envelope"></i>
               contato@opportunityleiloes.com.br
-            </p>
+            </div>
           </li>
           <li className={`${styles.customBgLight} list-group-item`}>
             <ul className="list-group d-flex flex-row justify-content-around mt-2">

@@ -1,9 +1,16 @@
 @import "@/styles/colors.scss";
+@import "@/styles/fonts.scss";
 
 .bgPrimary {
+  border: none;
+  height: 50px;
   background-color: $buttons_login;
+  box-shadow: 2px 2px 5px 0px $buttons_shadow;
+  font-family: $font_secondary;
+  transition: all 0.5s;
 }
 
 .bgPrimary:hover {
   background-color: $buttons_hover;
+  transition: all 0.5s;
 }

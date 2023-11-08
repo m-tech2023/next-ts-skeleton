@@ -62,7 +62,7 @@ const Login = () => {
         <div className={styles.register}>
           <p>
             Ainda não tem uma conta?{" "}
-            <Link href={"/register"} className={styles.link}>
+            <Link href={"/registro"} className={styles.link}>
               Cadastre-se
             </Link>
           </p>

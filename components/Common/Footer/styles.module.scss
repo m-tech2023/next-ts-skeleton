@@ -7,6 +7,22 @@
   .btn {
     color: white !important;
   }
+  button {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    border: none;
+    padding: 20px 18px;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  ul {
+    li {
+      border: none !important;
+    }
+  }
 
   .footerLinks {
     margin: 40px 0 0 0;
@@ -52,6 +68,7 @@
     font-family: "Roboto Italic", "Roboto", sans-serif;
     font-style: italic;
     color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
   }
 }
 

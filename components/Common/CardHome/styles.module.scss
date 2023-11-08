@@ -1,0 +1,17 @@
+.container_desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container_mobile {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .container_desktop {
+    display: none;
+  }
+  .container_mobile {
+    display: flex;
+  }
+}

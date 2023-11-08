@@ -4,6 +4,7 @@ import arrow from "@/public/u277.svg";
 import facebook from "@/public/u307.svg";
 import instagram from "@/public/u301.svg";
 import youtube from "@/public/u304.svg";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -40,24 +41,35 @@ function Footer() {
             >
               <div className="accordion-body">
                 <ul className="list-group">
-                  <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0 border-top-0">
-                    Home
-                  </li>
+                  <Link href={"/"} style={{ textDecoration: "none" }}>
+                    <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0 border-top-0">
+                      Home
+                    </li>
+                  </Link>
                   <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0">
                     Leilões
                   </li>
-                  <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0">
-                    Venda seu Cavalo
-                  </li>
+                  <Link
+                    href={"/venda-seu-cavalo"}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0">
+                      Venda seu Cavalo
+                    </li>
+                  </Link>
                   <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0">
                     Notícias
                   </li>
-                  <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0">
-                    Sobre
-                  </li>
-                  <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0 border-bottom-0">
-                    Contato
-                  </li>
+                  <Link href={"/sobre"} style={{ textDecoration: "none" }}>
+                    <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0">
+                      Sobre
+                    </li>
+                  </Link>
+                  <Link href={"/contato"} style={{ textDecoration: "none" }}>
+                    <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0 border-bottom-0">
+                      Contato
+                    </li>
+                  </Link>
                 </ul>
               </div>
             </div>

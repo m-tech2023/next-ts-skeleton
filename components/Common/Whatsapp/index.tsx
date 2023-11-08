@@ -9,6 +9,7 @@ import logo from "@/public/opportunity-icon.png";
 import Input from "../Input";
 import Image from "next/image";
 import { InputMask } from "primereact/inputmask";
+import Link from "next/link";
 
 const Whatsapp = () => {
   const [open, setOpen] = useState(false);
@@ -49,9 +50,14 @@ const Whatsapp = () => {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.container_instagram}>
-          <FontAwesomeIcon icon={faInstagram} className={styles.icon} />
-        </div>
+        <Link
+          href={"https://www.instagram.com/opportunityleiloes_qm_ph/"}
+          target="_blank"
+        >
+          <div className={styles.container_instagram}>
+            <FontAwesomeIcon icon={faInstagram} className={styles.icon} />
+          </div>
+        </Link>
         <div className={styles.container_whats} onClick={handleWhatsapp}>
           <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
           <p className={styles.pulse}>1</p>

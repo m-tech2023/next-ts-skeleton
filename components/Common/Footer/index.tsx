@@ -1,4 +1,9 @@
+import Image from "next/image";
 import styles from "./styles.module.scss";
+import arrow from "@/public/u277.svg";
+import facebook from "@/public/u307.svg";
+import instagram from "@/public/u301.svg";
+import youtube from "@/public/u304.svg";
 
 function Footer() {
   return (
@@ -11,14 +16,20 @@ function Footer() {
               style={{ backgroundColor: "#37406d" }}
             >
               <button
-                className="accordion-button collapsed bg-transparent text-white"
+                className="collapsed bg-transparent text-white"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseOne"
                 aria-expanded="false"
                 aria-controls="flush-collapseOne"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
               >
                 Mapa do site
+                <Image src={arrow} width={16} height={10} alt="flecha" />
               </button>
             </h2>
             <div
@@ -54,14 +65,21 @@ function Footer() {
           <div className="accordion-item bg-transparent">
             <h2 className="accordion-header">
               <button
-                className={`${styles.btn} accordion-button collapsed bg-transparent text-white`}
+                className="collapsed bg-transparent text-white"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseTwo"
                 aria-expanded="false"
                 aria-controls="flush-collapseTwo"
+                style={{
+                  borderBottom: "1px solid white",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
               >
                 Contatos
+                <Image src={arrow} width={16} height={10} alt="flecha" />
               </button>
             </h2>
             <div
@@ -85,26 +103,49 @@ function Footer() {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row mt-4">
           <ul className="list-group d-flex flex-row justify-content-around mt-2">
             <li className="list-group-item border border-0 bg-transparent text-white d-flex align-items-center">
-              <i className="bi bi-instagram me-2"></i> Instagram
+              <Image
+                src={instagram}
+                alt="a"
+                width={14}
+                height={14}
+                className="m-1"
+              />
+              Instagram
             </li>
             <li className="list-group-item text-white border border-0 bg-transparent d-flex align-items-center">
-              <i className="bi bi-youtube me-2"></i> Youtube
+              <Image
+                src={youtube}
+                alt="a"
+                width={20}
+                height={14}
+                className="m-1"
+              />
+              Youtube
             </li>
             <li className="list-group-item text-white border border-0 bg-transparent d-flex align-items-center">
-              <i className="bi bi-facebook me-2"></i> Facebook
+              <Image
+                src={facebook}
+                alt="a"
+                width={14}
+                height={14}
+                className="m-1"
+              />
+              Facebook
             </li>
           </ul>
         </div>
       </div>
 
       <div className={`${styles.footerInfo} px-4 py-3`}>
-        <h6 style={{ fontWeight: "600" }}>
+        <h6 style={{ fontWeight: "600", fontSize: "16px" }}>
           Opportunity Organizacão de Leilões Eireli
         </h6>
-        <p style={{ fontWeight: "600" }}>CNPJ 33.034.852/0001-59</p>
+        <p style={{ fontWeight: "600", fontSize: "14px" }}>
+          CNPJ 33.034.852/0001-59
+        </p>
         <p className={styles.footerInfoItalico}>
           © 2023 - Todos direitos reservados.
         </p>

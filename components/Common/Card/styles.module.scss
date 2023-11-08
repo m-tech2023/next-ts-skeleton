@@ -1,8 +1,17 @@
-.card{
-  background-image: url('../../../public/icon/hammer.svg');
+@import "@/styles/fonts.scss";
+
+.card {
+  background-image: url("../../../public/icon/hammer.svg");
   background-size: cover;
-  background-position: right  center ;
-  background-repeat: no-repeat; 
-  background-size: 25%; 
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 105px;
   background-color: #37406d;
+  h5 {
+    font-weight: 700;
+    font-family: $font_secondary;
+  }
+  p {
+    margin-top: -5px;
+  }
 }

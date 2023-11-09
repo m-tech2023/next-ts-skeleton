@@ -63,7 +63,9 @@
   padding: 16px 20px 0 20px;
   font-family: "Roboto Italic", "Roboto", sans-serif;
   line-height: 20px;
-
+  p {
+    margin: 3px 0;
+  }
   .footerInfoItalico {
     font-family: "Roboto Italic", "Roboto", sans-serif;
     font-style: italic;

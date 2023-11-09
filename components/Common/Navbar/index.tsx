@@ -7,11 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Menu from "../Menu";
-import ModalLang from "../Modal";
+import { ModalLang, ModalLogin } from "../Modal";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpenLogin, setIsModalOpenLogin] = useState(false);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -19,10 +20,12 @@ function Navbar() {
 
   const openModal = () => {
     setIsModalOpen(true);
+    setIsModalOpenLogin(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setIsModalOpenLogin(false);
   };
 
   const toggleMenu = () => {
@@ -31,7 +34,9 @@ function Navbar() {
 
   return (
     <div>
+      <ModalLogin />
       <ModalLang />
+
       <nav className="navbar fixed-top shadow bg-body-tertiary rounded-0 py-0">
         <div className="container">
           <div className={styles.container_content}>
@@ -82,17 +87,17 @@ function Navbar() {
             </span>
 
             <span className="navbar-brand lh-1 text-center">
-              <Link
-                className="text-decoration-none text-break fs-6 lh-1"
-                href="/login"
-                style={{ color: "#37406D" }}
+              <a
+                data-bs-toggle="modal"
+                data-bs-target="#modalLogin"
+                role="button"
               >
-                <small>
+                <small style={{ fontSize: "16px", color: "#37406d" }}>
                   Entrar ou
                   <br />
                   cadastrar
                 </small>
-              </Link>
+              </a>
             </span>
           </div>
 

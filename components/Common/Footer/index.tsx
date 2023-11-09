@@ -10,14 +10,17 @@ function Footer() {
   return (
     <div className="mt-5">
       <div className={styles.footer}>
-        <div className="accordion accordion-flush" id="accordionFlushExample">
+        <div
+          className="accordion accordion-flush container"
+          id="accordionFlushExample"
+        >
           <div className="accordion-item bg-transparent">
             <h2
               className="accordion-header"
               style={{ backgroundColor: "#37406d" }}
             >
               <button
-                className="collapsed bg-transparent text-white"
+                className="collapsed bg-transparent text-white "
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseOne"
@@ -74,7 +77,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="accordion-item bg-transparent">
+          <div className="accordion-item bg-transparent ">
             <h2 className="accordion-header">
               <button
                 className="collapsed bg-transparent text-white"
@@ -84,7 +87,6 @@ function Footer() {
                 aria-expanded="false"
                 aria-controls="flush-collapseTwo"
                 style={{
-                  borderBottom: "1px solid white",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
@@ -115,8 +117,8 @@ function Footer() {
           </div>
         </div>
 
-        <div className="row mt-4">
-          <ul className="list-group d-flex flex-row justify-content-around mt-2">
+        <div className="d-flex justify-content-center align-items-center container">
+          <ul className="list-group d-flex flex-row">
             <li className="list-group-item border border-0 bg-transparent text-white d-flex align-items-center">
               <Image
                 src={instagram}
@@ -151,16 +153,18 @@ function Footer() {
         </div>
       </div>
 
-      <div className={`${styles.footerInfo} px-4 py-3`}>
-        <h6 style={{ fontWeight: "600", fontSize: "16px" }}>
-          Opportunity Organizacão de Leilões Eireli
-        </h6>
-        <p style={{ fontWeight: "600", fontSize: "14px" }}>
-          CNPJ 33.034.852/0001-59
-        </p>
-        <p className={styles.footerInfoItalico}>
-          © 2023 - Todos direitos reservados.
-        </p>
+      <div className={`${styles.footerInfo}  py-3`}>
+        <div className="container">
+          <h6 style={{ fontWeight: "600", fontSize: "16px" }}>
+            Opportunity Organizacão de Leilões Eireli
+          </h6>
+          <p style={{ fontWeight: "600", fontSize: "14px" }}>
+            CNPJ 33.034.852/0001-59
+          </p>
+          <p className={styles.footerInfoItalico}>
+            © 2023 - Todos direitos reservados.
+          </p>
+        </div>
       </div>
     </div>
   );

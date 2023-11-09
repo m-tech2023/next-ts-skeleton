@@ -12,11 +12,10 @@ const Sobre = () => {
   ];
 
   return (
-    <div className={styles.container}>
-      <Breadcrumb lastText="Sobre" />
-      <Header title="Sobre" />
-
-      <div>
+    <div className={`${styles.container} container`}>
+      <Breadcrumb />
+      <div className={styles.container_content}>
+        <Header title="Sobre" />
         {aboutText.map((text: string, key: number) => {
           return (
             <p className="px-4 text-start" key={key}>

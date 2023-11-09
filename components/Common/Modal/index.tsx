@@ -1,28 +1,65 @@
 import Image from "next/image";
+import Close from "@/public/close_lightbox_u96.svg";
+import BRA from "@/public/icon/brazil.svg";
+import EUA from "@/public/icon/eua.svg";
+import SPA from "@/public/icon/spa.svg";
+import Link from "next/link";
 
-import BRA from '@/public/icon/brazil.svg';
-import EUA from '@/public/icon/eua.svg';
-import SPA from '@/public/icon/spa.svg';
-
-function Modal() {
+export function ModalLang() {
   return (
-    <div className="modal fade rounded-0" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div
+      className="modal fade rounded-0"
+      id="exampleModal"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
       <div className="modal-dialog modal-dialog-centered rounded-0">
         <div className="modal-content rounded-0">
-          <div className="modal-header rounded-0" style={{ backgroundColor: '#37406d', color: '#fff' }}>
+          <div
+            className="modal-header rounded-0"
+            style={{ backgroundColor: "#37406d", color: "#fff" }}
+          >
             <h5 className="modal-title">Idioma/Language</h5>
-            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style={{ backgroundColor: "transparent", border: "none" }}
+            >
+              <Image src={Close} alt="" width={15} height={15} />
+            </button>
           </div>
           <div className="modal-body">
             <ul className="list-group">
               <li className="list-group-item py-3 border-end-0 border-start-0 border-top-0">
-                <Image src={BRA} width={32} height={32} className="me-3" alt="Português" />Português
+                <Image
+                  src={BRA}
+                  width={32}
+                  height={32}
+                  className="me-3"
+                  alt="Português"
+                />
+                Português
               </li>
               <li className="list-group-item py-3 border-end-0 border-start-0">
-                <Image src={EUA} width={32} height={32} className="me-3" alt="English" />English
+                <Image
+                  src={EUA}
+                  width={32}
+                  height={32}
+                  className="me-3"
+                  alt="English"
+                />
+                English
               </li>
               <li className="list-group-item py-3 border-end-0 border-start-0 border-bottom-0 ">
-                <Image src={SPA} width={32} height={32} className="me-3" alt="Espanõl" />Espanõl
+                <Image
+                  src={SPA}
+                  width={32}
+                  height={32}
+                  className="me-3"
+                  alt="Espanõl"
+                />
+                Espanõl
               </li>
             </ul>
           </div>
@@ -31,5 +68,52 @@ function Modal() {
     </div>
   );
 }
-
-export default Modal;
+export function ModalLogin() {
+  return (
+    <div
+      className="modal fade rounded-0"
+      id="modalLogin"
+      aria-labelledby="modalLogin"
+      aria-hidden="true"
+    >
+      <div className="modal-dialog modal-dialog-centered rounded-0">
+        <div className="modal-content rounded-0">
+          <div
+            className="modal-header rounded-0"
+            style={{ backgroundColor: "#37406d", color: "#fff" }}
+          >
+            <h5 className="modal-title">Login e Cadastro</h5>
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style={{ backgroundColor: "transparent", border: "none" }}
+            >
+              <Image src={Close} alt="" width={15} height={15} />
+            </button>
+          </div>
+          <div className="modal-body">
+            <ul className="list-group">
+              <li className="list-group-item py-3 border-end-0 border-start-0 border-top-0">
+                <Link
+                  href={"/login"}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Entrar
+                </Link>
+              </li>
+              <li className="list-group-item py-3 border-end-0 border-start-0">
+                <Link
+                  href={"/registro"}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Registrar
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

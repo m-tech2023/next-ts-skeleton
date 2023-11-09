@@ -6,7 +6,7 @@ import Header from "@/components/Common/Header";
 const CadastroDeMensagens = () => {
   return (
     <div className={styles.container}>
-      <BreadCrumb lastText={styles.lastName} />
+      <BreadCrumb />
       <div className={styles.container_header}>
         <Header title="Controle de Mensagens" />
       </div>

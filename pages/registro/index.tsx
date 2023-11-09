@@ -100,7 +100,7 @@ const PreRegistration = () => {
   };
   return (
     <div className={styles.container}>
-      <BreadCrumb lastText="" />
+      <BreadCrumb />
       <Header title="Cadastre-se" />
       <div className={styles.container_form}>
         <form onSubmit={handleSubmit}>

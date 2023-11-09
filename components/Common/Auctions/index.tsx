@@ -1,3 +1,5 @@
+import Image from "next/image";
+import ImageHorse from "@/public/img/normal_appaloosa.svg";
 import styles from "./styles.module.scss";
 
 const subtitle = `${styles.subtitle} mb-2 text-muted`;
@@ -25,8 +27,8 @@ const customCard = `${styles.customCard} card rounded-0`;
 
 function Auctions() {
   return (
-    <div className={styles.container}>
-      <h2 className="fw-bolder mt-4 mb-4">Leilões por raça</h2>
+    <div className={`${styles.container} container`}>
+      <h2 className="fw-bolder mt-4 mb-4">Leilões por raças</h2>
       <div className="row">
         {auctionsData.map((auction, index) => (
           <div key={index} className="mt-2 col-6">
@@ -38,6 +40,9 @@ function Auctions() {
                 backgroundColor: "#d7d7d7",
               }}
             >
+              <div className={styles.container_img}>
+                <Image src={ImageHorse} alt="Cavalo" />
+              </div>
               <div className="card-body">
                 <div className="row">
                   <div className={styles.info}>

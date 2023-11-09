@@ -27,7 +27,7 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <BreadCrumb lastText={styles.lastName} />
+      <BreadCrumb />
       <Header title="Login" />
       <div className={styles.container_form}>
         <div className={styles.container_form_selected}>

@@ -10,7 +10,7 @@ const DataProperties = () => {
       <div className={styles.container_header}>
         <Header title="Minha conta" subTitle="Dados propriedade" />
       </div>
-      <BreadCrumb lastText={styles.lastName} />
+      <BreadCrumb />
       <Grid />
       <div className={styles.container_data}>
         <FormDataProperties />

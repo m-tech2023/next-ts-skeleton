@@ -9,7 +9,7 @@ const DataPersonalPage = () => {
       <div className={styles.container_header}>
         <Header title="Minha conta" subTitle="Dados pessoais" />
       </div>
-      <BreadCrumb lastText={styles.lastName} />
+      <BreadCrumb />
       <Grid />
       <div className={styles.container_data}>
         <FormPersonalData />

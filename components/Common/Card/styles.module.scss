@@ -1,17 +1,23 @@
 @import "@/styles/fonts.scss";
 
 .card {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 120px;
   background-image: url("../../../public/icon/hammer.svg");
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
   background-size: 105px;
   background-color: #37406d;
+  border-radius: 10px;
   h5 {
+    margin: 0;
     font-weight: 700;
     font-family: $font_secondary;
   }
   p {
-    margin-top: -5px;
+    margin: 0;
   }
 }

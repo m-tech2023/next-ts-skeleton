@@ -44,7 +44,7 @@ const Contact = () => {
   };
   return (
     <div className={styles.container}>
-      <BreadCrumb lastText="" />
+      <BreadCrumb />
       <Header title="Contato" />
       <div className={styles.container_form}>
         <form className={styles.form} onSubmit={handleSubmit}>

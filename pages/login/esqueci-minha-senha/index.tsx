@@ -1,36 +1,46 @@
 import BreadCrumb from "@/components/Common/BreadCrumb";
-import styles from "../styles.module.scss";
 import Header from "@/components/Common/Header";
+import Link from "next/link";
+import styles from "../styles.module.scss";
 import Label from "@/components/Common/Label";
 import Input from "@/components/Common/Input";
 import Button from "@/components/Common/Button";
 
-const ForgetEmail = () => {
+const ForgetPassword = () => {
   return (
     <div className={styles.container}>
-      <BreadCrumb lastText={styles.lastName} />
+      <BreadCrumb />
       <div className={styles.container_header}>
         <Header
-          title="Recuperar e-mail"
-          subTitle="Digite seu celular de cadastro para receber um código de recuperação"
+          title="Esqueci minha senha"
+          subTitle=" Digite o seu e-mail de cadastro para receber um link de recuperação de
+          senha, onde será possível alterar a sua senha."
         />
       </div>
       <div className={styles.container_form}>
         <form className={styles.form}>
           <div className={styles.form_group}>
             <Label
-              labelFor="telefone"
-              text="Celular de cadastro"
+              labelFor="email"
+              text="E-mail de cadastro"
               className={styles.label}
             />
             <Input
               required={true}
-              type="tel"
-              id="telefone"
-              name="telefone"
-              placeholder="Digite seu celular de cadastro"
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Digite seu e-mail de cadastro"
               className={styles.input}
             />
+          </div>
+          <div className={styles.forget_email}>
+            <p>
+              Não lembra seu e-mail?{" "}
+              <Link href={"/login/esqueci-meu-email"} className={styles.link}>
+                Clique aqui para recuperar.
+              </Link>
+            </p>
           </div>
           <div className={styles.container_buttons}>
             <Button text="ENVIAR" className={styles.btn} />
@@ -40,4 +50,4 @@ const ForgetEmail = () => {
     </div>
   );
 };
-export default ForgetEmail;
+export default ForgetPassword;

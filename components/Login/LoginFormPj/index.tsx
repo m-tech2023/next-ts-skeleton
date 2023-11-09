@@ -78,7 +78,7 @@ const LoginFormPessoaJuridica = () => {
         />
       </div>
       <div className={styles.forget_password}>
-        <Link href={"/login/forget-password"} className={styles.link}>
+        <Link href={"/login/esqueci-minha-senha"} className={styles.link}>
           <p>Esqueci minha senha</p>
         </Link>
       </div>

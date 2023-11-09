@@ -3,7 +3,6 @@ import Close from "@/public/close_lightbox_u96.svg";
 import BRA from "@/public/icon/brazil.svg";
 import EUA from "@/public/icon/eua.svg";
 import SPA from "@/public/icon/spa.svg";
-import Link from "next/link";
 
 export function ModalLang() {
   return (
@@ -96,7 +95,7 @@ export function ModalLogin() {
               <Image src={Close} alt="" width={15} height={15} />
             </button>
           </div>
-          <div className="modal-body" style={{ padding: "15px 0" }}>
+          <div className="modal-body" style={{ padding: "0" }}>
             <ul className="list-group">
               <li
                 className="list-group-item py-3 border-end-0 border-start-0 border-top-0"
@@ -107,15 +106,18 @@ export function ModalLogin() {
                   border: "1px solid black",
                 }}
               >
-                <Link
+                <a
                   href={"/login"}
                   style={{
                     textDecoration: "none",
                     color: "black",
+                    padding: "5px 0",
                   }}
                 >
-                  Entrar
-                </Link>
+                  <p data-bs-dismiss="modal" style={{ margin: "0" }}>
+                    Entrar
+                  </p>
+                </a>
                 <i className="bi bi-chevron-right" />
               </li>
               <li
@@ -127,12 +129,18 @@ export function ModalLogin() {
                   border: "none",
                 }}
               >
-                <Link
+                <a
                   href={"/registro"}
-                  style={{ textDecoration: "none", color: "black" }}
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                    padding: "5px 0",
+                  }}
                 >
-                  Registrar
-                </Link>
+                  <p data-bs-dismiss="modal" style={{ margin: "0" }}>
+                    Registrar
+                  </p>
+                </a>
                 <i className="bi bi-chevron-right" />
               </li>
             </ul>

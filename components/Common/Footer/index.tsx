@@ -158,7 +158,7 @@ function Footer() {
           <h6 style={{ fontWeight: "600", fontSize: "16px" }}>
             Opportunity Organizacão de Leilões Eireli
           </h6>
-          <p style={{ fontWeight: "600", fontSize: "14px" }}>
+          <p style={{ fontWeight: "300", fontSize: "14px" }}>
             CNPJ 33.034.852/0001-59
           </p>
           <p className={styles.footerInfoItalico}>

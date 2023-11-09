@@ -82,33 +82,58 @@ export function ModalLogin() {
             className="modal-header rounded-0"
             style={{ backgroundColor: "#37406d", color: "#fff" }}
           >
-            <h5 className="modal-title">Login e Cadastro</h5>
+            <h5 className="modal-title">Login e cadastro</h5>
             <button
               type="button"
               data-bs-dismiss="modal"
               aria-label="Close"
-              style={{ backgroundColor: "transparent", border: "none" }}
+              style={{
+                backgroundColor: "transparent",
+                border: "none",
+                padding: "0 10px",
+              }}
             >
               <Image src={Close} alt="" width={15} height={15} />
             </button>
           </div>
-          <div className="modal-body">
+          <div className="modal-body" style={{ padding: "15px 0" }}>
             <ul className="list-group">
-              <li className="list-group-item py-3 border-end-0 border-start-0 border-top-0">
+              <li
+                className="list-group-item py-3 border-end-0 border-start-0 border-top-0"
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  border: "1px solid black",
+                }}
+              >
                 <Link
                   href={"/login"}
-                  style={{ textDecoration: "none", color: "black" }}
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
                 >
                   Entrar
                 </Link>
+                <i className="bi bi-chevron-right" />
               </li>
-              <li className="list-group-item py-3 border-end-0 border-start-0">
+              <li
+                className="list-group-item py-3 border-end-0 border-start-0"
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  border: "none",
+                }}
+              >
                 <Link
                   href={"/registro"}
                   style={{ textDecoration: "none", color: "black" }}
                 >
                   Registrar
                 </Link>
+                <i className="bi bi-chevron-right" />
               </li>
             </ul>
           </div>

@@ -39,12 +39,6 @@ const SearchPage = () => {
         {searchResult ? (
           <>
             <p>{searchResult?.name}</p>
-            <Image
-              alt="teste"
-              src={
-                searchResult?.sprites.other["official-artwork"].front_default
-              }
-            />
           </>
         ) : (
           <>

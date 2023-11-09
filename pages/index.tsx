@@ -51,6 +51,7 @@ const Home = () => {
       </Head>
 
       <Carousel
+        itemsPerSlide={1}
         slides={slides.map((slide, index) => (
           <div key={index} className={styles.containerCarousel}>
             <div className={`${styles.container} mt-5`}>

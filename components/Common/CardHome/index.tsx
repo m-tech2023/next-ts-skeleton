@@ -73,7 +73,7 @@ function CardComponent({ data }) {
           <h6 className="card-title fw-bolder text-center pt-2 pb-2">
             {data.title}
           </h6>
-          <p className="card-text text-center d-flex justify-content-center align-items-center">
+          <div className="card-text text-center d-flex justify-content-center align-items-center mb-3">
             <Image
               src={STREAMING}
               alt="transmissão"
@@ -81,7 +81,7 @@ function CardComponent({ data }) {
             />
             <strong>Transmissão:</strong>
             <p style={{ margin: "0 5px" }}>{data.streamingDate}</p>
-          </p>
+          </div>
           <div className={styles.pre_lance}>
             <div className="row" style={{ backgroundColor: "#FDFDFD" }}>
               <div className="col-4 d-flex justify-content-center align-items-center">

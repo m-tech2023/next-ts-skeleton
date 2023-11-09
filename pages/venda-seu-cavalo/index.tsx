@@ -28,7 +28,7 @@ const VendaSeuCavalo = () => {
 
   return (
     <div className={styles.container}>
-      <BreadCrumb lastText="Venda seu cavalo" />
+      <BreadCrumb />
       <Head>
         <title>Venda seu cavalo</title>
         <meta

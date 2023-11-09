@@ -34,7 +34,7 @@
         width: 100%;
         display: flex;
         align-items: center;
-        font-family: $font_secondary;
+        font-family: "Roboto", Arial;
         border-bottom: 1px solid $light_black;
         h1 {
           font-size: 30px;
@@ -59,7 +59,7 @@
           h1 {
             font-size: 20px;
             margin: 0;
-            font-family: $font_secondary;
+            font-family: "Roboto", Arial;
             font-weight: 600;
           }
           .icon {
@@ -68,7 +68,7 @@
         }
         .date {
           font-size: 15px;
-          font-family: $font_secondary;
+          font-family: "Roboto", Arial;
         }
       }
       .lance {
@@ -82,7 +82,7 @@
         p {
           margin: 0;
           font-size: 15px;
-          font-family: $font_secondary;
+          font-family: "Roboto", Arial;
         }
         .start {
           border-left: 2px solid green;
@@ -112,6 +112,8 @@
           margin: 0;
           font-size: 12px;
           font-style: italic;
+          font-family: "Roboto", Arial;
+          font-weight: 700;
         }
       }
     }

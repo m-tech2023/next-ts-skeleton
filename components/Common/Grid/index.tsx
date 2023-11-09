@@ -61,22 +61,31 @@ const Grid = () => {
                   marginRight: "8px",
                 }}
               >
-                <FontAwesomeIcon
-                  icon={page.icon}
-                  style={{
-                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
-                    marginRight: "8px",
-                  }}
-                />
-                <Link
-                  style={{
-                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
-                    textDecoration: "none",
-                  }}
-                  href={page.path}
-                >
-                  {page.label}
-                </Link>
+                <div className={styles.container_content}>
+                  <div className={styles.container_icon}>
+                    <FontAwesomeIcon
+                      icon={page.icon}
+                      className={styles.icon}
+                      style={{
+                        color:
+                          router.asPath === page.path ? "#ffffff" : "#37406d",
+                        marginRight: "8px",
+                      }}
+                    />
+                  </div>
+                  <div className={styles.container_title}>
+                    <Link
+                      style={{
+                        color:
+                          router.asPath === page.path ? "#ffffff" : "#37406d",
+                        textDecoration: "none",
+                      }}
+                      href={page.path}
+                    >
+                      {page.label}
+                    </Link>
+                  </div>
+                </div>
               </td>
             ))}
           </tr>
@@ -90,22 +99,31 @@ const Grid = () => {
                   color: router.asPath === page.path ? "#ffffff" : "#000000",
                 }}
               >
-                <FontAwesomeIcon
-                  icon={page.icon}
-                  style={{
-                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
-                    marginRight: "8px",
-                  }}
-                />
-                <Link
-                  style={{
-                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
-                    textDecoration: "none",
-                  }}
-                  href={page.path}
-                >
-                  {page.label}
-                </Link>
+                <div className={styles.container_content}>
+                  <div className={styles.container_icon}>
+                    <FontAwesomeIcon
+                      icon={page.icon}
+                      className={styles.icon}
+                      style={{
+                        color:
+                          router.asPath === page.path ? "#ffffff" : "#37406d",
+                        marginRight: "8px",
+                      }}
+                    />
+                  </div>
+                  <div className={styles.container_title}>
+                    <Link
+                      style={{
+                        color:
+                          router.asPath === page.path ? "#ffffff" : "#37406d",
+                        textDecoration: "none",
+                      }}
+                      href={page.path}
+                    >
+                      {page.label}
+                    </Link>
+                  </div>
+                </div>
               </td>
             ))}
           </tr>
@@ -119,22 +137,31 @@ const Grid = () => {
                   color: router.asPath === page.path ? "#ffffff" : "#000000",
                 }}
               >
-                <FontAwesomeIcon
-                  icon={page.icon}
-                  style={{
-                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
-                    marginRight: "8px",
-                  }}
-                />
-                <Link
-                  style={{
-                    color: router.asPath === page.path ? "#ffffff" : "#37406d",
-                    textDecoration: "none",
-                  }}
-                  href={page.path}
-                >
-                  {page.label}
-                </Link>
+                <div className={styles.container_content}>
+                  <div className={styles.container_icon}>
+                    <FontAwesomeIcon
+                      icon={page.icon}
+                      className={styles.icon}
+                      style={{
+                        color:
+                          router.asPath === page.path ? "#ffffff" : "#37406d",
+                        marginRight: "8px",
+                      }}
+                    />
+                  </div>
+                  <div className={styles.container_title}>
+                    <Link
+                      style={{
+                        color:
+                          router.asPath === page.path ? "#ffffff" : "#37406d",
+                        textDecoration: "none",
+                      }}
+                      href={page.path}
+                    >
+                      {page.label}
+                    </Link>
+                  </div>
+                </div>
               </td>
             ))}
           </tr>

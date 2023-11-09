@@ -110,7 +110,7 @@ const LoginFormPessoaFisica = () => {
         />
       </div>
       <div className={styles.forget_password}>
-        <Link href={"/login/esqueci-a-senha"} className={styles.link}>
+        <Link href={"/login/esqueci-minha-senha"} className={styles.link}>
           <p>Esqueci minha senha</p>
         </Link>
       </div>

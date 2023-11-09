@@ -4,16 +4,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./styles.module.scss";
 
-interface BreadCrumbProps {
-  lastText: string;
-}
-
-const BreadCrumb: React.FC<BreadCrumbProps> = ({ lastText }) => {
+const BreadCrumb = () => {
   const router = useRouter();
   const pathNames = router.asPath.split("/").filter((x) => x);
 
   return (
-    <div className={styles.container_breadcrumb}>
+    <div className={`${styles.container_breadcrumb} container `}>
       <Link href="/" className={styles.link}>
         Home
         <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />

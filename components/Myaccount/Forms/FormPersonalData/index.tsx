@@ -14,6 +14,7 @@ import Select, {
   nacionalityOptions,
 } from "../../Selects/InputSelect";
 import { useRouter } from "next/router";
+import ComponentInputSelectCitys from "../../Selects/InputSelectCitys";
 
 const FormPersonalData = () => {
   const router = useRouter();
@@ -386,24 +387,18 @@ const FormPersonalData = () => {
       </div>
       <div className={styles.form_group}>
         <div className={styles.form_column}>
-          <Label labelFor="state" text="Estado" className={styles.label} />
-          <Input
-            type="text"
-            id="state"
-            name="address.state"
-            value={attributes.address.state}
-            onChange={handleChange}
-            className={styles.input}
-          />
-        </div>
-        <div className={styles.form_column}>
-          <Label labelFor="city" text="Cidade" className={styles.label} />
-          <Input
-            type="text"
-            id="city"
-            name="address.city"
-            value={attributes.address.city}
-            onChange={handleChange}
+          <ComponentInputSelectCitys
+            textState="Estado *"
+            htmlForState="state"
+            idState="state"
+            nameState="state"
+            textCity="Cidade *"
+            htmlForCity="city"
+            idCity="city"
+            nameCity="city"
+            classNameFlex={styles.container_inputs_flex}
+            classNameContentFlex={styles.classNameContentFlex}
+            classNameLabel={styles.label}
             className={styles.input}
           />
         </div>

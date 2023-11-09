@@ -17,30 +17,30 @@ function CardContato() {
             <p>
               <Image
                 src={telefone}
-                alt="a"
+                alt="telefone de contato"
                 width={16}
                 height={16}
-                className="m-1"
+                style={{ marginRight: "15px" }}
               />
               (11) 4858-5115 (Escritório)
             </p>
             <p>
               <Image
                 src={telefone}
-                alt="a"
+                alt="telefone de contato"
                 width={16}
                 height={16}
-                className="m-1"
+                style={{ marginRight: "15px" }}
               />
               (15) 98177-4112 (Carlos Santana)
             </p>
-            <p>
+            <p style={{ marginBottom: "0" }}>
               <Image
                 src={telefone}
-                alt="a"
+                alt="telefone de contato"
                 width={16}
                 height={16}
-                className="m-1"
+                style={{ marginRight: "15px" }}
               />
               (11) 99669-9022 (Freitas Neto)
             </p>
@@ -52,7 +52,7 @@ function CardContato() {
                 alt="a"
                 width={18}
                 height={14}
-                className="m-1"
+                style={{ marginRight: "15px" }}
               />
               contato@opportunityleiloes.com.br
             </div>
@@ -64,7 +64,7 @@ function CardContato() {
                 alt="a"
                 width={20}
                 height={20}
-                className="m-1"
+                style={{ marginRight: "15px" }}
               />
               Rua Fradique Coutinho 50 - 3º Andar - Conjunto 32 - Pinheiros -
               São Paulo/SP CEP 05416-010
@@ -78,7 +78,7 @@ function CardContato() {
                   alt="a"
                   width={14}
                   height={14}
-                  className="m-1"
+                  style={{ marginRight: "15px" }}
                 />
                 Instagram
               </li>

@@ -69,7 +69,7 @@ function CardComponent({ data }) {
     <div className={`${styles.container} container`}>
       <div className={styles.card}>
         <Image src={data.img} alt={data.title} className={styles.img} />
-        <div className={styles.favorite}>
+        <div className={styles.favorite} onClick={handleClick}>
           {click ? (
             <Image src={FavoriteSelected} alt="Favoritar" />
           ) : (

@@ -9,7 +9,14 @@
   gap: 5px;
   padding: 30px 10px;
   font-size: 14px;
-
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    font-family: "Roboto", Arial;
+    font-weight: bold;
+  }
   .link {
     color: $black;
     font-family: "Roboto", Arial;
@@ -18,11 +25,15 @@
   }
 
   .icon {
-    margin-top: 5px;
     margin-left: 5px;
   }
 
   p {
     margin: 0;
+  }
+}
+@media (max-width: 300px) {
+  .container_breadcrumb {
+    font-size: 10px;
   }
 }

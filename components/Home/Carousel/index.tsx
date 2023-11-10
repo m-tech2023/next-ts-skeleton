@@ -64,7 +64,7 @@ const CarouselHome = () => {
                   {slide.date} às {slide.hour_live}
                 </p>
               </div>
-              <div className={styles.contaienr_lance}>
+              <div className={styles.container_lance}>
                 <p className={styles.title} style={{ fontWeight: "600" }}>
                   Pré lances:
                 </p>

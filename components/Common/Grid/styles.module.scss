@@ -8,54 +8,71 @@
   align-items: center;
   padding: 0 10px;
   table {
-    max-width: 520px;
+    max-width: 500px;
     width: 100%;
     th {
       text-align: center;
       border: 1px solid $black;
-      padding: 12px;
     }
     td {
       @extend th;
       .container_content {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        .label {
+          margin-left: -14px;
+        }
         .container_icon {
-          max-width: 18px;
-          max-height: 18px;
-          .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          margin: 0 10px;
+          img {
+            max-width: 24px;
+            max-height: 24px;
             width: 100%;
             height: 100%;
+            object-fit: contain;
           }
         }
         .container_title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px;
+          max-width: 100px;
           width: 100%;
+          text-wrap: nowrap;
+        }
+        .container_title_mod {
+          text-align: left;
+          max-width: 100px;
+          width: 100%;
+          padding: 10px 0;
+          p {
+            margin: 0;
+            line-height: 18px;
+          }
         }
       }
     }
   }
 }
-@media (max-width: 415px) {
+
+@media (max-width: 310px) {
   .container_grid {
     table {
-      th {
-        padding: 10px 5px;
-        font-size: 4vw;
-      }
-    }
-  }
-}
-@media (max-width: 340px) {
-  .container_grid {
-    table {
-      th {
-        padding: 10px 5px;
-        font-size: 4vw;
-      }
       td {
         .container_content {
+          .container_title {
+            font-size: 5.2vw;
+          }
           .container_icon {
-            max-width: 14px;
-            max-height: 14px;
+            width: 40px;
+            height: 40px;
           }
         }
       }

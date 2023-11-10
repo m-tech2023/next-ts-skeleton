@@ -68,7 +68,7 @@ const Whatsapp = () => {
           <div className={styles.container_logo}>
             <Image
               src={logo}
-              alt=""
+              alt="Opportunity Leilões"
               width={50}
               height={50}
               className={styles.logo}
@@ -111,11 +111,11 @@ const Whatsapp = () => {
             placeholder="Nome"
           ></Input>
           <InputMask
-            mask="(99) 999-9999"
+            mask="(99) 9999-9999"
             className={styles.input}
             id="tel"
             name="tel"
-            placeholder="(DD)0000-0000"
+            placeholder="(DD) 0000-0000"
           ></InputMask>
           <Image
             src={send}

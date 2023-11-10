@@ -1,5 +1,26 @@
 .header {
   background-color: #37406d !important;
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    .input {
+      border: none;
+      border-radius: none;
+      height: 58px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .container_img {
+      top: 15px;
+      right: 15px;
+      position: absolute;
+      background-color: rgb(255, 255, 255);
+    }
+  }
   .links {
     margin-top: 40px;
     .link {

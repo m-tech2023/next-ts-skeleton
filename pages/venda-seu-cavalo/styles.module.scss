@@ -1,4 +1,8 @@
 .container {
-  padding: 60px 10px;
+  padding: 60px 0px;
   margin: 0 auto;
+  .title {
+    text-align: left;
+    padding: 30px 10px;
+  }
 }

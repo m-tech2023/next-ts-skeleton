@@ -1,6 +1,11 @@
 .container {
   padding: 60px 0;
+  .title {
+    text-align: left;
+    padding: 30px 10px;
+  }
   .container_content {
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;

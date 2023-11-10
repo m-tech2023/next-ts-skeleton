@@ -39,7 +39,7 @@ const ForgetPassword = () => {
           <div className={styles.forget_email}>
             <p>
               Não lembra seu e-mail?{" "}
-              <Link href={"/login/esqueci-meu-email"} className={styles.link}>
+              <Link href={"/login/recuperar-email"} className={styles.link}>
                 Clique aqui para recuperar.
               </Link>
             </p>

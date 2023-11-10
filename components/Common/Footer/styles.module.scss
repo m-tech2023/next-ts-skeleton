@@ -1,9 +1,7 @@
-/* Footer.scss */
-
 .footer {
   background-color: #37406d;
   color: #fff;
-  padding: 20px;
+  padding: 20px 5px;
   .btn {
     color: white !important;
   }
@@ -23,7 +21,26 @@
       border: none !important;
     }
   }
-
+  .container_redes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      align-items: center;
+      margin: 25px 0;
+      gap: 20px;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
   .footerLinks {
     margin: 40px 0 0 0;
     background-color: #37406d;
@@ -99,4 +116,26 @@
   font-style: normal;
   font-size: 14px;
   color: "#fff";
+}
+
+@media (max-width: 375px) {
+  .footer {
+    .container_redes {
+      ul {
+        justify-content: center;
+      }
+    }
+  }
+}
+@media (max-width: 325px) {
+  .footer {
+    .container_redes {
+      ul {
+        justify-content: center;
+        li {
+          font-size: 11px;
+        }
+      }
+    }
+  }
 }

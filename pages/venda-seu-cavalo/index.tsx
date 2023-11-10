@@ -27,7 +27,7 @@ const VendaSeuCavalo = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} container`}>
       <BreadCrumb />
       <Head>
         <title>Venda seu cavalo</title>
@@ -36,13 +36,8 @@ const VendaSeuCavalo = () => {
           content="Venda seu cavalo na Opportunity Leilões"
         />
       </Head>
+      <Header title="Venda seu cavalo" classNameTitle={styles.title} />
       <div className="container">
-        <div className="row">
-          <div className="col-12 pt-3">
-            <Header title="Venda seu cavalo" />
-          </div>
-        </div>
-
         <Formik
           initialValues={{
             name: "",

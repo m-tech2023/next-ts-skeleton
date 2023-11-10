@@ -65,9 +65,6 @@ function Menu({ show, handleClose }) {
                 Venda seu cavalo <i className="bi bi-chevron-right" />
               </ListGroup.Item>
             </Link>
-            <ListGroup.Item className={styles.link}>
-              Noticias <i className="bi bi-chevron-right" />
-            </ListGroup.Item>
             <Link href={"/sobre"} style={{ textDecoration: "none" }}>
               <ListGroup.Item className={styles.link}>
                 Sobre <i className="bi bi-chevron-right" />

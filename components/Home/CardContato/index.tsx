@@ -6,6 +6,7 @@ import facebook from "@/public/u437.svg";
 import instagram from "@/public/u431.svg";
 import telefone from "@/public/u439.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 function CardContato() {
   return (
@@ -49,7 +50,7 @@ function CardContato() {
             <div className={styles.contact_email}>
               <Image
                 src={email}
-                alt="a"
+                alt="email de contato"
                 width={18}
                 height={14}
                 style={{ marginRight: "15px" }}
@@ -72,36 +73,56 @@ function CardContato() {
           </li>
           <li className={`${styles.customBgLight} list-group-item`}>
             <ul className="list-group d-flex flex-row justify-content-around mt-2">
-              <li className="list-group-item border border-0 bg-transparent d-flex align-items-center">
-                <Image
-                  src={instagram}
-                  alt="a"
-                  width={14}
-                  height={14}
-                  style={{ marginRight: "15px" }}
-                />
-                Instagram
-              </li>
-              <li className="list-group-item border border-0 bg-transparent d-flex align-items-center">
-                <Image
-                  src={youtube}
-                  alt="a"
-                  width={20}
-                  height={14}
-                  className="m-1"
-                />
-                Youtube
-              </li>
-              <li className="list-group-item border border-0 bg-transparent d-flex align-items-center">
-                <Image
-                  src={facebook}
-                  alt="a"
-                  width={14}
-                  height={14}
-                  className="m-1"
-                />
-                Facebook
-              </li>
+              <Link
+                href={"https://www.instagram.com/opportunityleiloes_qm_ph/"}
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
+                <li className="list-group-item border border-0 bg-transparent d-flex align-items-center">
+                  <Image
+                    src={instagram}
+                    alt="instagram opportunity"
+                    width={14}
+                    height={14}
+                    className="m-1"
+                  />
+                  Instagram
+                </li>
+              </Link>
+              <Link
+                href={
+                  "https://www.youtube.com/channel/UCfaSBPNlgeEY3-bt937dGhg"
+                }
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
+                <li className="list-group-item border border-0 bg-transparent d-flex align-items-center">
+                  <Image
+                    src={youtube}
+                    alt="youtube opportunity"
+                    width={20}
+                    height={14}
+                    className="m-1"
+                  />
+                  Youtube
+                </li>
+              </Link>
+              <Link
+                href={"https://www.facebook.com/opportunityleiloes/"}
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
+                <li className="list-group-item border border-0 bg-transparent d-flex align-items-center">
+                  <Image
+                    src={facebook}
+                    alt="facebook opportunity"
+                    width={14}
+                    height={14}
+                    className="m-1"
+                  />
+                  Facebook
+                </li>
+              </Link>
             </ul>
           </li>
         </ul>

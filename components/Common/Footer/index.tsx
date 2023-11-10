@@ -116,36 +116,54 @@ function Footer() {
 
         <div className={`${styles.container_redes} container`}>
           <ul className="list-group d-flex flex-row">
-            <li>
-              <Image
-                src={instagram}
-                alt="instagram opportunity"
-                width={14}
-                height={14}
-                className="m-1"
-              />
-              Instagram
-            </li>
-            <li>
-              <Image
-                src={youtube}
-                alt="youtube opportunity"
-                width={20}
-                height={14}
-                className="m-1"
-              />
-              Youtube
-            </li>
-            <li>
-              <Image
-                src={facebook}
-                alt="facebook opportunity"
-                width={14}
-                height={14}
-                className="m-1"
-              />
-              Facebook
-            </li>
+            <Link
+              href={"https://www.instagram.com/opportunityleiloes_qm_ph/"}
+              target="_blank"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <li>
+                <Image
+                  src={instagram}
+                  alt="instagram opportunity"
+                  width={14}
+                  height={14}
+                  className="m-1"
+                />
+                Instagram
+              </li>
+            </Link>
+            <Link
+              href={"https://www.youtube.com/channel/UCfaSBPNlgeEY3-bt937dGhg"}
+              target="_blank"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <li>
+                <Image
+                  src={youtube}
+                  alt="youtube opportunity"
+                  width={20}
+                  height={14}
+                  className="m-1"
+                />
+                Youtube
+              </li>
+            </Link>
+            <Link
+              href={"https://www.facebook.com/opportunityleiloes/"}
+              target="_blank"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <li>
+                <Image
+                  src={facebook}
+                  alt="facebook opportunity"
+                  width={14}
+                  height={14}
+                  className="m-1"
+                />
+                Facebook
+              </li>
+            </Link>
           </ul>
         </div>
       </div>

@@ -7,7 +7,12 @@ const LogsAcessPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_header}>
-        <Header title="Minha conta" subTitle="Logs de acessos" />
+        <Header
+          title="Minha conta"
+          subTitle="Logs de acessos"
+          classNameTitle={styles.title}
+          classNameSubTitle={styles.sub_title}
+        />
       </div>
       <BreadCrumb />
       <Grid />

@@ -18,7 +18,7 @@ const Sobre = () => {
         <Header title="Sobre" />
         {aboutText.map((text: string, key: number) => {
           return (
-            <p className="px-4 text-start" key={key}>
+            <p className={`${styles.about} px-4 text-start`} key={key}>
               {text}
             </p>
           );

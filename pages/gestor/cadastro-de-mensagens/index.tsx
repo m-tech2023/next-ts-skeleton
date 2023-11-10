@@ -8,7 +8,7 @@ const CadastroDeMensagens = () => {
     <div className={styles.container}>
       <BreadCrumb />
       <div className={styles.container_header}>
-        <Header title="Controle de Mensagens" />
+        <Header title="Controle de Mensagens" classNameTitle={styles.title} />
       </div>
       <GestorForm />
     </div>

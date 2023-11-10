@@ -10,10 +10,7 @@ const ForgetEmail = () => {
     <div className={styles.container}>
       <BreadCrumb />
       <div className={styles.container_header}>
-        <Header
-          title="Recuperar e-mail"
-          subTitle="Digite seu celular de cadastro para receber um código de recuperação"
-        />
+        <Header title="Recuperar e-mail" subTitle="..." />
       </div>
       <div className={styles.container_form}>
         <form className={styles.form}>
@@ -32,7 +29,7 @@ const ForgetEmail = () => {
               className={styles.input}
             />
           </div>
-          <div className={styles.container_buttons}>
+          <div className={`${styles.container_buttons} mt-3`}>
             <Button text="ENVIAR" className={styles.btn} />
           </div>
         </form>

@@ -15,6 +15,8 @@ const ForgetPassword = () => {
           title="Esqueci minha senha"
           subTitle=" Digite o seu e-mail de cadastro para receber um link de recuperação de
           senha, onde será possível alterar a sua senha."
+          classNameTitle={styles.title}
+          classNameSubTitle={styles.sub_title}
         />
       </div>
       <div className={styles.container_form}>

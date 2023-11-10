@@ -3,9 +3,11 @@ import Carousel from "@/components/Common/Carousel";
 import STREAMING from "@/public/icon/normal_streaming.svg";
 import Image from "next/image";
 import Favorite from "@/public/u332.svg";
+import FavoriteSelected from "@/public/u332_selected.svg";
 import ImageHorse1 from "@/public/img-teste.jpg";
 import ImageHorse2 from "@/public/img-teste-two.png";
 import ImageHorse3 from "@/public/img-teste-third.jpg";
+import { useState } from "react";
 
 const cardData = [
   {
@@ -59,12 +61,20 @@ const cardData = [
 ];
 
 function CardComponent({ data }) {
+  const [click, setClick] = useState(false);
+  const handleClick = () => {
+    setClick(!click);
+  };
   return (
     <div className={`${styles.container} container`}>
       <div className={styles.card}>
         <Image src={data.img} alt={data.title} className={styles.img} />
         <div className={styles.favorite}>
-          <Image src={Favorite} alt="Favoritar" />
+          {click ? (
+            <Image src={FavoriteSelected} alt="Favoritar" />
+          ) : (
+            <Image src={Favorite} alt="Favoritar" />
+          )}
         </div>
         <div
           className={styles.card_body}

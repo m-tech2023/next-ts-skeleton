@@ -11,8 +11,12 @@
   margin: 60px 0;
   gap: 20px;
   .container_header {
-    max-width: 600px;
     height: 120px;
+    padding: 0 10px;
+    .sub_title {
+      text-align: left;
+      max-width: 320px;
+    }
   }
   .container_form {
     margin: 0 auto;
@@ -90,15 +94,6 @@
           box-shadow: 2px 2px 5px 0px $buttons_shadow;
           cursor: pointer;
           transition: all 0.5s;
-          button {
-            border: none;
-            background-color: transparent;
-            color: $white;
-          }
-          p {
-            margin: 0;
-            font-family: "Roboto", Arial;
-          }
           &:hover {
             background-color: $buttons_hover;
             transition: all 0.5s;
@@ -110,6 +105,9 @@
           background-color: $white;
           font-family: "Roboto", Arial;
           button {
+            color: $black;
+            border: none;
+            background-color: transparent;
             color: $black;
           }
           img {
@@ -139,6 +137,7 @@
         border-radius: 5px;
         font-size: 16px;
         transition: all 0.4s;
+        font-family: "Roboto", Arial;
         &:hover {
           background-color: $buttons_hover;
           transition: all 0.4s;
@@ -176,19 +175,6 @@
     }
   }
 }
-@media (max-width: 390px) {
-  .container {
-    .container_header {
-      .title {
-        font-size: 9vw;
-      }
-      .sub_title {
-        padding: 10px 5px;
-        font-size: 5vw;
-      }
-    }
-  }
-}
 @media (max-width: 360px) {
   .container {
     .container_form {
@@ -202,6 +188,20 @@
           border-radius: 5px;
           padding: 2px;
         }
+      }
+    }
+  }
+}
+@media (max-width: 345px) {
+  .container {
+    .container_header {
+      height: 120px;
+      .sub_title {
+        max-width: 320px;
+      }
+      .title {
+        text-align: left;
+        font-size: 9vw;
       }
     }
   }

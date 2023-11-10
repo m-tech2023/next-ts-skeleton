@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 import { SET_USER_TOKEN } from "@/store/user/action-types";
 import Label from "@/components/Common/Label";
 import Input from "@/components/Common/Input";
-import ButtonGoogle from "../ButtonGoogle";
+import ButtonGoogle from "../../Common/ButtonGoogle";
 import Button from "@/components/Common/Button";
 
 const LoginFormPessoaFisica = () => {

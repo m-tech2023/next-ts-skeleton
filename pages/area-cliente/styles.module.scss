@@ -18,18 +18,18 @@
     justify-content: center;
     background-color: $blue;
     text-align: center;
-    h1 {
+    .title {
       font-size: 21px;
       margin: 0;
       color: $buttons_login;
-      font-family: $font_secondary;
+      font-family: "Roboto", Arial;
     }
-    p {
+    .sub_title {
       margin: 0;
       text-align: center;
       color: $white;
       font-size: 30px;
-      font-family: $font_secondary;
+      font-family: "Roboto Slab", Arial;
       font-weight: 700;
     }
   }

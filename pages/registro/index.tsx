@@ -6,7 +6,7 @@ import axios from "axios";
 import Header from "@/components/Common/Header";
 import BreadCrumb from "@/components/Common/BreadCrumb";
 import Button from "@/components/Common/Button";
-import ButtonGoogle from "@/components/Login/ButtonGoogle";
+import ButtonGoogle from "@/components/Common/ButtonGoogle";
 
 const PreRegistration = () => {
   const [formValues, setFormValues] = useState({

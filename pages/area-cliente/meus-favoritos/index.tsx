@@ -7,7 +7,12 @@ const MyFavoritePage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_header}>
-        <Header title="Minha conta" subTitle="Meus favoritos" />
+        <Header
+          title="Minha conta"
+          subTitle="Meus favoritos"
+          classNameTitle={styles.title}
+          classNameSubTitle={styles.sub_title}
+        />
       </div>
       <BreadCrumb />
       <Grid />

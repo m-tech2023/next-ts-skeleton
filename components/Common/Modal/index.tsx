@@ -138,7 +138,7 @@ export function ModalLogin() {
                   }}
                 >
                   <p data-bs-dismiss="modal" style={{ margin: "0" }}>
-                    Registrar
+                    Cadastrar
                   </p>
                 </a>
                 <i className="bi bi-chevron-right" />

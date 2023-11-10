@@ -130,7 +130,7 @@ export function ModalLogin() {
                 }}
               >
                 <a
-                  href={"/registro"}
+                  href={"/cadastro"}
                   style={{
                     textDecoration: "none",
                     color: "black",

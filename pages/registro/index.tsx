@@ -98,10 +98,11 @@ const PreRegistration = () => {
     }
     console.log(formValues);
   };
+
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} container`}>
       <BreadCrumb />
-      <Header title="Cadastre-se" />
+      <Header title="Cadastre-se" classNameTitle={styles.title} />
       <div className={styles.container_form}>
         <form onSubmit={handleSubmit}>
           <div className="border m-1 p-4 w-auto rounded shadow">
@@ -111,8 +112,8 @@ const PreRegistration = () => {
             >
               Nacionalidade / Nacionality
             </label>
-            <div className="d-flex flex-row">
-              <label className="d-flex flex-row me-3">
+            <div className={styles.container_inputs}>
+              <label className={styles.label_select}>
                 <Image
                   src="/icons/brazil.png"
                   alt="Brazil flag"
@@ -121,7 +122,7 @@ const PreRegistration = () => {
                   height={22}
                 />
                 <input
-                  className="me-1"
+                  className={styles.input_select}
                   type="radio"
                   name="nationality"
                   value="brasileiro"
@@ -130,7 +131,7 @@ const PreRegistration = () => {
                 />
                 Brasileiro
               </label>
-              <label className="d-flex flex-row me-3">
+              <label className={styles.label_select}>
                 <Image
                   src="/icons/earth.png"
                   alt="Earth image"
@@ -139,7 +140,7 @@ const PreRegistration = () => {
                   height={22}
                 />
                 <input
-                  className="me-1"
+                  className={styles.input_select}
                   type="radio"
                   name="nationality"
                   value="estrangeiro"
@@ -158,10 +159,10 @@ const PreRegistration = () => {
             >
               Tipo de Cadastro
             </label>
-            <div className="d-flex flex-row">
-              <label className="d-flex flex-row me-3">
+            <div className={styles.container_inputs}>
+              <label className={styles.label_select}>
                 <input
-                  className="me-1"
+                  className={styles.input_select}
                   type="radio"
                   name="registrationType"
                   value="pf"
@@ -170,9 +171,9 @@ const PreRegistration = () => {
                 />
                 Pessoa Física
               </label>
-              <label className="d-flex flex-row me-3">
+              <label className={styles.label_select}>
                 <input
-                  className="me-1"
+                  className={styles.input_select}
                   type="radio"
                   name="registrationType"
                   value="pj"

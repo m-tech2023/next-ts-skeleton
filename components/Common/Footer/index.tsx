@@ -60,9 +60,6 @@ function Footer() {
                       Venda seu Cavalo
                     </li>
                   </Link>
-                  <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0">
-                    Notícias
-                  </li>
                   <Link href={"/sobre"} style={{ textDecoration: "none" }}>
                     <li className="list-group-item bg-transparent text-white border border-end-0 border-start-0">
                       Sobre
@@ -117,32 +114,32 @@ function Footer() {
           </div>
         </div>
 
-        <div className="d-flex justify-content-center align-items-center container">
+        <div className={`${styles.container_redes} container`}>
           <ul className="list-group d-flex flex-row">
-            <li className="list-group-item border border-0 bg-transparent text-white d-flex align-items-center">
+            <li>
               <Image
                 src={instagram}
-                alt="a"
+                alt="instagram opportunity"
                 width={14}
                 height={14}
                 className="m-1"
               />
               Instagram
             </li>
-            <li className="list-group-item text-white border border-0 bg-transparent d-flex align-items-center">
+            <li>
               <Image
                 src={youtube}
-                alt="a"
+                alt="youtube opportunity"
                 width={20}
                 height={14}
                 className="m-1"
               />
               Youtube
             </li>
-            <li className="list-group-item text-white border border-0 bg-transparent d-flex align-items-center">
+            <li>
               <Image
                 src={facebook}
-                alt="a"
+                alt="facebook opportunity"
                 width={14}
                 height={14}
                 className="m-1"
@@ -152,7 +149,6 @@ function Footer() {
           </ul>
         </div>
       </div>
-
       <div className={`${styles.footerInfo}  py-3`}>
         <div className="container">
           <h6 style={{ fontWeight: "600", fontSize: "16px" }}>

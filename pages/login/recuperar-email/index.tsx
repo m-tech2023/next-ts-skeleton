@@ -10,7 +10,12 @@ const ForgetEmail = () => {
     <div className={styles.container}>
       <BreadCrumb />
       <div className={styles.container_header}>
-        <Header title="Recuperar e-mail" subTitle="..." />
+        <Header
+          title="Recuperar e-mail"
+          subTitle="..."
+          classNameTitle={styles.title}
+          classNameSubTitle={styles.sub_title}
+        />
       </div>
       <div className={styles.container_form}>
         <form className={styles.form}>

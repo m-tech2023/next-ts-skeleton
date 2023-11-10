@@ -1,14 +1,21 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import { useRouter } from "next/router";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faLock } from "@fortawesome/free-solid-svg-icons";
-import { faClipboard } from "@fortawesome/free-solid-svg-icons";
-import { faBookmark } from "@fortawesome/free-solid-svg-icons";
-import { faSheetPlastic } from "@fortawesome/free-solid-svg-icons";
-import { faCoins } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+
+import PessoalBlack from "@/public/img-myaccount/pessoal-black.svg";
+import PessoalWhite from "@/public/img-myaccount/pessoal-white.svg";
+import CadeadoBlack from "@/public/img-myaccount/cadeado-black.svg";
+import CadeadoWhite from "@/public/img-myaccount/cadeado-white.svg";
+import PropriedadeBlack from "@/public/img-myaccount/propriedade-black.svg";
+import PropriedadeWhite from "@/public/img-myaccount/propriedade-white.svg";
+import LogBlack from "@/public/img-myaccount/log-black.svg";
+import LogWhite from "@/public/img-myaccount/log-white.svg";
+import RoseBlack from "@/public/img-myaccount/rosas-black.svg";
+import RoseWhite from "@/public/img-myaccount/rosas-white.svg";
+import FavoriteBlack from "@/public/img-myaccount/favorite-black.svg";
+import FavoriteWhite from "@/public/img-myaccount/favorite-white.svg";
+import Image from "next/image";
 
 const Grid = () => {
   const router = useRouter();
@@ -17,32 +24,46 @@ const Grid = () => {
     {
       path: "/area-cliente/dados-pessoais",
       label: "Dados pessoais",
-      icon: faUser,
+      icon:
+        router.asPath === "/area-cliente/dados-pessoais"
+          ? PessoalWhite
+          : PessoalBlack,
     },
     {
       path: "/area-cliente/dados-da-propriedade",
       label: "Dados da propriedade",
-      icon: faSheetPlastic,
+      icon:
+        router.asPath === "/area-cliente/dados-da-propriedade"
+          ? PropriedadeWhite
+          : PropriedadeBlack,
     },
     {
       path: "/area-cliente/dados-de-acesso",
       label: "Dados de acesso",
-      icon: faLock,
+      icon:
+        router.asPath === "/area-cliente/dados-de-acesso"
+          ? CadeadoWhite
+          : CadeadoBlack,
     },
     {
       path: "/area-cliente/meus-lances",
       label: "Meus lances",
-      icon: faCoins,
+      icon:
+        router.asPath === "/area-cliente/meus-lances" ? RoseWhite : RoseBlack,
     },
     {
       path: "/area-cliente/meus-favoritos",
       label: "Meus favoritos",
-      icon: faBookmark,
+      icon:
+        router.asPath === "/area-cliente/meus-favoritos"
+          ? FavoriteWhite
+          : FavoriteBlack,
     },
     {
       path: "/area-cliente/logs-de-acessos",
       label: "Log de acessos",
-      icon: faClipboard,
+      icon:
+        router.asPath === "/area-cliente/logs-de-acessos" ? LogWhite : LogBlack,
     },
   ];
 
@@ -57,73 +78,98 @@ const Grid = () => {
                 style={{
                   backgroundColor:
                     router.asPath === page.path ? "#37406d" : "#ffffff",
-                  color: router.asPath === page.path ? "#ffffff" : "#000000",
+                  color: router.asPath === page.path ? "#ffffff" : "black",
                   marginRight: "8px",
                 }}
               >
-                <div className={styles.container_content}>
-                  <div className={styles.container_icon}>
-                    <FontAwesomeIcon
-                      icon={page.icon}
-                      className={styles.icon}
-                      style={{
-                        color:
-                          router.asPath === page.path ? "#ffffff" : "#37406d",
-                        marginRight: "8px",
-                      }}
-                    />
+                <Link
+                  style={{
+                    color: router.asPath === page.path ? "#ffffff" : "black",
+                    textDecoration: "none",
+                  }}
+                  href={page.path}
+                >
+                  <div className={styles.container_content}>
+                    <div className={styles.container_icon}>
+                      <Image
+                        src={page.icon}
+                        alt={page.label}
+                        className={styles.icon}
+                        style={{
+                          marginRight: "8px",
+                        }}
+                      />
+                    </div>
+                    <div className={styles.container_title_mod}>
+                      <p>{page.label}</p>
+                    </div>
                   </div>
-                  <div className={styles.container_title}>
-                    <Link
-                      style={{
-                        color:
-                          router.asPath === page.path ? "#ffffff" : "#37406d",
-                        textDecoration: "none",
-                      }}
-                      href={page.path}
-                    >
-                      {page.label}
-                    </Link>
-                  </div>
-                </div>
+                </Link>
               </td>
             ))}
           </tr>
           <tr>
-            {pages.slice(2, 4).map((page) => (
+            {pages.slice(2, 3).map((page) => (
               <td
                 key={page.path}
                 style={{
                   backgroundColor:
                     router.asPath === page.path ? "#37406d" : "#ffffff",
-                  color: router.asPath === page.path ? "#ffffff" : "#000000",
+                  color: router.asPath === page.path ? "#ffffff" : "black",
                 }}
               >
                 <div className={styles.container_content}>
                   <div className={styles.container_icon}>
-                    <FontAwesomeIcon
-                      icon={page.icon}
+                    <Image
+                      src={page.icon}
+                      alt={page.label}
                       className={styles.icon}
-                      style={{
-                        color:
-                          router.asPath === page.path ? "#ffffff" : "#37406d",
-                        marginRight: "8px",
-                      }}
                     />
                   </div>
-                  <div className={styles.container_title}>
+                  <div className={styles.container_title_mod}>
                     <Link
                       style={{
                         color:
-                          router.asPath === page.path ? "#ffffff" : "#37406d",
+                          router.asPath === page.path ? "#ffffff" : "black",
                         textDecoration: "none",
                       }}
                       href={page.path}
                     >
-                      {page.label}
+                      <p>{page.label}</p>
                     </Link>
                   </div>
                 </div>
+              </td>
+            ))}
+            {pages.slice(3, 4).map((page) => (
+              <td
+                key={page.path}
+                style={{
+                  backgroundColor:
+                    router.asPath === page.path ? "#37406d" : "#ffffff",
+                  color: router.asPath === page.path ? "#ffffff" : "black",
+                }}
+              >
+                <Link
+                  style={{
+                    color: router.asPath === page.path ? "#ffffff" : "black",
+                    textDecoration: "none",
+                  }}
+                  href={page.path}
+                >
+                  <div className={styles.container_content}>
+                    <div className={styles.container_icon}>
+                      <Image
+                        src={page.icon}
+                        alt={page.label}
+                        className={styles.icon}
+                      />
+                    </div>
+                    <div className={styles.container_title}>
+                      <div className={styles.label}>{page.label}</div>
+                    </div>
+                  </div>
+                </Link>
               </td>
             ))}
           </tr>
@@ -134,34 +180,29 @@ const Grid = () => {
                 style={{
                   backgroundColor:
                     router.asPath === page.path ? "#37406d" : "#ffffff",
-                  color: router.asPath === page.path ? "#ffffff" : "#000000",
+                  color: router.asPath === page.path ? "#ffffff" : "black",
                 }}
               >
-                <div className={styles.container_content}>
-                  <div className={styles.container_icon}>
-                    <FontAwesomeIcon
-                      icon={page.icon}
-                      className={styles.icon}
-                      style={{
-                        color:
-                          router.asPath === page.path ? "#ffffff" : "#37406d",
-                        marginRight: "8px",
-                      }}
-                    />
+                <Link
+                  style={{
+                    color: router.asPath === page.path ? "#ffffff" : "black",
+                    textDecoration: "none",
+                  }}
+                  href={page.path}
+                >
+                  <div className={styles.container_content}>
+                    <div className={styles.container_icon}>
+                      <Image
+                        src={page.icon}
+                        alt={page.label}
+                        className={styles.icon}
+                      />
+                    </div>
+                    <div className={styles.container_title_mod}>
+                      <p>{page.label}</p>
+                    </div>
                   </div>
-                  <div className={styles.container_title}>
-                    <Link
-                      style={{
-                        color:
-                          router.asPath === page.path ? "#ffffff" : "#37406d",
-                        textDecoration: "none",
-                      }}
-                      href={page.path}
-                    >
-                      {page.label}
-                    </Link>
-                  </div>
-                </div>
+                </Link>
               </td>
             ))}
           </tr>

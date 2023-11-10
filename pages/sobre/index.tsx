@@ -14,11 +14,11 @@ const Sobre = () => {
   return (
     <div className={`${styles.container} container`}>
       <Breadcrumb />
+      <Header title="Sobre" classNameTitle={styles.title} />
       <div className={styles.container_content}>
-        <Header title="Sobre" />
         {aboutText.map((text: string, key: number) => {
           return (
-            <p className={`${styles.about} px-4 text-start`} key={key}>
+            <p className={styles.about} key={key}>
               {text}
             </p>
           );

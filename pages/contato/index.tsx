@@ -45,8 +45,8 @@ const Contact = () => {
   return (
     <div className={styles.container}>
       <BreadCrumb />
-      <Header title="Contato" />
       <div className={styles.container_form}>
+        <Header title="Contato" classNameTitle={styles.title} />
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className="d-flex flex-column mb-3 fw-bold">
             <Label text="Nome *" labelFor="name" />

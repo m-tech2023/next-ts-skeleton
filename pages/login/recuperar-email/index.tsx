@@ -12,7 +12,8 @@ const ForgetEmail = () => {
       <div className={styles.container_header}>
         <Header
           title="Recuperar e-mail"
-          subTitle="..."
+          subTitle="Digite o seu celular de cadastro para receber um link de recuperação de
+          email, onde será possível recuperar o email."
           classNameTitle={styles.title}
           classNameSubTitle={styles.sub_title}
         />

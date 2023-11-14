@@ -7,6 +7,7 @@ import Image from "next/image";
 import Title from "@/components/Common/Title";
 import Auction from "@/components/Details/Auction";
 import CarouselSponsors from "@/components/Details/Carousel";
+import Informations from "@/components/Details/Informations";
 
 const Details = () => {
   return (
@@ -26,7 +27,10 @@ const Details = () => {
           <p className={styles.title}>Compart.</p>
         </div>
       </div>
-      <div className={styles.container_info}></div>
+      <div className={styles.container_info}>
+        <Title title="Informações" color="#37406d" />
+        <Informations />
+      </div>
       <div className={styles.sponsors}>
         <Title title="Patrocinadores" color="#37406d" />
         <CarouselSponsors />

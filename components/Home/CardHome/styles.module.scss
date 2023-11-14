@@ -43,6 +43,7 @@
   display: none;
   @extend .container_desktop;
 }
+
 @media (max-width: 1200px) {
   .container_desktop {
     display: none;
@@ -107,6 +108,13 @@
           font-size: 3.4vw;
         }
       }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .container_title {
+    small {
+      text-wrap: nowrap;
     }
   }
 }

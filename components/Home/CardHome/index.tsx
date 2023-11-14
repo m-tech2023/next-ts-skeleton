@@ -141,7 +141,9 @@ export function CardComponent({ data }) {
 function CardsHome() {
   return (
     <div className="container mt-5">
-      <div className="d-flex justify-content-between align-items-center mt-4 mb-4">
+      <div
+        className={`${styles.container_title} d-flex justify-content-between align-items-center mt-4 mb-4`}
+      >
         <h2 className="fw-bolder">Próximos leilões</h2>
         <small
           className="d-flex justify-content-between align-items-center mb-0"

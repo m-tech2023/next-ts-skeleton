@@ -1,8 +1,34 @@
+@import "@/styles/colors.scss";
+
 .customBgLight {
-  background-color: #f2f2f2;
+  background-color: $white_home_contact;
   .contact_email {
     i {
       margin: 0 5px;
     }
+  }
+}
+.contact {
+  @extend .customBgLight;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    li {
+      color: $black;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .customBgLight {
+    font-size: 4vw;
   }
 }

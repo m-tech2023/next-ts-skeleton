@@ -113,7 +113,6 @@ function Footer() {
             </div>
           </div>
         </div>
-
         <div className={`${styles.container_redes} container`}>
           <ul className="list-group d-flex flex-row">
             <Link

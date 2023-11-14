@@ -1,0 +1,29 @@
+@import "@/styles/fonts.scss";
+@import "@/styles/colors.scss";
+
+.carousel {
+  padding: 0 5px;
+  .container_sponsers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    gap: 5px;
+    box-shadow: 2px 2px 5px 0px $buttons_shadow;
+    .container_access {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 15px;
+      gap: 5px;
+      .sub_title {
+        margin: 0;
+        font-size: 12px;
+      }
+    }
+  }
+}

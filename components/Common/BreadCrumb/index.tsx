@@ -3,14 +3,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./styles.module.scss";
+import React from "react";
 
-const BreadCrumb = () => {
+interface Prop {
+  color?: string;
+}
+
+const BreadCrumb: React.FC<Prop> = ({ color }) => {
   const router = useRouter();
   const pathNames = router.asPath.split("/").filter((x) => x);
+  const textColor = color && color !== "" ? color : "black";
 
   return (
     <div className={`${styles.container_breadcrumb} container `}>
-      <Link href="/" className={styles.link}>
+      <Link href="/" className={styles.link} style={{ color: textColor }}>
         Home
         <FontAwesomeIcon icon={faAngleRight} className={styles.icon} />
       </Link>
@@ -18,10 +24,11 @@ const BreadCrumb = () => {
         const routeTo = `/${pathNames.slice(0, index + 1).join("/")}`;
         const isLast = index === pathNames.length - 1;
         return (
-          <span key={pathname}>
+          <span key={pathname} style={{ color: textColor }}>
             <Link
               href={routeTo}
-              className="fw-bold text-dark text-decoration-none"
+              className={styles.link}
+              style={{ color: textColor, fontWeight: "bold" }}
             >
               {pathname.charAt(0).toUpperCase() +
                 pathname.slice(1).toLocaleLowerCase().replaceAll("-", " ")}

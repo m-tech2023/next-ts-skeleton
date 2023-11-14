@@ -13,6 +13,10 @@
     th {
       text-align: center;
       border: 1px solid $black;
+<<<<<<< HEAD
+=======
+      padding: 12px 5px;
+>>>>>>> c3b4410553d0bbaa9ebe94268610c96c22d98249
     }
     td {
       @extend th;
@@ -75,6 +79,16 @@
             height: 40px;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .container_grid {
+    table {
+      th {
+        font-size: 4vw;
       }
     }
   }

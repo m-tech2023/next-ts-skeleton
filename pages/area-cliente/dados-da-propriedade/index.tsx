@@ -17,7 +17,7 @@ const DataProperties = () => {
       </div>
       <BreadCrumb />
       <Grid />
-      <div className={styles.container_data}>
+      <div className={`${styles.container_data} mt-4`}>
         <FormDataProperties />
       </div>
     </div>

@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/router";
-import { Button, CloseButton, Input } from "reactstrap";
+import { Button, Input } from "reactstrap";
 import closeBtn from "@/public/close_lightbox_u96.svg";
 
 function Menu({ show, handleClose }) {

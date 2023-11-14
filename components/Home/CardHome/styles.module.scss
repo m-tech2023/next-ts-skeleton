@@ -43,6 +43,7 @@
   display: none;
   @extend .container_desktop;
 }
+
 @media (max-width: 1200px) {
   .container_desktop {
     display: none;
@@ -77,16 +78,43 @@
   .container {
     .card {
       .card_body {
-        font-size: 4.5vw;
+        img {
+          width: 22px;
+          height: 12px;
+        }
       }
       .breed {
-        font-size: 4.5vw;
+        font-size: 4.2vw;
       }
       .pre_lance {
         strong {
-          font-size: 3.5vw;
+          font-size: 3.4vw;
         }
       }
+    }
+  }
+}
+@media (max-width: 370px) {
+  .container {
+    .card {
+      .card_body {
+        font-size: 4vw;
+      }
+      .breed {
+        font-size: 4.2vw;
+      }
+      .pre_lance {
+        strong {
+          font-size: 3.4vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .container_title {
+    small {
+      text-wrap: nowrap;
     }
   }
 }

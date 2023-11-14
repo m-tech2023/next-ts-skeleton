@@ -71,14 +71,14 @@ function CardContato() {
               São Paulo/SP CEP 05416-010
             </div>
           </li>
-          <li className={`${styles.customBgLight} list-group-item`}>
+          <div className={styles.contact}>
             <ul className="list-group d-flex flex-row justify-content-around mt-2">
               <Link
                 href={"https://www.instagram.com/opportunityleiloes_qm_ph/"}
                 target="_blank"
                 style={{ textDecoration: "none" }}
               >
-                <li className="list-group-item border border-0 bg-transparent d-flex align-items-center">
+                <li className=" border border-0 bg-transparent d-flex align-items-center">
                   <Image
                     src={instagram}
                     alt="instagram opportunity"
@@ -96,7 +96,7 @@ function CardContato() {
                 target="_blank"
                 style={{ textDecoration: "none" }}
               >
-                <li className="list-group-item border border-0 bg-transparent d-flex align-items-center">
+                <li className=" border border-0 bg-transparent d-flex align-items-center">
                   <Image
                     src={youtube}
                     alt="youtube opportunity"
@@ -112,7 +112,7 @@ function CardContato() {
                 target="_blank"
                 style={{ textDecoration: "none" }}
               >
-                <li className="list-group-item border border-0 bg-transparent d-flex align-items-center">
+                <li className="border border-0 bg-transparent d-flex align-items-center">
                   <Image
                     src={facebook}
                     alt="facebook opportunity"
@@ -124,7 +124,7 @@ function CardContato() {
                 </li>
               </Link>
             </ul>
-          </li>
+          </div>
         </ul>
       </div>
     </div>

@@ -1,39 +1,39 @@
+.container {
+  padding: 15px 5px;
+  .card {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 6px 6px 5px -5px rgba(0, 0, 0, 0.75);
+    .favorite {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      cursor: pointer;
+    }
+    .pre_lance {
+      padding: 5px 30px;
+    }
+    .breed {
+      width: 100%;
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      gap: 10px;
+    }
+    .img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 .container_desktop {
   display: flex;
   width: 100%;
   height: 100%;
-  .container {
-    padding: 15px 0;
-    .card {
-      position: relative;
-      max-width: 410px;
-      width: 100%;
-      height: 100%;
-      box-shadow: 6px 6px 16px -8px rgba(0, 0, 0, 0.75);
-      .favorite {
-        position: absolute;
-        right: 15px;
-        top: 10px;
-        cursor: pointer;
-      }
-      .pre_lance {
-        padding: 5px 30px;
-      }
-      .breed {
-        width: 100%;
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        gap: 10px;
-      }
-      .img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
 }
 .container_mobile {
   display: none;
@@ -63,30 +63,28 @@
   }
   .container_mobile {
     display: flex;
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .card {
-        max-width: 100%;
-      }
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card {
+      max-width: 100%;
     }
   }
 }
 @media (max-width: 340px) {
-  .container_desktop {
-    .container {
-      .card {
-        .card_body {
-          font-size: 4.5vw;
-        }
-        .breed {
-          font-size: 4.5vw;
-        }
-        .pre_lance {
-          strong {
-            font-size: 3.5vw;
-          }
+  .container {
+    .card {
+      .card_body {
+        font-size: 4.5vw;
+      }
+      .breed {
+        font-size: 4.5vw;
+      }
+      .pre_lance {
+        strong {
+          font-size: 3.5vw;
         }
       }
     }

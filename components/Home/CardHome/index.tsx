@@ -60,7 +60,7 @@ const cardData = [
   },
 ];
 
-function CardComponent({ data }) {
+export function CardComponent({ data }) {
   const [click, setClick] = useState(false);
   const handleClick = () => {
     setClick(!click);

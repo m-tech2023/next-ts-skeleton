@@ -1,0 +1,147 @@
+@import "@/styles/colors.scss";
+@import "@/styles/fonts.scss";
+
+.container_auction {
+  padding: 0 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 350px;
+  width: 100%;
+  height: 100%;
+  color: $white;
+  background-color: $black;
+  .title {
+    z-index: 2;
+    padding: 0 10px;
+    color: $buttons_login;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+  }
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img {
+      margin-left: -10px;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 100%;
+      background: linear-gradient(to right, $black, transparent);
+      z-index: 1;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 100%;
+      background: linear-gradient(to right, $black, transparent);
+      z-index: 1;
+    }
+  }
+  .container_transmission {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    .sub_title {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .container_streaming {
+      width: 100%;
+      max-width: 130px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $red;
+      border-radius: 10px;
+      cursor: pointer;
+      .container_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 25px;
+        background-color: $white;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .container_online {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .sub_title {
+          margin-left: -5px;
+          color: $white;
+          font-family: "Roboto", sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .date {
+    z-index: 2;
+    padding: 0 10px;
+    .sub_title {
+      font-size: 22px;
+    }
+  }
+  .container_cube {
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: -45px;
+    .cube {
+      max-width: 100px;
+      width: 100%;
+      height: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background-color: $white_home_contact;
+      color: $light_black;
+      box-shadow: 5px 5px 5px 0px $buttons_shadow;
+      h1 {
+        font-weight: 300;
+        color: $light_black;
+      }
+      p {
+        margin: 0;
+        margin-top: -10px;
+        font-weight: bold;
+      }
+    }
+  }
+}

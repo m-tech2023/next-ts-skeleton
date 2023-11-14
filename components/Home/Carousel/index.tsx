@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Carousel from "../../Common/Carousel";
-import styles from "../../Common/Carousel/styles.module.scss";
+import styles from "./styles.module.scss";
 import Streaming from "@/public/streaming_icon_u10.svg";
 import Horse1 from "@/public/img-teste.jpg";
 import Horse2 from "@/public/img-teste-two.png";

@@ -64,8 +64,8 @@ const LogsAcessPage = () => {
           </thead>
           <tbody>
             {data.map((item, index) => (
-              <tr>
-                <td className="text-center" key={index}>
+              <tr key={index}>
+                <td className="text-center">
                   <p>{item.date}</p>
                   <span>{item.hour}</span>
                 </td>

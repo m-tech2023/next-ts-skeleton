@@ -84,8 +84,8 @@ const MyBidsPage = () => {
           </thead>
           <tbody>
             {data.map((item, index) => (
-              <tr>
-                <td key={index}>
+              <tr key={index}>
+                <td>
                   <p style={{ fontWeight: "bold" }}>{item.user}</p>
                   <span>{item.date}</span>
                 </td>

@@ -12,10 +12,6 @@ const SearchPage = () => {
   const searchName = router.query.name;
   const [searchResult, setSearchResult] = useState<Pokemon>();
 
-  useEffect(() => {
-    handleSearch();
-  }, [searchName]);
-
   const handleSearch = async () => {
     try {
       if (typeof searchName === "string") {
@@ -27,6 +23,10 @@ const SearchPage = () => {
       setSearchResult(undefined);
     }
   };
+
+  useEffect(() => {
+    handleSearch();
+  }, [searchName]);
 
   return (
     <div className={styles.container}>

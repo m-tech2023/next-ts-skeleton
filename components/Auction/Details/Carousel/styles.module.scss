@@ -27,3 +27,26 @@
     }
   }
 }
+.container_tablet {
+  display: none;
+}
+.container_mobile {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .container_desktop {
+    display: none;
+  }
+  .container_tablet {
+    display: flex;
+  }
+}
+@media (max-width: 360px) {
+  .container_mobile {
+    display: flex;
+  }
+  .container_tablet {
+    display: none;
+  }
+}

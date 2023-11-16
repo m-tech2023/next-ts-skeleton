@@ -1,0 +1,232 @@
+@import "@/styles/colors.scss";
+
+.container {
+  max-width: 420px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 5px 0px $buttons_shadow;
+  .horse {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .img {
+      width: 100%;
+      height: 100%;
+    }
+    .title_lote {
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: $buttons_login;
+      p {
+        margin: 0;
+        line-height: 15px;
+        color: $white;
+        font-family: "Roboto Slab";
+        font-weight: bold;
+        font-size: 13px;
+      }
+    }
+    .title {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      position: absolute;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.616);
+      height: 50px;
+      p {
+        margin: 0;
+        color: $lotes_title;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .gender {
+        max-width: 25px;
+        max-height: 25px;
+        object-fit: contain;
+      }
+    }
+    .favorite {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      cursor: pointer;
+    }
+  }
+  .family {
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    .container_family {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .container_line {
+        width: 100%;
+        padding: 10px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .male {
+          width: 50px;
+          height: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $white;
+          background-color: $lotes_male;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          margin: 0;
+        }
+        .female {
+          @extend .male;
+          background-color: $lotes_female;
+        }
+        .name_male {
+          @extend .male;
+          color: $black;
+          width: 100%;
+          font-weight: 300;
+          font-family: "Roboto", arial;
+          font-size: 12px;
+          background-color: $lotes_male_bg;
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+        .name_female {
+          @extend .name_male;
+          background-color: $lotes_female_bg;
+        }
+      }
+    }
+  }
+  .grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    .table {
+      width: 100%;
+      display: flex;
+      .thead {
+        width: 50%;
+        border-width: 1px 1px 0 1px;
+        border-style: solid;
+        border-color: $light_black;
+        .row {
+          margin: 0;
+          border-bottom: 1px solid $light_black;
+          padding: 0 5px;
+          color: $light_black;
+        }
+      }
+      .tbody {
+        @extend .thead;
+        border-width: 1px 1px 1px 0px;
+        .row {
+          border-bottom: 1px solid $light_black;
+          margin: 0;
+          padding: 0 5px;
+          color: $light_black;
+        }
+      }
+    }
+  }
+  .seller {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    text-align: center;
+    p {
+      margin: 0;
+      font-family: "Roboto", arial;
+    }
+  }
+  .lance {
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    background-color: $blue;
+    p {
+      color: $white;
+      margin: 0;
+      font-family: "Roboto Slab", arial;
+      strong {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    .family {
+      .container_family {
+        .container_line {
+          padding: 0 5px;
+          .male {
+            font-size: 3.5vw;
+          }
+          .name_male {
+            font-size: 3vw;
+            text-align: center;
+            line-height: 12px;
+          }
+        }
+      }
+    }
+    .grid {
+      padding: 0 5px;
+      font-size: 3.5vw;
+    }
+    .seller {
+      font-size: 4vw;
+    }
+    .lance {
+      p {
+        font-size: 4vw;
+        text-wrap: nowrap;
+        strong {
+          font-size: 5.5vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 350px) {
+  .container {
+    .horse {
+      .title {
+        p {
+          font-size: 5.5vw;
+        }
+      }
+    }
+  }
+}

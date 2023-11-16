@@ -6,7 +6,6 @@ import Input from "@/components/Common/Input";
 import Label from "@/components/Common/Label";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import Head from "next/head";
-import validationSchema from "./validations";
 
 type State = {
   name: string;
@@ -50,7 +49,6 @@ const VendaSeuCavalo = () => {
             speciesInterest: [],
             breedsInterest: [],
           }}
-          validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
           <Form className="row">

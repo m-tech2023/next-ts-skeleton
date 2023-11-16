@@ -74,7 +74,7 @@ const FormPersonalData = () => {
     } else {
       setAttributes(userDetails);
     }
-  }, [userDetails]);
+  }, [dispatch, userDetails]);
 
   const handleUpdate = async (e: FormEvent) => {
     e.preventDefault();

@@ -26,7 +26,7 @@ const SearchPage = () => {
 
   useEffect(() => {
     handleSearch();
-  }, [searchName]);
+  }, [handleSearch, searchName]);
 
   return (
     <div className={styles.container}>

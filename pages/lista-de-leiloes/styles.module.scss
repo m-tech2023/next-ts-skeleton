@@ -1,0 +1,17 @@
+@import "@/styles/colors.scss";
+
+.container {
+  padding: 60px 0;
+  .container_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: $blue;
+    .title {
+      color: $white;
+      margin: 0;
+      font-size: 35px;
+    }
+  }
+}
